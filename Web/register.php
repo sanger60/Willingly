@@ -45,6 +45,9 @@
 														<input type="text" name="Last Name" id="lastname" class="form-control" onfocusout="ErrorCode(this)" placeholder="Soyad" required>
 													</div>
 													<div class="form-group">
+														<input type="text" name="Username" id="RegisterUsername" class="form-control" onfocusout="ErrorCode(this)" placeholder="Kullanıcı Adı" required>
+													</div>
+													<div class="form-group">
 														<input type="mail" name="Email" id="email" class="form-control" onfocusout="ErrorCode(this)" placeholder="Email" required>
 													</div>
 													<div class="form-group">
@@ -54,7 +57,7 @@
 														<input type="password" name="Password" id="pwdCheck" class="form-control" onfocusout="ErrorCode(this)" placeholder="Şifre (Tekrar)" required>
 													</div>
 													<div class="form-group">
-														<a href="#" id="registerFormBtn" onclick="RegisterFormSubmitClick()" class="wt-btn">Şimdi Başla</a>
+														<a href="javascript:;" id="registerFormBtn" onclick="RegisterFormSubmitEvent()" class="wt-btn">Şimdi Başla</a>
 													</div>
 												</fieldset>
 											</form>
