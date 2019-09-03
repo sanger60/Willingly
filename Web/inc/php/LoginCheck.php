@@ -14,8 +14,6 @@ if (count($res) > 0) {
 		
     //foreach ($UserIdQuery as $item)
     $_SESSION['UserID'] =  $res[0]["Id"];
-			
-    
 
     print(json_encode(array('Status'=>true,"SessionID"=>session_id())));
 }else{
