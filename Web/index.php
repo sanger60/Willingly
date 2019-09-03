@@ -19,47 +19,35 @@
 							<div class="wt-bannercontent">
 								<div class="wt-bannerhead">
 									<div class="wt-title">
-										<h1><span>Hire expert freelancers</span> for any job, Online</h1>
+										<h1><span>Yetenekli freelancer'larla</span> daha çok iş yapın.</h1>
 									</div>
 									<div class="wt-description">
-										<p>Consectetur adipisicing elit sed dotem eiusmod tempor incuntes ut labore etdolore maigna aliqua enim.</p>
+										<p>Willingly, yetenekli freelancer'ların kendilerine uygun işletmeler ve girişimlerle buluştuğu, topluluk mantığıyla ​i​şleyen ​​özgürlükçü bir çalışma platformudur.</p>
 									</div>
 								</div>
-								<form class="wt-formtheme wt-formbanner">
+								<form class="wt-formtheme wt-formbanner" method="GET" id="searchDataForm">
 									<fieldset>
 										<div class="form-group">
-											<input type="text" name="fullname" class="form-control" placeholder="I’m looking for">
+											<input type="text" name="fullname" id="SearchKey" class="form-control" placeholder="Ne tür bir işe ihtiyacın var?">
 											<div class="wt-formoptions">
 												<div class="wt-dropdown">
-													<span>In: <em class="selected-search-type">Freelancers </em><i class="lnr lnr-chevron-down"></i></span>
+													<span>In: <em class="selected-search-type">Willingers </em><i class="lnr lnr-chevron-down"></i></span>
 												</div>
 												<div class="wt-radioholder">
 													<span class="wt-radio">
-														<input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked>
-														<label for="wt-freelancers">Freelancers</label>
+														<input id="wt-freelancers" data-title="Willingers" type="radio" name="SearchType" value="Willingers" checked>
+														<label for="wt-freelancers">Willingers</label>
 													</span>
 													<span class="wt-radio">
-														<input id="wt-jobs"  data-title="Jobs" type="radio" name="searchtype" value="job">
-														<label for="wt-jobs">Jobs</label>
-													</span>
-													<span class="wt-radio">
-														<input id="wt-company"  data-title="Companies" type="radio" name="searchtype" value="job">
-														<label for="wt-company">Companies</label>
+														<input id="wt-jobs"  data-title="MeetUp" type="radio"  name="SearchType" value="MeetUp">
+														<label for="wt-jobs">Meet up</label>
 													</span>
 												</div>
-												<a href="userlisting.html" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></a>
+												<a href="javascript:;" class="wt-searchbtn" onclick="SearchBtn();"><i class="lnr lnr-magnifier"></i></a>
 											</div>
 										</div>
 									</fieldset>
 								</form>
-								<div class="wt-videoholder">
-									<div class="wt-videoshow">
-										<a data-rel="prettyPhoto[video]" href="https://www.youtube.com/watch?v=J37W6DjqT3Q"><i class="fa fa-play"></i></a>
-									</div>
-									<div class="wt-videocontent">
-										<span>See For Yourself!<em>How it works &amp; experience the ultimate joy.</em></span>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -345,8 +333,3 @@
 			<!--Footer Start-->
 <?php require 'inc/frontend/views/footer_start.php'; ?>
 <?php require 'inc/frontend/views/footer_end.php'; ?>
-
-</body>
-
-
-</html>
