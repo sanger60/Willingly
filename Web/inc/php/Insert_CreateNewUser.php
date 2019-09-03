@@ -24,7 +24,7 @@ $data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" (\"Name\", \"Surnam
 $data08->execute();
 $UserId = $Conn_pgsql->lastInsertId();
 
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"UserActivationCode\" (\"UserId\", \"Type\",\"Code\",\"Email\",\"Password\") VALUES ('$UserId '0','$NewAPIKey')");
+$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"UserActivationCode\" (\"UserId\", \"Type\",\"Code\") VALUES ('$UserId '0','$NewAPIKey')");
 $data08->execute();
 
 include_once("Mail/Core.php");
