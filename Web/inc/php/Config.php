@@ -7,7 +7,7 @@ date_default_timezone_set('Europe/Istanbul');
 $ThisDate = date("d.m.y");
 
 try {
-    $Conn_pgsql = new PDO("pgsql:host=127.0.0.1;port=5432;dbname=Willingly;user=WillinglyUser;password=ok");
+    $Conn_pgsql = new PDO("pgsql:host=13.90.141.199;port=5432;dbname=Willingly;user=WillinglyUser;password=ok");
 	$Conn_pgsql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $Conn_pgsql->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 }
