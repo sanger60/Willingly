@@ -95,10 +95,19 @@
 	<script src="/../../../assets/js/tilt.jquery.js"></script>
 	<script src="/../../../assets/js/scrollbar.min.js"></script>
 	<script src="/../../../assets/js/prettyPhoto.js"></script>
-	<script src="/../../../assets/js/jquery-ui.js"></script>
+    <script src="/../../../assets/js/jquery-ui.js"></script>
+    <script src="/../../../assets/js/ajax/plugin.js"></script>
+
 	<script src="/../../../assets/js/readmore.js"></script>
 	<script src="/../../../assets/js/countTo.js"></script>
 	<script src="/../../../assets/js/appear.js"></script>
 	<script src="/../../../assets/js/tipso.js"></script>
 	<script src="/../../../assets/js/jRate.js"></script>
-	<script src="/../../../assets/js/main.js"></script>
+    <script src="/../../../assets/js/main.js"></script>
+
+    <script src="/../../../assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Customs -->
+    <script src="/../../../assets/js/custom/register.js"></script>
+
+    <!-- Customs End -->
