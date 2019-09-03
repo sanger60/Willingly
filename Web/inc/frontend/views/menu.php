@@ -4,7 +4,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<strong class="wt-logo"><a href="index-2.html"><img src="images/logo.png" alt="company logo here"></a></strong>
+								<strong class="wt-logo"><a href="index-2.html"><img src="/../../../assets/images/logo.png" alt="company logo here"></a></strong>
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,34 +85,34 @@
 									</nav>
 									<div class="wt-loginarea">
 										<figure class="wt-userimg">
-											<img src="images/user-login.png" alt="img description">
+											<img src="/../../../assets/images/user-login.png" alt="img description">
 										</figure>
 										<div class="wt-loginoption">
-											<a href="javascript:void(0);" id="wt-loginbtn" class="wt-loginbtn">Login</a>
+											<a href="javascript:void(0);" id="wt-loginbtn" class="wt-loginbtn">Giriş Yap</a>
 											<div class="wt-loginformhold">
 												<div class="wt-loginheader">
-													<span>Login</span>
+													<span>Giriş</span>
 													<a href="javascript:;"><i class="fa fa-times"></i></a>
 												</div>
-												<form class="wt-formtheme wt-loginform do-login-form">
+												<form class="wt-formtheme wt-loginform do-login-form" id="login-form">
 													<fieldset>
 														<div class="form-group">
-															<input type="text" name="username" class="form-control" placeholder="Username">
+															<input type="text" name="username" id="LoginUsername" class="form-control" placeholder="Kullanıcı Adı" onfocusout="ErrorCode(this)" required>
 														</div>
 														<div class="form-group">
-															<input type="password" name="password" class="form-control" placeholder="Password">
+															<input type="password" name="password" id="pwdLogin" class="form-control" placeholder="Şifre" onfocusout="ErrorCode(this)" required>
 														</div>
 														<div class="wt-logininfo">
-															<a href="javascript:;" class="wt-btn do-login-button">Login</a>
+															<a href="javascript:;" onclick="LoginCheck()" class="wt-btn do-login-button">Giriş Yap</a>
 															<span class="wt-checkbox">
 																<input id="wt-login" type="checkbox" name="rememberme">
-																<label for="wt-login">Keep me logged in</label>
+																<label for="wt-login">Beni Hatırla</label>
 															</span>
 														</div>
 													</fieldset>
 													<div class="wt-loginfooterinfo">
-														<a href="javascript:;" class="wt-forgot-password">Forgot password?</a>
-														<a href="register.html">Create account</a>
+														<a href="javascript:;" class="wt-forgot-password">Şifremi Unuttum?</a>
+														<a href="register.php">Hesap Oluştur</a>
 													</div>
 												</form>
 											    <form class="wt-formtheme wt-loginform do-forgot-password-form wt-hide-form">
@@ -126,8 +126,8 @@
 											            </div>     
 											        </fieldset>
 											        <div class="wt-loginfooterinfo">
-											            <a href="javascript:void(0);" class="wt-show-login">Login</a>
-											            <a href="register.html">Create account</a>
+											            <a href="javascript:void(0);" class="wt-show-login">Giriş Yap</a>
+											            <a href="register.php">Kayıt Ol</a>
 											        </div>
 											    </form>
 											</div>
@@ -136,7 +136,7 @@
 									</div>
 									<div class="wt-userlogedin">
 										<figure class="wt-userimg">
-											<img src="images/user-img.jpg" alt="image description">
+											<img src="/../../../assets/images/user-img.jpg" alt="image description">
 										</figure>
 										<div class="wt-username">
 											<h3>Louanne Mattioli</h3>
