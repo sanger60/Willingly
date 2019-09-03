@@ -107,7 +107,9 @@
 
     <script src="/../../../assets/plugins/sweetalert2/sweetalert2.min.js"></script>
 
-    <!-- Customs -->
+	<!-- Customs -->
+	<script src="/../../../assets/js/custom/custom.js"></script>
+	<script src="/../../../assets/js/custom/login.js"></script>
     <script src="/../../../assets/js/custom/register.js"></script>
 
     <!-- Customs End -->

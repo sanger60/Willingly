@@ -94,16 +94,16 @@
 													<span>Giriş</span>
 													<a href="javascript:;"><i class="fa fa-times"></i></a>
 												</div>
-												<form class="wt-formtheme wt-loginform do-login-form" id="login-form" onsubmit="LoginCheck()">
+												<form class="wt-formtheme wt-loginform do-login-form" id="login-form">
 													<fieldset>
 														<div class="form-group">
-															<input type="text" name="username" id="LoginUsername" class="form-control" placeholder="Kullanıcı Adı">
+															<input type="text" name="username" id="LoginUsername" class="form-control" placeholder="Kullanıcı Adı" onfocusout="ErrorCode(this)" required>
 														</div>
 														<div class="form-group">
-															<input type="password" name="password" id="pwdLogin" class="form-control" placeholder="Şifre">
+															<input type="password" name="password" id="pwdLogin" class="form-control" placeholder="Şifre" onfocusout="ErrorCode(this)" required>
 														</div>
 														<div class="wt-logininfo">
-															<a href="javascript:;" onclick="LoginFormSubmitEvent()" class="wt-btn do-login-button">Giriş Yap</a>
+															<a href="javascript:;" onclick="LoginCheck()" class="wt-btn do-login-button">Giriş Yap</a>
 															<span class="wt-checkbox">
 																<input id="wt-login" type="checkbox" name="rememberme">
 																<label for="wt-login">Beni Hatırla</label>

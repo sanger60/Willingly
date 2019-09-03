@@ -36,7 +36,7 @@
 											</div>
 										</div>
 										<div class="wt-joinforms">
-											<form class="wt-formtheme wt-formregister" onsubmit="RegisterCheck()" id="registerForm">
+											<form class="wt-formtheme wt-formregister" id="registerForm">
 												<fieldset class="wt-registerformgroup">
 													<div class="form-group form-group-half">
 														<input type="text" name="First Name" id="name" class="form-control" onfocusout="ErrorCode(this)" placeholder="Ad" required>
@@ -54,10 +54,10 @@
 														<input type="password" name="Password" id="pwd" class="form-control" onfocusout="ErrorCode(this)" placeholder="Şifre" required>
 													</div>
 													<div class="form-group">
-														<input type="password" name="Password" id="pwdCheck" class="form-control" onfocusout="ErrorCode(this)" placeholder="Şifre (Tekrar)" required>
+														<input type="password" name="CheckPassword" id="pwdCheck" class="form-control" onfocusout="ErrorCode(this)" placeholder="Şifre (Tekrar)" required>
 													</div>
 													<div class="form-group">
-														<a href="javascript:;" id="registerFormBtn" onclick="RegisterFormSubmitEvent()" class="wt-btn">Şimdi Başla</a>
+														<a href="javascript:;" id="registerFormBtn" onclick="RegisterCheck()" class="wt-btn">Şimdi Başla</a>
 													</div>
 												</fieldset>
 											</form>

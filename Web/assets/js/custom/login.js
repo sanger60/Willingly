@@ -1,6 +1,6 @@
 function LoginCheck(){
-    var username = document.getElementById("#LoginUsername").value;
-    var pwd = document.getElementById("#pwdLogin").value;
+    var username = document.getElementById("LoginUsername").value;
+    var pwd = document.getElementById("pwdLogin").value;
 
     $.ajax({
         url: "login.php",
