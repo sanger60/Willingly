@@ -1,0 +1,48 @@
+{
+    "data":[
+        {
+        "pictureUrl": "http://amentotech.com/htmls/worktern/images/user/userlisting/img-01.jpg",
+        "UserName": "Alfredo Bossard",
+        "UserAdvertisement": "Classifieds Posting, Data Entry, Typing",
+        "Price" : "44",
+        "UserCountry":"United States",
+        "rate" : "3.5",
+        "feedback" : "88",
+        "adDescription" : "Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris...",
+            "widgets":
+            [
+                {
+                    "name": "PHP"
+                },
+                {
+                    "name": "HTML"
+                },
+                {
+                    "name":"JAVASCRİPT"
+                }         
+            ]
+        },
+        {
+            "pictureUrl": "http://amentotech.com/htmls/worktern/images/user/userlisting/img-02.jpg",
+            "UserName": "Bossard",
+            "UserAdvertisement": "Classifieds Posting, Data Entry, Typing",
+            "Price" : "10",
+            "UserCountry":"United States",
+            "rate" : "3.5",
+            "feedback" : "88",
+            "adDescription" : "Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris...",
+                "widgets":
+                [
+                    {
+                        "name": "PHP"
+                    },
+                    {
+                        "name": "HTML"
+                    },
+                    {
+                        "name":"JAVASCRİPT"
+                    }         
+                ]
+            }
+    ]
+}

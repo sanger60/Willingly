@@ -69,45 +69,44 @@
 										<aside id="wt-sidebar" class="wt-sidebar wt-usersidebar">
 											<div class="wt-widget wt-effectiveholder">
 												<div class="wt-widgettitle">
-													<h2>Categories</h2>
+													<h2>Kategoriler</h2>
 												</div>
 												<div class="wt-widgetcontent">
 													<form class="wt-formtheme wt-formsearch">
 														<fieldset>
 															<div class="form-group">
-																<input type="text" name="Search" class="form-control" placeholder="Search Category">
-																<a href="javascrip:void(0);" class="wt-searchgbtn"><i class="lnr lnr-magnifier"></i></a>
+																<input type="text" name="Search" onkeydown="FreeLancerFilter(this,'category');" onchange="FreeLancerFilter(this,'category');" class="form-control" placeholder="Kategori Ara">
 															</div>
 														</fieldset>
 														<fieldset>
 															<div class="wt-checkboxholder wt-verticalscrollbar">
 																<span class="wt-checkbox">
-																	<input id="wordpress" type="checkbox" name="description" value="company" checked="">
-																	<label for="wordpress"> WordPress</label>
+																	<input id="wordpress" type="checkbox" name="category" value="grafik & tasarım" checked="">
+																	<label for="wordpress"> Grafik & Tasarım</label>
 																</span>
 																<span class="wt-checkbox">
-																	<input id="graphic" type="checkbox" name="description" value="company">
-																	<label for="graphic"> Graphic Design</label>
+																	<input id="graphic" type="checkbox" name="category" value="internet reklamcılığı">
+																	<label for="graphic"> İnternet Reklamcılığı</label>
 																</span>
 																<span class="wt-checkbox">
-																	<input id="website" type="checkbox" name="description" value="company">
-																	<label for="website"> Website Design</label>
+																	<input id="website" type="checkbox" name="category" value="yazı & çeviri">
+																	<label for="website"> Yazı & Çeviri</label>
 																</span>
 																<span class="wt-checkbox">
-																	<input id="article" type="checkbox" name="description" value="company">
-																	<label for="article"> Article Writing</label>
+																	<input id="article" type="checkbox" name="category" value="video & animasyon">
+																	<label for="article"> Video & Animasyon</label>
 																</span>
 																<span class="wt-checkbox">
-																	<input id="software" type="checkbox" name="description" value="company">
-																	<label for="software"> Software Architecture</label>
+																	<input id="software" type="checkbox" name="category" value="ses & müzik">
+																	<label for="software"> Ses & Müzik</label>
 																</span>
 																<span class="wt-checkbox">
-																	<input id="wordpress1" type="checkbox" name="description" value="company">
-																	<label for="wordpress1"> WordPress</label>
+																	<input id="wordpress1" type="checkbox" name="category" value="yazılım & teknoloji">
+																	<label for="wordpress1"> Yazılım & Teknoloji</label>
 																</span>
 																<span class="wt-checkbox">
-																	<input id="graphic1" type="checkbox" name="description" value="company">
-																	<label for="graphic1"> Graphic Design</label>
+																	<input id="graphic1" type="checkbox" name="category" value="iş & yönetim">
+																	<label for="graphic1"> İş & Yönetim</label>
 																</span>
 															</div>
 														</fieldset>
@@ -116,87 +115,19 @@
 											</div>
 											<div class="wt-widget wt-effectiveholder">
 												<div class="wt-widgettitle">
-													<h2>Location</h2>
-												</div>
-												<div class="wt-widgetcontent">
-													<form class="wt-formtheme wt-formsearch">
-														<fieldset>
-															<div class="form-group">
-																<input type="text" name="fullname" class="form-control" placeholder="Search Location">
-																<a href="javascrip:void(0);" class="wt-searchgbtn"><i class="lnr lnr-magnifier"></i></a>
-															</div>
-														</fieldset>
-														<fieldset>
-															<div class="wt-checkboxholder wt-verticalscrollbar">
-																<span class="wt-checkbox">
-																	<input id="wt-description" type="checkbox" name="description" value="company" checked="">
-																	<label for="wt-description"> <img src="/../../../assets/images/flag/img-01.png" alt="img description"> Australia</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="us" type="checkbox" name="description" value="company">
-																	<label for="us"> <img src="/../../../assets/images/flag/img-02.png" alt="img description"> United States</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="canada" type="checkbox" name="description" value="company">
-																	<label for="canada"> <img src="/../../../assets/images/flag/img-03.png" alt="img description"> Canada</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="england" type="checkbox" name="description" value="company">
-																	<label for="england"> <img src="/../../../assets/images/flag/img-04.png" alt="img description"> England</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="emirates" type="checkbox" name="description" value="company">
-																	<label for="emirates"> <img src="/../../../assets/images/flag/img-05.png" alt="img description"> United Emirates</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="wt-description1" type="checkbox" name="description" value="company">
-																	<label for="wt-description1"> <img src="/../../../assets/images/flag/img-01.png" alt="img description"> Australia</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="us1" type="checkbox" name="description" value="company">
-																	<label for="us1"> <img src="/../../../assets/images/flag/img-02.png" alt="img description"> United States</label>
-																</span>
-															</div>
-														</fieldset>
-													</form>
-												</div>
-											</div>
-											<div class="wt-widget wt-effectiveholder">
-												<div class="wt-widgettitle">
-													<h2>Hourly Rate</h2>
+													<h2>Fiyat</h2>
 												</div>
 												<div class="wt-widgetcontent">
 													<form class="wt-formtheme wt-formsearch">
 														<fieldset>
 															<div class="wt-checkboxholder wt-verticalscrollbar">
-																<span class="wt-checkbox">
-																	<input id="rate1" type="checkbox" name="description" value="company" checked="">
-																	<label for="rate1">$10 and below</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rate2" type="checkbox" name="description" value="company">
-																	<label for="rate2"> $10 - $30</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rate3" type="checkbox" name="description" value="company">
-																	<label for="rate3"> $30 - $60</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rate4" type="checkbox" name="description" value="company">
-																	<label for="rate4"> $60 - $90</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rate5" type="checkbox" name="description" value="company">
-																	<label for="rate5"> $90 &amp;above</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rate2v" type="checkbox" name="description" value="company">
-																	<label for="rate2v">$10 and below</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rate3v" type="checkbox" name="description" value="company">
-																	<label for="rate3v"> $10 - $30</label>
-																</span>
+																Min:
+																<input type="range" min="10" max="10000" value="10" oninput="updateTextInput(this.value);" id="min-range" class="my-range">
+																<output name="ageOutputName" id="minOutput">10 ₺</output>
+																<br/>
+																Max:
+																<input type="range" min="10" max="10000" value="10" oninput="updateTextInput2(this.value);" id="max-range" class="my-range">
+																<output name="ageOutputName" id="maxOutput">10 ₺</output>
 															</div>
 														</fieldset>
 													</form>
@@ -204,7 +135,7 @@
 											</div>
 											<div class="wt-widget wt-effectiveholder">
 												<div class="wt-widgettitle">
-													<h2>Freelancer Type</h2>
+													<h2>Çalışan Tip</h2>
 												</div>
 												<div class="wt-widgetcontent">
 													<form class="wt-formtheme wt-formsearch">
@@ -212,103 +143,23 @@
 															<div class="wt-checkboxholder">
 																<span class="wt-checkbox">
 																	<input id="proindependent" type="checkbox" name="description" value="company" checked="">
-																	<label for="proindependent">Pro Independent Freelancers</label>
+																	<label for="proindependent">Pro B.Serbest Çalışanlar</label>
 																</span>
 																<span class="wt-checkbox">
 																	<input id="proagency" type="checkbox" name="description" value="company">
-																	<label for="proagency"> Pro Agency Freelancers</label>
+																	<label for="proagency"> Pro Ajans Freelancerlaır</label>
 																</span>
 																<span class="wt-checkbox">
 																	<input id="independent" type="checkbox" name="description" value="company">
-																	<label for="independent"> Independent Freelancers</label>
+																	<label for="independent"> B.Serbest Çalışanlar</label>
 																</span>
 																<span class="wt-checkbox">
 																	<input id="agency" type="checkbox" name="description" value="company">
-																	<label for="agency">Agency Freelancers</label>
+																	<label for="agency"> Ajans Freelancerları</label>
 																</span>
 																<span class="wt-checkbox">
 																	<input id="rising" type="checkbox" name="description" value="company">
-																	<label for="rising"> New Rising Talent</label>
-																</span>
-															</div>
-														</fieldset>
-													</form>
-												</div>
-											</div>
-											<div class="wt-widget wt-effectiveholder">
-												<div class="wt-widgettitle">
-													<h2>English level</h2>
-												</div>
-												<div class="wt-widgetcontent">
-													<form class="wt-formtheme wt-formsearch">
-														<fieldset>
-															<div class="wt-checkboxholder">
-																<span class="wt-checkbox">
-																	<input id="basic" type="checkbox" name="description" value="company" checked="">
-																	<label for="basic">Basic</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="conversational" type="checkbox" name="description" value="company">
-																	<label for="conversational"> Conversational</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="fluent" type="checkbox" name="description" value="company">
-																	<label for="fluent"> Fluent</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="native" type="checkbox" name="description" value="company">
-																	<label for="native"> Native or bilingual</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="professional" type="checkbox" name="description" value="company">
-																	<label for="professional"> Professional</label>
-																</span>
-															</div>
-														</fieldset>
-													</form>
-												</div>
-											</div>
-											<div class="wt-widget wt-effectiveholder">
-												<div class="wt-widgettitle">
-													<h2>Languages</h2>
-												</div>
-												<div class="wt-widgetcontent">
-													<form class="wt-formtheme wt-formsearch">
-														<fieldset>
-															<div class="form-group">
-																<input type="text" name="fullname" class="form-control" placeholder="Search Language">
-																<a href="javascrip:void(0);" class="wt-searchgbtn"><i class="lnr lnr-magnifier"></i></a>
-															</div>
-														</fieldset>
-														<fieldset>
-															<div class="wt-checkboxholder wt-verticalscrollbar">
-																<span class="wt-checkbox">
-																	<input id="chinese" type="checkbox" name="description" value="company" checked="">
-																	<label for="chinese">Chinese</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="spanish" type="checkbox" name="description" value="company">
-																	<label for="spanish">Spanish</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="english" type="checkbox" name="description" value="company">
-																	<label for="english">English</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="arabic" type="checkbox" name="description" value="company">
-																	<label for="arabic">Arabic</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="russian" type="checkbox" name="description" value="company">
-																	<label for="russian">Russian</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="chinese1" type="checkbox" name="description" value="company">
-																	<label for="chinese1">Chinese</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="spanish1" type="checkbox" name="description" value="company">
-																	<label for="spanish1">Spanish</label>
+																	<label for="rising"> Yeni Yükselen Yetenek</label>
 																</span>
 															</div>
 														</fieldset>
@@ -318,8 +169,8 @@
 											<div class="wt-widget wt-applyfilters-holder">
 												<div class="wt-widgetcontent">
 													<div class="wt-applyfilters">
-														<span>Click “Apply Filter” to apply latest<br> changes made by you.</span>
-														<a href="javascript:void(0);" class="wt-btn">Apply Filters</a>
+														<span>En son uygulamak için “Filtre Uygula” ya tıklayın <br> Sizin tarafınızdan yapılan değişiklikler.</span>
+														<a href="javascript:void(0);" class="wt-btn">Filtre Uygula</a>
 													</div>
 												</div>
 											</div>
@@ -352,11 +203,11 @@
 													</li>
 												</ul>
 											</div>
-											<div class="wt-userlistinghold" v-for="item in items">
+											<div class="wt-userlistinghold" v-for="item in items.data">
 												<span class="wt-featuredtag">
 													<img src="/../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
 												<figure class="wt-userlistingimg">
-													<img v-bind:src="{{item.pictureUrl}}" alt="image">
+													<img v-bind:src="item.pictureUrl" alt="image">
 												</figure>
 												<div class="wt-userlistingcontent">
 													<div class="wt-contenthead">
@@ -367,7 +218,7 @@
 														</div>
 														<ul class="wt-userlisting-breadcrumb">
 															<li><span><i class="far fa-money-bill-alt"></i> {{item.Price}} </span></li>
-															<li><span><img src="/../../../assets/images/flag/img-02.png" alt="img description">  {{item.UserCountry}}</span></li>
+															<li><span>{{item.UserCountry}}</span></li>
 															<li><a href="javascript:void(0);" class="wt-clicksave"><i class="fa fa-heart"></i> Save</a></li>
 														</ul>
 													</div>
