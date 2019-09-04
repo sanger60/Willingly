@@ -7,7 +7,7 @@ include_once("Config.php");
 
 $Code = $_GET["Code"];
 
-$CheckHaveUserEmail = $Conn_pgsql->query("SELECT * FROM public.\"UserActivationCode\" Where \"Code\"='$Code' LIMIT 1")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
+$CheckHaveUserEmail = $Conn_pgsql->query("SELECT * FROM public.\"UserActivationCode\" Where \"Code\"='$Code' LIMIT 1")->fetchAll(PDO::FETCH_ASSOC);
 if (count($CheckHaveUserEmail) == 0)
 {
 	Print(json_encode(["Status"=>false,"Message"=>"Yanlis Aktivasyon Kodu"]));
