@@ -108,8 +108,9 @@
     <script src="/../../../assets/plugins/sweetalert2/sweetalert2.min.js"></script>
 
 	<!-- Customs -->
-	<script src="/../../../assets/js/custom/custom.js"></script>
-	<script src="/../../../assets/js/custom/login.js"></script>
-    <script src="/../../../assets/js/custom/register.js"></script>
 
+	<script src="/../../../assets/js/vue.js"></script>
+	<script src="/../../../assets/js/custom/login.js"></script>
+	<script src="/../../../assets/js/custom/register.js"></script>
+	<script src="/../../../assets/js/custom/custom.js"></script>
     <!-- Customs End -->

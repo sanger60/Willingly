@@ -10,7 +10,7 @@ function RegisterCheck(){
 
     if(pwd == pwdCheck){
         $.ajax({
-            url: "register.php",
+            url: "https://willingly.tk/inc/php/Insert_CreateNewUser.php",
             method: "POST",
             data: {Name:ad,Surname:soyad,UserName: kullaniciAdi,Email:email,Password:pwd},
             dataType: "JSON",
