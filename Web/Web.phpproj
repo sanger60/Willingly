@@ -24,6 +24,11 @@
     <Compile Include="inc\frontend\views\head_start.php" />
     <Compile Include="inc\frontend\views\menu.php" />
     <Compile Include="inc\php\Config.php" />
+    <Compile Include="inc\php\Get_UserInformation.php" />
+    <Compile Include="inc\php\Get_FreelanceAdvertisement.php" />
+    <Compile Include="inc\php\Get_FilterConfig.php" />
+    <Compile Include="inc\php\Insert_FreelancerAdvertisementCreate.php" />
+    <Compile Include="inc\php\Update_UserActivation.php" />
     <Compile Include="inc\php\Insert_CreateNewUser.php" />
     <Compile Include="inc\php\LoginCheck.php" />
     <Compile Include="inc\php\Mail\Core.php" />
@@ -79,6 +84,7 @@
     <Compile Include="inc\php\Mail\phpMailerLib\language\phpmailer.lang-zh_cn.php" />
     <Compile Include="index.php" />
     <Compile Include="register.php" />
+    <Compile Include="userlisting.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
@@ -135,6 +141,7 @@
     <Folder Include="inc\php\Mail\" />
     <Folder Include="inc\php\Mail\phpMailerLib\" />
     <Folder Include="inc\php\Mail\phpMailerLib\language\" />
+    <Folder Include="inc\php\Mail\Template\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\basictable.css" />
@@ -158,6 +165,7 @@
     <Content Include="assets\css\themify-icons.css" />
     <Content Include="assets\css\tipso.css" />
     <Content Include="assets\css\transitions.css" />
+    <Content Include="assets\data.json" />
     <Content Include="assets\fonts\fontawesome-webfont-1.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
@@ -459,11 +467,14 @@
     <Content Include="assets\js\vendor\jquery-3.3.1.js" />
     <Content Include="assets\js\vendor\jquery-library.js" />
     <Content Include="assets\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="assets\js\vue.js" />
+    <Content Include="assets\js\vuejs-paginator.min.js" />
     <Content Include="assets\plugins\sweetalert2\sweetalert2.all.js" />
     <Content Include="assets\plugins\sweetalert2\sweetalert2.all.min.js" />
     <Content Include="assets\plugins\sweetalert2\sweetalert2.css" />
     <Content Include="assets\plugins\sweetalert2\sweetalert2.js" />
     <Content Include="assets\plugins\sweetalert2\sweetalert2.min.css" />
     <Content Include="assets\plugins\sweetalert2\sweetalert2.min.js" />
+    <Content Include="inc\php\Mail\Template\MailActivationMail.html" />
   </ItemGroup>
 </Project>
