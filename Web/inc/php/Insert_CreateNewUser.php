@@ -13,7 +13,8 @@ $Password = $_POST["Password"];
 
 $NewAPIKey = generateRandomString().generateRandomString().generateRandomString().generateRandomString();
 
-$CheckHaveUserEmail = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Users\" Where \"Email\"='$Email' LIMIT 1")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
+$CheckHaveUserEmail = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Users\" Where \"Email\"='$Email'")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
+
 if (count($CheckHaveUserEmail) == 0)
 {
 	Print(json_encode(["Status"=>false,"Message"=>"Bu Email Adresiyle Eslesen Kullanici Bulunmaktadir"]));
@@ -22,18 +23,20 @@ if (count($CheckHaveUserEmail) == 0)
 
 $data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" (\"Name\", \"Surname\",\"Username\",\"Email\",\"Password\") VALUES ('$Name', '$Surname','$UserName','$Email','$Password')");
 $data08->execute();
-$UserId = $Conn_pgsql->lastInsertId();
 
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"UserActivationCode\" (\"UserId\", \"Type\",\"Code\") VALUES ('$UserId '0','$NewAPIKey')");
-$data08->execute();
+$UserId = $Conn_pgsql->prepare("SELECT * FROM public.\"Users\" Where \"Email\"='$Email'")->fetchAll(PDO::FETCH_ASSOC);
+var_dump($UserId);
 
-include_once("Mail/Core.php");
+//$data09 = $Conn_pgsql->prepare("INSERT INTO public.\"UserActivationCode\" (\"UserId\", \"Type\",\"Code\") VALUES ('$UserId', '0','$NewAPIKey')");
+//$data09->execute();
 
-$file = file_get_contents('Mail/Template/MailActivationMail.html');
+//include_once("Mail/Core.php");
 
-$bodytag = str_replace("{{LINK}}", "https://willingly.tk/inc/php/Activation.php?Code=".$Code, $file);
+//$file = file_get_contents('Mail/Template/MailActivationMail.html');
 
-$MailActivationCore = new Core($Email,"Willingly Hesabinizi Dogrulayiniz",$bodytag);
+//$bodytag = str_replace("{{LINK}}", "https://willingly.tk/inc/php/Activation.php?Code=".$Code, $file);
+
+//$MailActivationCore = new Core($Email,"Willingly Hesabinizi Dogrulayiniz",$bodytag);
 
 print(json_encode(array(
                 "Status" => True,
