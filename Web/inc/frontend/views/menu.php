@@ -97,7 +97,7 @@
 												<form class="wt-formtheme wt-loginform do-login-form" id="login-form">
 													<fieldset>
 														<div class="form-group">
-															<input type="text" name="username" id="LoginUsername" class="form-control" placeholder="Kullanıcı Adı" onfocusout="ErrorCode(this)" required>
+															<input type="text" name="username" id="LoginEmail" class="form-control" placeholder="Email" onfocusout="ErrorCode(this)" required>
 														</div>
 														<div class="form-group">
 															<input type="password" name="password" id="pwdLogin" class="form-control" placeholder="Şifre" onfocusout="ErrorCode(this)" required>
