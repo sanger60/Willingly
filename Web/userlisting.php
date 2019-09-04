@@ -133,39 +133,6 @@
 													</form>
 												</div>
 											</div>
-											<div class="wt-widget wt-effectiveholder">
-												<div class="wt-widgettitle">
-													<h2>Çalışan Tip</h2>
-												</div>
-												<div class="wt-widgetcontent">
-													<form class="wt-formtheme wt-formsearch">
-														<fieldset>
-															<div class="wt-checkboxholder">
-																<span class="wt-checkbox">
-																	<input id="proindependent" type="checkbox" name="description" value="company" checked="">
-																	<label for="proindependent">Pro B.Serbest Çalışanlar</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="proagency" type="checkbox" name="description" value="company">
-																	<label for="proagency"> Pro Ajans Freelancerlaır</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="independent" type="checkbox" name="description" value="company">
-																	<label for="independent"> B.Serbest Çalışanlar</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="agency" type="checkbox" name="description" value="company">
-																	<label for="agency"> Ajans Freelancerları</label>
-																</span>
-																<span class="wt-checkbox">
-																	<input id="rising" type="checkbox" name="description" value="company">
-																	<label for="rising"> Yeni Yükselen Yetenek</label>
-																</span>
-															</div>
-														</fieldset>
-													</form>
-												</div>
-											</div>
 											<div class="wt-widget wt-applyfilters-holder">
 												<div class="wt-widgetcontent">
 													<div class="wt-applyfilters">
