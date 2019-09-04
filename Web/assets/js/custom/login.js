@@ -8,8 +8,8 @@ function LoginCheck(){
         data: {email:username2,password:pwd},
         dataType: "JSON",
         success: function(data){
-            if(data.status == true){
-                window.location.href = "";
+            if(data.Status == true){
+                Swal.fire('Olduuu');
             }
             else{
                 Swal.fire({
