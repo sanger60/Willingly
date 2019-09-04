@@ -2,9 +2,9 @@
 class Core{
     Private $Debug = False;
 
-    Private $Host = "smtp.seznam.cz";
-    Private $Port = 587; // or 465
-    Private $SMTPSecure = ""; // ssl or tls
+    Private $Host = "smtp.gmail.com";
+    Private $Port = 587;
+    Private $SMTPSecure = "tls";
     Private $Auth = true;
     Private $Username = "willinglydestek@gmail.com";
     private $SenderEmail = "willingly@mail.com.tr";
@@ -36,12 +36,12 @@ class Core{
             $mail->Body = $Body;
 
             if(!$mail->Send()){
-	            print(json_encode(array("Status"=>False,"Message"=>$mail->ErrorInfo)));
+	            //print(json_encode(array("Status"=>False,"Message"=>$mail->ErrorInfo)));
             } else {
-	            print(json_encode(array("Status"=>True,"Message"=>"Report Has been Sended")));  
+	            //print(json_encode(array("Status"=>True,"Message"=>"Report Has been Sended")));  
             }
         }catch (Exception $exception){
-            print(json_encode(array("Status"=>False,"Message"=>$mail->ErrorInfo)));
+           //print(json_encode(array("Status"=>False,"Message"=>$mail->ErrorInfo)));
         }
     }
 }
