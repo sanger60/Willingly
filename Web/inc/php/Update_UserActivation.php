@@ -5,7 +5,7 @@ $DontUseChecker = true;
 
 include_once("Config.php");
 
-$Code = $_POST["Code"];
+$Code = $_GET["Code"];
 
 $CheckHaveUserEmail = $Conn_pgsql->query("SELECT * FROM public.\"UserActivationCode\" Where \"Code\"='$Code' LIMIT 1")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
 if (count($CheckHaveUserEmail) == 0)
