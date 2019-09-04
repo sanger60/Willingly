@@ -11,15 +11,6 @@ $UserName = $_POST["UserName"];
 $Email = $_POST["Email"];
 $Password = $_POST["Password"];
 
-$Code = generateRandomString().generateRandomString().generateRandomString().generateRandomString();
-
-$CheckHaveUserEmail = $Conn_pgsql->query("SELECT \"Id\" FROM public.\"Users\" Where \"Email\"='$Email'")->fetchAll(PDO::FETCH_ASSOC);
-if (count($CheckHaveUserEmail) > 0)
-{
-	Print(json_encode(["Status"=>false,"Message"=>"Bu Email Adresiyle Eslesen Kullanici Bulunmaktadir"]));
-    die();
-}
-
 $data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" (\"Name\", \"Surname\",\"Username\",\"Email\",\"Password\") VALUES ('$Name', '$Surname','$UserName','$Email','$Password')");
 $data08->execute();
 
