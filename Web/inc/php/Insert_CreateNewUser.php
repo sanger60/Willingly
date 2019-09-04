@@ -13,19 +13,19 @@ $Password = $_POST["Password"];
 
 $NewAPIKey = generateRandomString().generateRandomString().generateRandomString().generateRandomString();
 
-$CheckHaveUserEmail = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Users\" Where \"Email\"='$Email'")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
+//$CheckHaveUserEmail = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Users\" Where \"Email\"='$Email'")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
 
-if (count($CheckHaveUserEmail) == 0)
-{
-	Print(json_encode(["Status"=>false,"Message"=>"Bu Email Adresiyle Eslesen Kullanici Bulunmaktadir"]));
-    die();
-}
+//if (count($CheckHaveUserEmail) == 0)
+//{
+//    Print(json_encode(["Status"=>false,"Message"=>"Bu Email Adresiyle Eslesen Kullanici Bulunmaktadir"]));
+//    die();
+//}
 
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" (\"Name\", \"Surname\",\"Username\",\"Email\",\"Password\") VALUES ('$Name', '$Surname','$UserName','$Email','$Password')");
-$data08->execute();
+//$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" (\"Name\", \"Surname\",\"Username\",\"Email\",\"Password\") VALUES ('$Name', '$Surname','$UserName','$Email','$Password')");
+//$data08->execute();
 
-$UserId = $Conn_pgsql->prepare("SELECT * FROM public.\"Users\" Where \"Email\"='$Email'")->fetchAll(PDO::FETCH_ASSOC);
-var_dump($UserId);
+$UserIdaaa = $Conn_pgsql->prepare("SELECT * FROM public.\"Users\"")->fetchAll(PDO::FETCH_ASSOC);
+var_dump($UserIdaaa);
 
 //$data09 = $Conn_pgsql->prepare("INSERT INTO public.\"UserActivationCode\" (\"UserId\", \"Type\",\"Code\") VALUES ('$UserId', '0','$NewAPIKey')");
 //$data09->execute();
