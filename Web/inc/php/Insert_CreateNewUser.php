@@ -14,7 +14,7 @@ $Password = $_POST["Password"];
 $Code = generateRandomString().generateRandomString().generateRandomString().generateRandomString();
 
 $CheckHaveUserEmail = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Users\" Where \"Email\"='$Email' LIMIT 1")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
-if (count($CheckHaveUserEmail) == 0)
+if (count($CheckHaveUserEmail) > 0)
 {
 	Print(json_encode(["Status"=>false,"Message"=>"Bu Email Adresiyle Eslesen Kullanici Bulunmaktadir"]));
     die();
@@ -32,7 +32,7 @@ include_once("Mail/Core.php");
 
 $file = file_get_contents('Mail/Template/MailActivationMail.html');
 
-$bodytag = str_replace("{{LINK}}", "https://willingly.tk/inc/php/Activation.php?Code=".$Code, $file);
+$bodytag = str_replace("{{LINK}}", "https://willingly.tk/inc/php/Update_UserActivation.php?Code=".$Code, $file);
 
 $MailActivationCore = new Core($Email,"Willingly Hesabinizi Dogrulayiniz",$bodytag);
 
