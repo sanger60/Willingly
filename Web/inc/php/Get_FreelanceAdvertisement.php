@@ -13,11 +13,15 @@ if (isset($_POST["searchKey"]))
     if ($IsFist == false)
     {
     	$AddQuery .= " and ";
+    }else{
+        $AddQuery .= "where";
     }
-	$AddQuery .= "\"Tittle\" LIKE '%".$_POST["searchKey"]."%'";
+	$AddQuery .= " lower(\"Tittle\") similar to '%".strtolower($_POST["searchKey"])."%'";
 
     $IsFist = false;
 }
+
+//1 gelirse freelance 2 meetup
 
 //$AddQuery01 = "";
 //if (isset($_POST["searchtip"]))
@@ -38,8 +42,10 @@ if (isset($_POST["category"]))
     if ($IsFist == false)
     {
     	$AddQuery02 .= " and ";
+    }else{
+        $AddQuery .= "where";
     }
-	$AddQuery02 .= "\"CatagoryId\"='".$_POST["searchtip"]."'";
+	$AddQuery02 .= "\"CatagoryId\"='".$_POST["category"]."'";
 
     $IsFist = false;
 }
@@ -47,13 +53,15 @@ if (isset($_POST["category"]))
 $AddQuery03 = "";
 if (isset($_POST["price"]))
 {
-    list($Min, $Max) = explode(",", $_POST["price"]);
+    list($Min, $Max) = explode("-", $_POST["price"]);
 
     if ($IsFist == false)
     {
     	$AddQuery .= " and ";
+    }else{
+        $AddQuery .= "where";
     }
-	$AddQuery03 .= "\"Price\" > '$Min' and \"Price\" < '$Max'";
+	$AddQuery03 .= "\"Price\" >= '$Min' and \"Price\" <= '$Max'";
 
     $IsFist = false;
 }
@@ -61,6 +69,6 @@ if (isset($_POST["price"]))
 
 $Response = Array();
 
-$Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\" where $AddQuery $AddQuery02 $AddQuery03")->fetchAll(PDO::FETCH_ASSOC);
+$Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03")->fetchAll(PDO::FETCH_ASSOC);
 
-Print(json_encode(array("Catagory" =>$Catagory,"Price"=>$Prce)));
+Print(json_encode(array("Data" =>$Ilan)));

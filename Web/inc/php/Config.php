@@ -25,7 +25,6 @@ if (isset($_SESSION['UserID'])) {
 				$Global_Email = $item04['Email'];
 				$Global_Password = $item04['Password'];
                 $Global_Name = $item04['Name'];
-                $Global_Balance = $item04['Balance'];
 			}
 		}else{
 			$Global_IsLogin = False;
