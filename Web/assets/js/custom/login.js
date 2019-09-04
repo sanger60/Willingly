@@ -1,11 +1,11 @@
 function LoginCheck(){
-    var username2 = document.getElementById("LoginUsername").value;
+    var username2 = document.getElementById("LoginEmail").value;
     var pwd = document.getElementById("pwdLogin").value;
 
     $.ajax({
         url: "https://willingly.tk/inc/php/logincheck.php",
         method: "GET",
-        data: {username:username2,password:pwd},
+        data: {email:username2,password:pwd},
         dataType: "JSON",
         success: function(data){
             if(data.status == true){
