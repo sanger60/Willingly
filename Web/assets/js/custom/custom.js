@@ -109,7 +109,7 @@ function FreeLancerFilter(){
     
     var PriceTemplate = minRange + "-"+maxRange;
     $.ajax({
-        url: "",
+        url: "userlisting.php",
         method: "POST",
         data: {category: filterStr,price: PriceTemplate},
         dataType: "JSON",
@@ -124,7 +124,6 @@ function FreeLancerFilter(){
             });
         }
     });
-
 }
 
 function IndexSubmit(){

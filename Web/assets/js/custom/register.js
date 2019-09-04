@@ -15,8 +15,8 @@ function RegisterCheck(){
             data: {Name:ad,Surname:soyad,UserName: kullaniciAdi,Email:email,Password:pwd},
             dataType: "JSON",
             success: function(data){
-                if(data.status == true){
-                    window.location.href = "";
+                if(data.Status == true){
+                    Swal.fire('Olduuuuu');
                 }
                 else{
                     Swal.fire({
