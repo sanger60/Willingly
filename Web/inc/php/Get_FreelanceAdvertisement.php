@@ -8,6 +8,9 @@ include_once("Config.php");
 $IsFist = true;
 
 $AddQuery = "";
+
+$page = $_POST["PageId"];
+
 if (isset($_POST["searchKey"]))
 {
     if ($IsFist == false)
@@ -69,6 +72,13 @@ if (isset($_POST["price"]))
 
 $Response = Array();
 
-$Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03")->fetchAll(PDO::FETCH_ASSOC);
+$IlanCount = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
+
+$limit = 10;
+$total_results = $IlanCount;
+$total_pages = ceil($total_results/$limit);
+$starting_limit = ($page-1)*$limit;
+
+$Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03 ORDER BY \"Id\" DESC LIMIT $limit offset $starting_limit")->fetchAll(PDO::FETCH_ASSOC);
 
 Print(json_encode(array("Data" =>$Ilan)));
