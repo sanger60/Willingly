@@ -28,3 +28,34 @@
     background: #4CAF50;
     cursor: pointer;
   }
+
+  .paginationBtn{
+    color: #999;
+    width: 46px;
+    height: 46px;
+    display: block;
+    font-size: 14px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    line-height: 46px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }
+  .paginationBtn:hover{
+    background: #ff5851;
+    border-color: #ff5851;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+  }
+
+  .btnCategory{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+  }
