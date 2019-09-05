@@ -49,13 +49,27 @@ if (isset($_POST["category"]))
 {
     if (!is_null($_POST["category"]))
     {
+        $Catagorys = explode(",", $_POST["category"]);
+
     	if ($IsFist == false)
         {
     	    $AddQuery02 .= " and ";
         }else{
             $AddQuery02 .= "where";
         }
-	    $AddQuery02 .= "\"CatagoryId\"='".$_POST["category"]."'";
+
+        for ($i = 1; $i <= count($Catagorys); $i++)
+        {
+            if (!is_null($Catagorys[$i]) && isset($Catagorys[$i]) && $Catagorys[$i] !="")
+            {
+            	$AddQuery02 .= " \"CatagoryId\"='".$Catagorys[$i]."'";
+
+        	    if ($i != count($Catagorys))
+                {
+            	    $AddQuery02 .= " and";
+                }   
+            }   
+        }
 
         $IsFist = false;
     }

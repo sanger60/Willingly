@@ -14,7 +14,7 @@ CreateInsertQuery($_POST["UserName"]);
 CreateInsertQuery($_POST["Email"]);
 CreateInsertQuery($_POST["Password"]);
 
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" ($QueryStep1,\"UserId\"='$Global_UserID') VALUES ($QueryStep2)");
+$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Users\" ($QueryStep1) VALUES ($QueryStep2)");
 $data08->execute();
 
 
