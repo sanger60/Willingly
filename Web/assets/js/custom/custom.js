@@ -19,12 +19,12 @@ function pageChanged(a){
         var searchType2 = urlParams.get('searchType');
         window.location.href = "http://willingly.com/userlisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
     }
-    else if(location.toString().includes('categoryId')){
+    else if(location.toString().includes('category')){
         console.log("ikinci if");
 
         var urlParams = new URLSearchParams(location.search);
-        var catKey = urlParams.get('categoryId');
-        window.location.href = "http://willingly.com/userlisting.php/?categoryId="+catKey+"&page="+PageId;
+        var catKey = urlParams.get('category');
+        window.location.href = "http://willingly.com/userlisting.php/?category="+catKey+"&page="+PageId;
 
     }
     else{
@@ -85,7 +85,7 @@ function ListWithCategory(a){
 
     var id = parseInt(a.name);
     
-    window.location.href = "http://willingly.com/userlisting.php/?categoryId="+id+"&page=1";
+    window.location.href = "http://willingly.com/userlisting.php/?category="+id+"&page=1";
     
 }
 
@@ -140,14 +140,13 @@ function FreeLancerList(){
      var searchKey = urlParams.get('search');
      var searchType2 = urlParams.get('searchType');
      var page = urlParams.get('page');
-     var categoryId = urlParams.get('CategoryId');
-
+     var category = urlParams.get("category");
+     var price = urlParams.get("price");
         // created(){
         //     fetch("./assets/data.json")
         //     .then((res) => {return res.json(); })
         //     .then((res) => { items = res; this.items = items; })
         // },
-        
      ItemsVue = new Vue({
         el: '#mainVue',
         data:{
@@ -161,7 +160,7 @@ function FreeLancerList(){
             $.ajax({
                 url: 'http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php',
                 method: 'POST',
-                data: {searchKey:searchKey,searchtip: searchType2,PageId:page,CategoryId:categoryId},
+                data: {searchKey:searchKey,searchtip: searchType2,PageId:page,category: category,price:price},
                 dataType: "JSON",
                 timeout: 60000,
                 success: function (data) {
@@ -231,7 +230,14 @@ function FreeLancerFilter(){
 
     for(var i=0;i< filterProp.length;i++){
         if(filterProp[i].checked == true)
-        filterCheckedProps += filterProp[i].value + ",";
+        {
+            filterCheckedProps += filterProp[i].value;
+
+            if(i != (filterProp.length-1))
+            {
+                filterCheckedProps += ",";
+            }
+        }
     }
 
     console.log("Categori Filtre Post Sorgusu : "+filterCheckedProps);
@@ -240,57 +246,30 @@ function FreeLancerFilter(){
     
     var PriceTemplate = minRange + "-"+maxRange;
 
-    ItemsVue = new Vue({
-        el: '#mainVue',
-        data:{
-            categories: [],
-            MinPrice: 0,
-            MaxPrice: 0,
-            items: []
-        },
-        mounted: function () {
-            var self = this;
-            $.ajax({
-                url: "http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
-                method: "POST",
-                data: {category: filterCheckedProps,price: PriceTemplate,PageId:1},
-                dataType: "JSON",
-                success: function(data) {
-                    self.items = data;
+    var urlParams = new URLSearchParams(location.search);
+    var catKey = urlParams.get('category');
 
-                    console.log("Filter dan Gelen Data : ---------------");
-                    console.log(data);
-                },
-                error: function(a,b,g){
-                    Swal.fire({
-                        type: 'error',
-                        title: 'Oops...',
-                        text: 'Bir şeyler yanlış gitti category and price'
-                    });
-                }
-            });
-
-            
-            $.ajax({
-                url: 'http://willingly.tk/inc/php/Get_FilterConfig.php',
-                method: 'POST',
-                dataType: "JSON",
-                timeout: 60000,
-                success: function (data) {
-                    self.categories = data.Catagory;
-                    self.MinPrice = data.Price[0].min;
-                    self.MaxPrice = data.Price[0].max;
-                },
-                error: function (error) {
-                    Swal.fire({
-                        type: 'error',
-                        title: 'Oops...',
-                        text: 'Bir şeyler yanlış gitti!'
-                    });
-                }
-            });
+    if(catKey != null && catKey != "")
+    {
+        if(filterCheckedProps != "")
+        {
+            urlParams.set("category",filterCheckedProps);
         }
-    });
+    }
+    else{
+        if(filterCheckedProps != "" && PriceTemplate != "")
+        {
+            window.location.href += "&price="+PriceTemplate+"&category="+filterCheckedProps;
+    
+        }
+        else if(filterCheckedProps != ""){
+            window.location.href += "&category="+filterCheckedProps;
+    
+        }
+        else if(PriceTemplate != ""){
+            window.location.href += "&price="+PriceTemplate;
+        }
+    }
 }
 
 function IndexSubmit(){
