@@ -3089,11 +3089,9 @@ body.wt-login .wt-userlogedin{display: block;}
 .wt-categoriesslider{
 	width: 100%;
 	float: left;
-	padding-left: 319px;
 }
 .wt-categoryslidercontent{
 	float: left;
-	width: 100%;
 	padding: 15px;
 	border-left:1px solid #ddd;
 }
@@ -3179,7 +3177,6 @@ body.wt-login .wt-userlogedin{display: block;}
 	font-size: 14px;
 	color: #767676;
 }
-.wt-formsearch fieldset .wt-checkboxholder{max-height: 150px;}
 .wt-formsearch fieldset .wt-checkboxholder .wt-checkbox label img{
 	width: auto;
 	display: inline-block;

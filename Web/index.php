@@ -42,6 +42,7 @@
 														<input id="wt-jobs"  data-title="MeetUp" type="radio"  name="SearchType" value="MeetUp">
 														<label for="wt-jobs">Meet up</label>
 													</span>
+													<input type="hidden" value="1" name="page" id="pageIndex" />
 												</div>
 												<a href="javascript:;" class="wt-searchbtn" onclick="SearchBtn();"><i class="lnr lnr-magnifier"></i></a>
 											</div>
