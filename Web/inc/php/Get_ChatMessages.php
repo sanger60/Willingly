@@ -18,13 +18,15 @@ if (isset($_POST["ChatRoomID"]))
         }else{
             $AddQuery .= "where";
         }
-	    $AddQuery .= "\"ChatRoomID\"='".$_POST["ChatRoomID"]."'";
+	    $AddQuery .= "\"ChatID\"='".$_POST["ChatRoomID"]."'";
 
         $IsFist = false;
     }
 }
 
 var_dump($AddQuery);
+
+$Response = array();
 
 $List = $Conn_pgsql->query("SELECT * FROM public.\"Messages\" $AddQuery")->fetchAll(PDO::FETCH_ASSOC);
 
