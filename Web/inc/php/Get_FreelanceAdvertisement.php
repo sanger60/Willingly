@@ -15,7 +15,7 @@ $page = $_POST["PageId"];
 
 if (isset($_POST["searchKey"]))
 {
-    if (!is_null($_POST["searchKey"]))
+    if (!is_null($_POST["searchKey"]) && $_POST["searchKey"] != "")
     {
     	if ($IsFist == false)
         {
@@ -47,7 +47,7 @@ if (isset($_POST["searchKey"]))
 $AddQuery02 = "";
 if (isset($_POST["category"]))
 {
-    if (!is_null($_POST["category"]))
+    if (!is_null($_POST["category"]) && $_POST["category"] != "")
     {
         $Catagorys = explode(",", $_POST["category"]);
 
@@ -82,7 +82,7 @@ if (isset($_POST["category"]))
 $AddQuery03 = "";
 if (isset($_POST["price"]))
 {   
-    if (!is_null($_POST["price"]))
+    if (!is_null($_POST["price"]) && $_POST["price"] != "")
     {
     	list($Min, $Max) = explode("-", $_POST["price"]);
 
