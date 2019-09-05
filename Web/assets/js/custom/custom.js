@@ -228,7 +228,6 @@ function FreeLancerCategoryFilter(a,b){
 function FreeLancerFilter(){
     var filterProp = document.getElementsByName("category");
     var filterCheckedProps = "";
-    var filterStr ="";
 
     for(var i=0;i< filterProp.length;i++){
         if(filterProp[i].checked == true)
@@ -254,7 +253,7 @@ function FreeLancerFilter(){
             $.ajax({
                 url: "http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
                 method: "POST",
-                data: {category: filterStr,price: PriceTemplate,PageId:1},
+                data: {category: filterCheckedProps,price: PriceTemplate,PageId:1},
                 dataType: "JSON",
                 success: function(data) {
                     self.items = data;
