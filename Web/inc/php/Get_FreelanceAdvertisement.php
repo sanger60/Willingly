@@ -64,6 +64,7 @@ if (isset($_POST["category"]))
                     }else{
                         $AddQuery02 .= "where";
                     }
+                    $IsFist = false;
                     $First = true;
                 }
                     
@@ -97,6 +98,8 @@ if (isset($_POST["price"]))
         $IsFist = false;
     }
 }
+
+var_dump($AddQuery.$AddQuery02.$AddQuery03);    
 
 $Response = Array();
 

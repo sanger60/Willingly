@@ -21,7 +21,7 @@ if (isset($_SESSION['UserID'])) {
 		$data04 = $Conn_pgsql->query("Select * from Public.\"Users\" Where \"Id\"='".$_SESSION['UserID']."'")->fetchAll(PDO::FETCH_ASSOC);
 		if (count($data04) > 0) {
 			foreach ($data04 as $item04){
-				$Global_UserID = $_SESSION['Id'];
+				$Global_UserID = $_SESSION['UserID'];
 				$Global_Email = $item04['Email'];
 				$Global_Password = $item04['Password'];
                 $Global_Name = $item04['Name'];
@@ -29,14 +29,14 @@ if (isset($_SESSION['UserID'])) {
 		}else{
 			$Global_IsLogin = False;
 			if(GetFullUrl("OnlyCurretFile") != "/signin.php" && $DontUseChecker != True){
-				header("Location: ".GetFullUrl("Full")."/signin.php");
+				//header("Location: ".GetFullUrl("Full")."/signin.php");
 			}
 		}
 } else {
 	$Global_IsLogin = False;
 
 	if(GetFullUrl("OnlyCurretFile") != "/signin.php" && $DontUseChecker != True){
-		header("Location: ".GetFullUrl("Full")."/signin.php");
+		//header("Location: ".GetFullUrl("Full")."/signin.php");
 	}
 }
 function GetIP(){
