@@ -9,19 +9,24 @@ $IsFist = true;
 
 $AddQuery = "";
 
+$page = 1;
+
 $page = $_POST["PageId"];
 
 if (isset($_POST["searchKey"]))
 {
-    if ($IsFist == false)
+    if (!is_null($_POST["searchKey"]))
     {
-    	$AddQuery .= " and ";
-    }else{
-        $AddQuery .= "where";
-    }
-	$AddQuery .= " lower(\"Tittle\") similar to '%".strtolower($_POST["searchKey"])."%'";
+    	if ($IsFist == false)
+        {
+    	    $AddQuery .= " and ";
+        }else{
+            $AddQuery .= "where";
+        }
+	    $AddQuery .= " lower(\"Tittle\") similar to '%".strtolower($_POST["searchKey"])."%'";
 
-    $IsFist = false;
+        $IsFist = false;
+    }
 }
 
 //1 gelirse freelance 2 meetup
@@ -42,31 +47,37 @@ if (isset($_POST["searchKey"]))
 $AddQuery02 = "";
 if (isset($_POST["category"]))
 {
-    if ($IsFist == false)
+    if (!is_null($_POST["category"]))
     {
-    	$AddQuery02 .= " and ";
-    }else{
-        $AddQuery .= "where";
-    }
-	$AddQuery02 .= "\"CatagoryId\"='".$_POST["category"]."'";
+    	if ($IsFist == false)
+        {
+    	    $AddQuery02 .= " and ";
+        }else{
+            $AddQuery02 .= "where";
+        }
+	    $AddQuery02 .= "\"CatagoryId\"='".$_POST["category"]."'";
 
-    $IsFist = false;
+        $IsFist = false;
+    }
 }
 
 $AddQuery03 = "";
 if (isset($_POST["price"]))
-{
-    list($Min, $Max) = explode("-", $_POST["price"]);
-
-    if ($IsFist == false)
+{   
+    if (!is_null($_POST["price"]))
     {
-    	$AddQuery .= " and ";
-    }else{
-        $AddQuery .= "where";
-    }
-	$AddQuery03 .= "\"Price\" >= '$Min' and \"Price\" <= '$Max'";
+    	list($Min, $Max) = explode("-", $_POST["price"]);
 
-    $IsFist = false;
+        if ($IsFist == false)
+        {
+    	    $AddQuery03 .= " and ";
+        }else{
+            $AddQuery03 .= "where";
+        }
+	    $AddQuery03 .= "\"Price\" >= '$Min' and \"Price\" <= '$Max'";
+
+        $IsFist = false;
+    }
 }
 
 
