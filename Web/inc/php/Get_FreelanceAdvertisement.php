@@ -15,7 +15,7 @@ $page = $_POST["PageId"];
 
 if (isset($_POST["searchKey"]))
 {
-    if (!is_null($_POST["searchKey"]))
+    if (!is_null($_POST["searchKey"]) && $_POST["searchKey"] != "")
     {
     	if ($IsFist == false)
         {
@@ -47,23 +47,27 @@ if (isset($_POST["searchKey"]))
 $AddQuery02 = "";
 if (isset($_POST["category"]))
 {
-    if (!is_null($_POST["category"]))
+    if (!is_null($_POST["category"]) && $_POST["category"] != "")
     {
         $Catagorys = explode(",", $_POST["category"]);
 
-    	if ($IsFist == false)
-        {
-    	    $AddQuery02 .= " and ";
-        }else{
-            $AddQuery02 .= "where";
-        }
-
-        $AddQuery02 .= "(";
+        $First = false;
 
         for ($i = 0; $i < count($Catagorys); $i++)
         {
             if (!is_null($Catagorys[$i]) && isset($Catagorys[$i]) && $Catagorys[$i] !="")
             {
+                if ($First == false)
+                {
+                	if ($IsFist == false) {
+    	                $AddQuery02 .= " and ";
+                    }else{
+                        $AddQuery02 .= "where";
+                    }
+                    $IsFist = false;
+                    $First = true;
+                }
+                    
             	$AddQuery02 .= " \"CatagoryId\"='".$Catagorys[$i]."'";
 
         	    if (strval($i) != strval(count($Catagorys)-1))
@@ -72,10 +76,6 @@ if (isset($_POST["category"]))
                 }   
             }   
         }
-
-        $AddQuery02 .= " )";
-
-        $IsFist = false;
     }
 }
 
@@ -83,7 +83,7 @@ if (isset($_POST["category"]))
 $AddQuery03 = "";
 if (isset($_POST["price"]))
 {   
-    if (!is_null($_POST["price"]))
+    if (!is_null($_POST["price"]) && $_POST["price"] != "")
     {
     	list($Min, $Max) = explode("-", $_POST["price"]);
 
@@ -99,6 +99,7 @@ if (isset($_POST["price"]))
     }
 }
 
+var_dump($AddQuery.$AddQuery02.$AddQuery03);    
 
 $Response = Array();
 
