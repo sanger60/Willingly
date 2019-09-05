@@ -99,7 +99,7 @@ if (isset($_POST["price"]))
     }
 }
 
-var_dump($AddQuery.$AddQuery02.$AddQuery03);    
+//var_dump($AddQuery.$AddQuery02.$AddQuery03);    
 
 $Response = Array();
 

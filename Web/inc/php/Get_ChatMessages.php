@@ -24,6 +24,8 @@ if (isset($_POST["ChatRoomID"]))
     }
 }
 
+var_dump($AddQuery);
+
 $List = $Conn_pgsql->query("SELECT * FROM public.\"Messages\" $AddQuery")->fetchAll(PDO::FETCH_ASSOC);
 
 Print(json_encode(array("Data" =>$List)));
