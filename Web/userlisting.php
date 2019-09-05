@@ -81,7 +81,7 @@
 													<div class="wt-widgetcontent">
 														<div class="wt-applyfilters">
 															<span>En son uygulamak için “Filtre Uygula” ya tıklayın <br> Sizin tarafınızdan yapılan değişiklikler.</span>
-															<a href="javascript:void(0);" class="wt-btn" onclick="FreeLancerFilter()">Filtre Uygula</a>
+															<input type="submit" class="wt-btn" onclick="FreeLancerFilter()" />
 														</div>
 													</div>
 												</div>
