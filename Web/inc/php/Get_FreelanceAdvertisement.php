@@ -58,22 +58,27 @@ if (isset($_POST["category"]))
             $AddQuery02 .= "where";
         }
 
-        for ($i = 1; $i <= count($Catagorys); $i++)
+        $AddQuery02 .= "(";
+
+        for ($i = 0; $i < count($Catagorys); $i++)
         {
             if (!is_null($Catagorys[$i]) && isset($Catagorys[$i]) && $Catagorys[$i] !="")
             {
             	$AddQuery02 .= " \"CatagoryId\"='".$Catagorys[$i]."'";
 
-        	    if ($i != count($Catagorys))
+        	    if (strval($i) != strval(count($Catagorys)-1))
                 {
-            	    $AddQuery02 .= " and";
+            	    $AddQuery02 .= " or";
                 }   
             }   
         }
 
+        $AddQuery02 .= " )";
+
         $IsFist = false;
     }
 }
+
 
 $AddQuery03 = "";
 if (isset($_POST["price"]))
