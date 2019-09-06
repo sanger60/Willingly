@@ -76,24 +76,22 @@
 												<div class="wt-userlistingcontent">
 													<div class="wt-contenthead">
 														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> {{item.CompanyName}}</a>
-															<a href="jobsingle.html"><h2>{{item.Tittle}}</h2></a>
+															<a href="usersingle.html"><i class="fa fa-check-circle"></i> {{item.UserInfo.Name}}</a>
+															<a href="jobsingle.html"><h2>{{item.AdvertisementInfo.Tittle}}</h2></a>
 														</div>
 														<div class="wt-description">
-															<p>{{item.Description}}</p>
+															<p>{{item.AdvertisementInfo.Explanation}}</p>
 														</div>
 														<div class="wt-tag wt-widgettag">
-															<a href="javascript:void(0);">PHP</a>
-															<a href="javascript:void(0);">HTML</a>
-															<a href="javascript:void(0);">JQuery</a>
+															<a href="#">{{item.AdvertisementInfo.RequiredSkills}}</a>
 														</div>
 													</div>
 													<div class="wt-viewjobholder">
 														<ul>
-															<li><span><i class="fa fa-dollar-sign wt-viewjobdollar"></i></span></li> <!-- Orta düzy yatırım - yüksek yatırım - düşük yatırım -->
-															<li><span><i class="far fa-clock wt-viewjobclock"></i>Zaman: {{item.time}}</span></li>
-															<li><span><i class="fa fa-tag wt-viewjobtag"></i>İş No: {{item.Id}}</span></li> <!-- gy3yV2Vm5u -->
-															<li class="wt-btnarea"><a href="userlisting.html" class="wt-btn">Detay Göster</a></li>
+															<li><span><i class="fa fa-dollar-sign wt-viewjobdollar"></i>{{item.AdvertisementInfo.Price}} ₺</span></li> <!-- Orta düzy yatırım - yüksek yatırım - düşük yatırım -->
+															<li><span class="viewjobclockData"><i class="far fa-clock wt-viewjobclock"></i>{{item.AdvertisementInfo.DeadLine}}</span></li>
+															<li><span><i class="fa fa-tag wt-viewjobtag"></i>No: {{item.AdvertisementInfo.Id}}</span></li> <!-- gy3yV2Vm5u -->
+															<li class="wt-btnarea"><a href="javascript:;" class="wt-btn" onclick="JobDetail(this);" v-bind:title="item.AdvertisementInfo.Id">Detay Göster</a></li>
 														</ul>
 													</div>
 												</div>
@@ -102,20 +100,20 @@
 													<ul>
 														<li class="wt-prevpage"><a href="javascrip:void(0);"><i class="lnr lnr-chevron-left"></i></a></li>
 														<li>
-															<input type="submit" class="paginationBtn" onclick="pageChanged(this);" value="1" />
+															<input type="submit" class="paginationBtn" onclick="JobPageChanged(this);" value="1" />
 														</li>
 														<li>
-															<input type="submit" class="paginationBtn" onclick="pageChanged(this);" value="2" />
+															<input type="submit" class="paginationBtn" onclick="JobPageChanged(this);" value="2" />
 														</li>
 														<li>
-															<input type="submit" class="paginationBtn" onclick="pageChanged(this);" value="3" />
+															<input type="submit" class="paginationBtn" onclick="JobPageChanged(this);" value="3" />
 														</li>
 														<li>
-															<input type="submit" class="paginationBtn" onclick="pageChanged(this);" value="4" />
+															<input type="submit" class="paginationBtn" onclick="JobPageChanged(this);" value="4" />
 														</li>
 														<li><a href="javascrip:void(0);">...</a></li>
 														<li>
-															<input type="submit" class="paginationBtn" onclick="pageChanged(this);" value="50" />
+															<input type="submit" class="paginationBtn" onclick="JobPageChanged(this);" value="50" />
 														</li>
 														<li class="wt-nextpage"><a href="javascrip:void(0);"><i class="lnr lnr-chevron-right"></i></a></li>
 													</ul>

@@ -457,6 +457,7 @@ function FreelancerSendOffer(){
     
     //#endregion
 
+      
         var ItemsVue = new Vue({
             el: '#wt-main',
             data:{
@@ -474,6 +475,7 @@ function FreelancerSendOffer(){
                     dataType: "JSON",
                     success: function (data) {
                         self.items = data;
+
                     },
                     error: function (error) {
                         Swal.fire({
@@ -491,9 +493,6 @@ function FreelancerSendOffer(){
                     timeout: 60000,
                     success: function (data) {
                         self.categories = data.Catagory;
-                        if(jQuery("#wt-productrangeslider").length > 0 ){
-                            ageRangeslider(data.Price[0].min,data.Price[0].max);
-                        }
                     },
                     error: function (error) {
                         Swal.fire({
@@ -507,13 +506,60 @@ function FreelancerSendOffer(){
         });
     
         window.vue = ItemsVue;
-    
     }
 
     if(window.location.toString().includes("http://willingly.com/joblisting.php"))
     {
         JobList();
+
+        $(document).ready(function() {
+            setTimeout(function() {
+                var widgets = $('.wt-widgettag');
+                var clocks = $('.viewjobclockData');
+                console.log(clocks);
+                console.log(widgets);
+                for(var i=0; i < widgets.length;i++)
+                {
+                    console.log(i);
+
+                    var firstChl = widgets[i].firstChild;
+                    console.log(firstChl);
+
+                    var firstDizi = firstChl.innerText.split(",");
+                    console.log(firstDizi);
+                    // window
+                    $(firstChl).remove();
+
+                    for(var j=0;j< firstDizi.length;j++)
+                    {
+                        var txt3 = document.createElement("a");
+                        txt3.innerText = firstDizi[j];
+                        $(widgets[i]).append(txt3);
+                    }
+                }
+
+                for(var i=0;i< clocks.length;i++){
+                    var eskiDeger = clocks[i].innerText.replace("00:00:00","");
+
+                    clocks[i].innerText = "";
+
+                    var item = document.createElement('i');
+
+                    item.classList.add("far");
+                    item.classList.add("fa-clock");
+                    item.classList.add("wt-viewjobclock");
+
+                    $(clocks[i]).append(item);
+
+                    
+                    var item2 = document.createElement('text');
+                    item2.innerText = eskiDeger;
+                    $(clocks[i]).append(item2);
+                }
+            },1300);
+        });
     }
+
 
     function JobPageChanged(a){
     
@@ -565,7 +611,12 @@ function FreelancerSendOffer(){
     
         console.log("Categori Filtre Post Sorgusu : "+filterCheckedProps);
         var PriceTemplate = document.getElementById("wt-consultationfeeamount").value;
-        
+        if(PriceTemplate.includes("₺")){
+            PriceTemplate = PriceTemplate.replace("₺","");
+            PriceTemplate = PriceTemplate.replace("₺","");
+            PriceTemplate = PriceTemplate.replace(" ","");
+            PriceTemplate = PriceTemplate.replace(" ","");
+        }
     
         var urlParams = new URLSearchParams(location.search);
         var catKey = urlParams.get('category');

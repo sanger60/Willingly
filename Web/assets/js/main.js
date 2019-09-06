@@ -217,21 +217,21 @@ jQuery(document).on('ready', function() {
 	    tooltipHover: true,
 	});
 	/* CONSULTATION FEE SLIDER */
-	function ageRangeslider(min,max){
+	function ageRangeslider(){
 		jQuery("#wt-productrangeslider").slider({
 			range: true,
-			min: min,
-			max: max,
-			values: [ 10, 110 ],
+			min: 0,
+			max: 5000,
+			values: [ 10, 4900 ],
 			slide: function( event, ui ) {
-				jQuery( "#wt-consultationfeeamount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+				jQuery( "#wt-consultationfeeamount" ).val( "₺" + ui.values[ 0 ] + " - ₺" + ui.values[ 1 ] );
 			}
 		});
-		jQuery( "#wt-consultationfeeamount" ).val( "$" + jQuery("#wt-productrangeslider").slider( "values", 0 ) + " - $" + jQuery("#wt-productrangeslider").slider( "values", 1 ));
+		jQuery( "#wt-consultationfeeamount" ).val( "₺" + jQuery("#wt-productrangeslider").slider( "values", 0 ) + " - ₺" + jQuery("#wt-productrangeslider").slider( "values", 1 ));
 	}
-	// if( jQuery("#wt-productrangeslider").length > 0 ){
-	// 	ageRangeslider();
-	// }
+	 if( jQuery("#wt-productrangeslider").length > 0 ){
+	 	ageRangeslider();
+	 }
 	/* SHORT DESCRIPTION */
 	var _readmore = jQuery('.wt-userdetails .wt-description');
 	_readmore.readmore({
