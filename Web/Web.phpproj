@@ -24,9 +24,13 @@
     <Compile Include="inc\frontend\views\head_start.php" />
     <Compile Include="inc\frontend\views\menu.php" />
     <Compile Include="inc\php\Config.php" />
+    <Compile Include="inc\php\Get_ChatMessages.php" />
+    <Compile Include="inc\php\Get_ChatList.php" />
     <Compile Include="inc\php\Get_UserInformation.php" />
     <Compile Include="inc\php\Get_FreelanceAdvertisement.php" />
     <Compile Include="inc\php\Get_FilterConfig.php" />
+    <Compile Include="inc\php\Update_UserInformationUpdate.php" />
+    <Compile Include="inc\php\Update_FreelancerAdvertisement.php" />
     <Compile Include="inc\php\Insert_FreelancerAdvertisementCreate.php" />
     <Compile Include="inc\php\Update_UserActivation.php" />
     <Compile Include="inc\php\Insert_CreateNewUser.php" />
