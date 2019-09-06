@@ -405,14 +405,13 @@ address { font-style: italic; }
 }
 .wt-btn {
 	color: #fff;
-	padding: 0 50px;
+	padding: 18px 50px;
 	background: #fff;
 	position:relative;
 	text-align:center;
 	border-radius: 5px;
 	display: inline-block;
 	vertical-align: middle;
-	text-transform: uppercase;
 	font:700 13px/50px 'Poppins', Arial, Helvetica, sans-serif;
 }
 .wt-btn:hover{
