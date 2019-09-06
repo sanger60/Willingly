@@ -12,11 +12,14 @@ CreateInsertQuery($_POST["Tittle"],true,"Tittle");
 CreateInsertQuery($_POST["Explanation"],false,"Explanation");
 CreateInsertQuery($_POST["Price"],false,"Price"); 
 CreateInsertQuery($_POST["DonationPrice"],false,"DonationPrice");
-CreateInsertQuery($_POST["AdvertisementSkills"],false,"AdvertisementSkills"); 
+CreateInsertQuery($_POST["RequiredSkills"],false,"RequiredSkills"); 
 CreateInsertQuery($_POST["CatagoryId"],false,"CatagoryId");
 CreateInsertQuery($_POST["ADate"],false,"ADate");
+CreateInsertQuery($_POST["DeadLine"],false,"DeadLine");
 
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Freelancer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
+//  var_dump("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
+
+$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
 $data08->execute();
 
 

@@ -11,11 +11,13 @@ CreateInsertQuery($_POST["Tittle"],true);
 CreateInsertQuery($_POST["Explanation"]);
 CreateInsertQuery($_POST["Price"]); 
 CreateInsertQuery($_POST["DonationPrice"]);
-CreateInsertQuery($_POST["AdvertisementSkills"]);
+CreateInsertQuery($_POST["RequiredSkills"]); 
 CreateInsertQuery($_POST["CatagoryId"]);
 CreateInsertQuery($_POST["ADate"]);
+CreateInsertQuery($_POST["DeadLine"]);
 
-$data08 = $Conn_pgsql->prepare("UPDATE public.\"Freelancer_Advertisement\" SET $QueryStep1 where \"UserId\"='$Global_UserID' and \"Id\"='".$_POST["Id"]."'");
+
+$data08 = $Conn_pgsql->prepare("UPDATE public.\"Employer_Advertisement\" SET $QueryStep1 where \"UserId\"='$Global_UserID' and \"Id\"='".$_POST["Id"]."'");
 $data08->execute();
 
 print(json_encode(array(
