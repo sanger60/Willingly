@@ -13,6 +13,24 @@ $page = 1;
 
 $page = $_POST["PageId"];
 
+$AddQuery04 = "";
+
+if (isset($_POST["AdvertisementId"]))
+{
+    if (!is_null($_POST["AdvertisementId"]) && $_POST["AdvertisementId"] != "")
+    {
+    	if ($IsFist == false)
+        {
+    	    $AddQuery04 .= " and ";
+        }else{
+            $AddQuery04 .= "where";
+        }
+	    $AddQuery04 .= "\"Id\" = '".$_POST["AdvertisementId"]."'";
+
+        $IsFist = false;
+    }
+}
+
 if (isset($_POST["searchKey"]))
 {
     if (!is_null($_POST["searchKey"]) && $_POST["searchKey"] != "")
@@ -104,17 +122,35 @@ if (isset($_POST["price"]))
     }
 }
 
+$Users = $Conn_pgsql->query("SELECT * FROM public.\"Users\"")->fetchAll(PDO::FETCH_ASSOC);
+
 //var_dump($AddQuery.$AddQuery02.$AddQuery03);    
 
 $Response = Array();
 
-$IlanCount = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
+$IlanCount = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03 $AddQuery04")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
 
 $limit = 10;
 $total_results = $IlanCount;
 $total_pages = ceil($total_results/$limit);
 $starting_limit = ($page-1)*$limit;
 
-$Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03 ORDER BY \"Id\" DESC LIMIT $limit offset $starting_limit")->fetchAll(PDO::FETCH_ASSOC);
+$Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03 $AddQuery04 ORDER BY \"Id\" DESC LIMIT $limit offset $starting_limit")->fetchAll(PDO::FETCH_ASSOC);
 
-Print(json_encode(array("Data" =>$Ilan)));
+foreach ($Ilan as $value)
+{
+    $ArrayT = array();
+
+    $ArrayT["AdvertisementInfo"] = $value;
+
+    foreach ($Users as $value01)
+    {
+    	if ($value["UserId"] == $value01["Id"])
+        {
+            $ArrayT["UserInfo"] = $value01;
+        }
+    }	
+    array_push($Response,$ArrayT);
+}
+
+Print(json_encode(array("Data" =>$Response)));

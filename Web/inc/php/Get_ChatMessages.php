@@ -28,6 +28,9 @@ var_dump($AddQuery);
 
 $Response = array();
 
+$data08 = $Conn_pgsql->prepare("UPDATE public.\"Messages\" SET \"IsRead\"='t' where \"ChatID\"='".$_POST["ChatRoomID"]."' and \"Reciver\"='$Global_UserID'");
+$data08->execute();
+
 $List = $Conn_pgsql->query("SELECT * FROM public.\"Messages\" $AddQuery")->fetchAll(PDO::FETCH_ASSOC);
 
 Print(json_encode(array("Data" =>$List)));
