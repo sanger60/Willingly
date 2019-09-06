@@ -377,7 +377,7 @@ if(window.location.toString().includes("http://willingly.com/usersingle.php"))
     var AdDetailVue = new Vue({
         el: '#wt-main',
         data:{
-            item = []
+            item: []
         },
         mounted: function(){
             var self = this;
@@ -431,29 +431,32 @@ function FreelancerSendOffer(){
         var page = urlParams.get('page');
         var category = urlParams.get("category");
         var price = urlParams.get("price");
+    //#region FilterDetails
+    if(category != null && category != ""){
     
-        if(category != null && category != ""){
+        var ul = $('#filtertags');
+        var li = ul.find('li:first').clone(true).appendTo(ul);
+
+        li.find('a span')[0].innerText = "Kategori = "+category;
+    }
+
+    if(price != null && price != ""){
+        var ul = $('#filtertags');
+        var li = ul.find('li:first').clone(true).appendTo(ul);
+
+        li.find('a span')[0].innerText = "Fiyat = "+price;
+    }
+
+        
+    var ul2 = $('#filtertags');
+    var liCount = ul2.find('li');
+    if(liCount.length > 1){
+        ul2.find('li:first').find('a span')[0].innerText = "Filtreler = ";
+    }
+
     
-            var ul = $('#filtertags');
-            var li = ul.find('li:first').clone(true).appendTo(ul);
-    
-            li.find('a span')[0].innerText = "Kategori = "+category;
-        }
-    
-        if(price != null && price != ""){
-            var ul = $('#filtertags');
-            var li = ul.find('li:first').clone(true).appendTo(ul);
-    
-            li.find('a span')[0].innerText = "Fiyat = "+price;
-        }
-    
-            
-        var ul2 = $('#filtertags');
-        var liCount = ul2.find('li');
-        if(liCount.length > 1){
-            ul2.find('li:first').find('a span')[0].innerText = "Filtreler = ";
-        }
-    
+    //#endregion
+
         var ItemsVue = new Vue({
             el: '#wt-main',
             data:{
@@ -465,7 +468,7 @@ function FreelancerSendOffer(){
             mounted: function () {
                 var self = this;
                 $.ajax({
-                    url: 'http://willingly.tk/inc/php/Get_JobAdvertisement.php',
+                    url: 'http://willingly.tk/inc/php/Get_Employer_Advertisement.php',
                     method: 'POST',
                     data: {searchKey:searchKey,searchtip: searchType2,PageId:page,category: category,price:price},
                     dataType: "JSON",
@@ -488,8 +491,9 @@ function FreelancerSendOffer(){
                     timeout: 60000,
                     success: function (data) {
                         self.categories = data.Catagory;
-                        self.MinPrice = data.Price[0].min;
-                        self.MaxPrice = data.Price[0].max;
+                        if(jQuery("#wt-productrangeslider").length > 0 ){
+                            ageRangeslider(data.Price[0].min,data.Price[0].max);
+                        }
                     },
                     error: function (error) {
                         Swal.fire({
@@ -504,6 +508,11 @@ function FreelancerSendOffer(){
     
         window.vue = ItemsVue;
     
+    }
+
+    if(window.location.toString().includes("http://willingly.com/joblisting.php"))
+    {
+        JobList();
     }
 
     function JobPageChanged(a){
