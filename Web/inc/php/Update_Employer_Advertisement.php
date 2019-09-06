@@ -9,7 +9,6 @@ $QueryStep1 = "";
 
 CreateInsertQuery($_POST["Tittle"],true);
 CreateInsertQuery($_POST["Explanation"]);
-CreateInsertQuery($_POST["Id"]);
 CreateInsertQuery($_POST["Price"]); 
 CreateInsertQuery($_POST["DonationPrice"]);
 CreateInsertQuery($_POST["RequiredSkills"]); 
