@@ -106,6 +106,8 @@ if (isset($_POST["price"]))
 
 //var_dump($AddQuery.$AddQuery02.$AddQuery03);    
 
+$Users = $Conn_pgsql->query("SELECT * FROM public.\"Users\"")->fetchAll(PDO::FETCH_ASSOC);
+
 $Response = Array();
 
 $IlanCount = $Conn_pgsql->query("SELECT COUNT(*) FROM public.\"Employer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03")->fetchAll(PDO::FETCH_ASSOC)[0]["count"];
@@ -117,4 +119,21 @@ $starting_limit = ($page-1)*$limit;
 
 $Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Employer_Advertisement\" $AddQuery $AddQuery02 $AddQuery03 ORDER BY \"Id\" DESC LIMIT $limit offset $starting_limit")->fetchAll(PDO::FETCH_ASSOC);
 
-Print(json_encode(array("Data" =>$Ilan)));
+foreach ($Ilan as $value)
+{
+    $ArrayT = array();
+
+    $ArrayT["AdvertisementInfo"] = $value;
+
+    foreach ($Users as $value01)
+    {
+    	if ($value["UserId"] == $value01["Id"])
+        {
+            $ArrayT["UserInfo"] = $value01;
+        }
+    }	
+    array_push($Response,$ArrayT);
+}
+
+
+Print(json_encode(array("Data" =>$Response)));

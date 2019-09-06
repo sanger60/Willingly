@@ -10,10 +10,11 @@ $QueryStep1 = "";
 CreateInsertQuery($_POST["Tittle"],true);
 CreateInsertQuery($_POST["Explanation"]);
 CreateInsertQuery($_POST["Id"]);
-CreateInsertQuery($_POST["Price"]);
+CreateInsertQuery($_POST["Price"]); 
 CreateInsertQuery($_POST["DonationPrice"]);
 CreateInsertQuery($_POST["AdvertisementSkills"]);
 CreateInsertQuery($_POST["CatagoryId"]);
+CreateInsertQuery($_POST["ADate"]);
 
 $data08 = $Conn_pgsql->prepare("UPDATE public.\"Freelancer_Advertisement\" SET $QueryStep1 where \"UserId\"='$Global_UserID' and \"Id\"='".$_POST["Id"]."'");
 $data08->execute();
