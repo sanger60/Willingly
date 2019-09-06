@@ -9,7 +9,7 @@
 							<div class="wt-cattitle">
 								<h3>
 									<form method="GET">
-									<input type="hidden" v-bind:value="item.Id" name="CategoryId" />
+									<input type="hidden" v-bind:value="item.Id" name="category" />
 									<input type="submit" v-bind:value="item.Name" class="btnCategory" />
 									</form>
 								</h3>
@@ -43,7 +43,7 @@
 														<form class="wt-formtheme wt-formsearch">
 															<fieldset>
 																<div class="form-group">
-																	<input type="text" name="Search" onkeydown="FreeLancerFilter(this,'category');" onchange="FreeLancerFilter(this,'category');" class="form-control" placeholder="Kategori Ara">
+																	<input type="text" name="Search" onkeydown="FreeLancerCategoryFilter(this,'category');" onchange="FreeLancerCategoryFilter(this,'category');" class="form-control" placeholder="Kategori Ara">
 																</div>
 															</fieldset>
 															<fieldset>
@@ -81,7 +81,7 @@
 													<div class="wt-widgetcontent">
 														<div class="wt-applyfilters">
 															<span>En son uygulamak için “Filtre Uygula” ya tıklayın <br> Sizin tarafınızdan yapılan değişiklikler.</span>
-															<input type="submit" class="wt-btn" onclick="FreeLancerFilter()" />
+																<input type="submit" class="wt-btn" id="btnFilter" onclick="FreeLancerFilter();" />
 														</div>
 													</div>
 												</div>
@@ -93,24 +93,9 @@
 													<span>01 - 48 / 57143 <em>"Kategori Adı"</em> için sonuçlar</span>
 												</div>
 												<div class="wt-filterholder">
-													<ul class="wt-filtertag">
-														<li class="wt-filtertagclear">
-															<a href="javascrip:void(0)"><i class="fa fa-times"></i> <span>Clear All Filter</span></a>
-														</li>
+													<ul class="wt-filtertag" id="filtertags">
 														<li class="alert alert-dismissable fade in">
-															<a href="javascrip:void(0)"><i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i> <span>Graphic Design</span></a>
-														</li>
-														<li class="alert alert-dismissable fade in">
-															<a href="javascrip:void(0)"><i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i> <span>Any Hourly Rate</span></a>
-														</li>
-														<li class="alert alert-dismissable fade in">
-															<a href="javascrip:void(0)"><i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i> <span>Any Freelancer Type</span></a>
-														</li>
-														<li class="alert alert-dismissable fade in">
-															<a href="javascrip:void(0)"><i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i> <span>Chinese</span></a>
-														</li>
-														<li class="alert alert-dismissable fade in">
-															<a href="javascrip:void(0)"><i class="fa fa-times close" data-dismiss="alert" aria-label="close"></i> <span>English</span></a>
+															<a href="javascrip:void(0)"><span></span></a>
 														</li>
 													</ul>
 												</div>
@@ -123,11 +108,10 @@
 															<div class="wt-title">
 																<a href="javascript:;"><i class="fa fa-check-circle"></i> {{item.UserId}} Id
 																</a>
-																<a href="usersingle.php"><h2>{{item.Tittle}}</h2></a>
+																<a href="javascript:;" onclick="AdDetail(this);" v-bind:title="item.Id"><h2>{{item.Tittle}}</h2></a>
 															</div>
 															<ul class="wt-userlisting-breadcrumb">
 																<li><span><i class="far fa-money-bill-alt"></i> {{item.Price}} ₺</span></li>
-																<li><a href="javascript:void(0);" class="wt-clicksave"><i class="fa fa-heart"></i> Save</a></li>
 															</ul>
 														</div>
 														<div class="wt-rightarea">
