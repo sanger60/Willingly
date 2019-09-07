@@ -42,14 +42,10 @@ $(document).ready(function() {
 });
 
 
-function PressToMessageIdChanger(a){
-    Id = a;
-    console.log(Id);
- }
 
+function ViewMessage(a){
+    var id = a;
 
-var Id;
-function ViewMessage(){
     var MyVue = new Vue({
         el: '#wt-main',
         data:{
@@ -60,13 +56,13 @@ function ViewMessage(){
             $.ajax({
                 url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
                 method:"POST",
-                data:{ChatRoomId:Id},
+                data:{ChatRoomId:id},
                 dataType:"JSON",
                 success:function(data){
-                     
+                     self.items = data.Data;
                 },
                 error:function(a,b,g){
-                    
+                    Swal.fire("Hatalı İşlem");
                 }
             });
         }
