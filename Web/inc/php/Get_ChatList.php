@@ -29,7 +29,10 @@ foreach ($List as $value)
 
     $Messages = $Conn_pgsql->query("SELECT \"Id\",\"Text\" FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' Order By \"Id\" DESC Limit 1")->fetchAll(PDO::FETCH_ASSOC);
 
-    $Response["message"] = $Messages[0]["Text"];
+    if (count($Messages) != 0)
+    {
+        $Response["message"] = $Messages[0]["Text"];	
+    }
 }
 
 Print(json_encode(array("Data" =>$Response)));
