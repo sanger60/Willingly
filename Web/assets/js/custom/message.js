@@ -56,7 +56,7 @@ function ViewMessage(a){
             $.ajax({
                 url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
                 method:"POST",
-                data:{ChatRoomId:id},
+                data:{ChatRoomID:id},
                 dataType:"JSON",
                 success:function(data){
                      self.Items = data.Data;
