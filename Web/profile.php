@@ -158,19 +158,16 @@
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
                                                     <div class="form-group form-group-half">
-                                                        <input type="text" name="first name" class="form-control" placeholder="İsim">
+                                                        <input type="text" name="first name" class="form-control" placeholder="İsim" v-bind:value="items.Name">
                                                     </div>
                                                     <div class="form-group form-group-half">
-                                                        <input type="email" name="last name" class="form-control" placeholder="Soyisim">
-                                                    </div>
-                                                    <div class="form-group form-group-half">
-                                                        <input type="number" name="rate" class="form-control" placeholder="Saatlik Bedeliniz (TL)">
+                                                        <input type="email" name="last name" class="form-control" placeholder="Soyisim" v-bind:value="items.Surname">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="tagline" class="form-control" placeholder="Yeteneklerini Buraya Yaz">
+                                                        <input type="text" name="tagline" class="form-control" placeholder="Yeteneklerini Buraya Yaz" v-bind:value="items.Skills">
                                                     </div>
                                                     <div class="form-group">
-                                                        <textarea name="message" class="form-control" placeholder="Hakkında"></textarea>
+                                                        <textarea name="message" class="form-control" placeholder="Hakkında" v-bind:value="items.About"></textarea>
                                                     </div>
                                                 </fieldset>
                                             </form>
