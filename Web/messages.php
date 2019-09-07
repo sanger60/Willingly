@@ -114,7 +114,10 @@
 													<div class="wt-adcontent">
 														<h3>{{item.userName}}</h3>
                                                         <span>{{item.message}}</span>
-                                                        <input type="hidden" v-bind:value="item.Id"  />
+														<input type="hidden" v-bind:value="item.Id"  />
+														<input type="hidden" v-bind:value="item.Reciver" name="reciverIds" />
+														<input type="hidden" v-bind:value="item.ChatID" name="chatIds" />
+
 													</div>
 												</div>
 											</div>
@@ -127,13 +130,13 @@
 												</div>
 												<div class="wt-replaybox">
 													<div class="form-group">
-														<textarea class="form-control" name="reply" placeholder="Type message here"></textarea>
+														<textarea class="form-control" id="msgBox" name="reply" placeholder="Type message here"></textarea>
 													</div>
 													<div class="wt-iconbox">
 														<i class="lnr lnr-thumbs-up"></i>
 														<i class="lnr lnr-thumbs-down"></i>
 														<i class="lnr lnr-smile"></i>
-														<a href="javascript:void(0);" class="wt-btnsendmsg">Gönder</a>
+														<a href="javascript:void(0);" onclick="SendMessage()" class="wt-btnsendmsg">Gönder</a>
 													</div>
 												</div>
 											</div>

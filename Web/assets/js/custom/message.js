@@ -118,9 +118,25 @@ function ViewMessage(a){
         });
 }
 
-
-
-
 function SendMessage(){
+    var t1 = document.getElementsByName("reciverIds")[0].value;
+    var t2 = document.getElementsByName("chatIds")[0].value;
+    var msg = document.getElementById("msgBox").value;
 
+    $(".wt-adcontent input")
+    $.ajax({
+        url:"https://willingly.tk/inc/php/Insert_NewMessage.php",
+        method:"POST",
+        data:{Text:msg,Reciver:t1,ChatID:t2},
+        dataType:"JSON",
+        success:function(data){
+            if(data.Status == true)
+            Swal.fire("Mesaj Gönderildi");
+            else Swal.fire("Bilinmeyen bir hata oluştu");
+
+        },
+        error:function(a,b,g){
+            Swal.fire("Bilinmeyen bir hata oluştu"),
+        }
+    })
 }
