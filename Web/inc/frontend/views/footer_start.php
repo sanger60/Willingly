@@ -109,4 +109,6 @@
 	<script src="/../../../assets/js/custom/login.js"></script>
 	<script src="/../../../assets/js/custom/register.js"></script>
 	<script src="/../../../assets/js/custom/custom.js"></script>
+	<script src="/../../../assets/js/custom/profile.js"></script>
+
     <!-- Customs End -->

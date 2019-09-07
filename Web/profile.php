@@ -5,7 +5,7 @@
 <?php require 'inc/frontend/views/head_end.php'; ?>
         <!--Main Start-->
         <!--Main Start-->
-        <main id="wt-main" class="wt-main wt-haslayout">
+        <main id="wt-main" class="wt-main wt-haslayout" >
             <!--Sidebar Start-->
             <div id="wt-sidebarwrapper" class="wt-sidebarwrapper">
                 <div id="wt-btnmenutoggle" class="wt-btnmenutoggle">
@@ -24,7 +24,7 @@
                             <figure><img src="http://amentotech.com/htmls/worktern/images/sidebar/img-02.jpg" alt="img description"></figure>
                             <div class="wt-title">
                                 <h2><a href="javascript:void(0);">İsim veya Kullanıcı adı </a></h2>
-                                <span>{{UserName}}</span>
+                                <span>{{items.Username}}</span>
                             </div>
                             <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Bir İş İlanı Paylaş</a></div>
                         </div>
@@ -157,15 +157,6 @@
                                             </div>
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
-                                                    <div class="form-group form-group-half">
-                                                        <span class="wt-select">
-                                                            <select>
-                                                                <option value="" disabled="">Cinsiyet Seçiniz</option>
-                                                                <option value="">Erkek</option>
-                                                                <option value="">Kadın</option>
-                                                            </select>
-                                                        </span>
-                                                    </div>
                                                     <div class="form-group form-group-half">
                                                         <input type="text" name="first name" class="form-control" placeholder="İsim">
                                                     </div>
@@ -1124,5 +1115,4 @@
         </main>
         <!--Main End-->	
 <?php require 'inc/frontend/views/footer_start.php'; ?>
-<script type="text/javascript" src="/../../../assets/js/custom/profile.js">
 <?php require 'inc/frontend/views/footer_end.php'; ?>
