@@ -53,8 +53,9 @@ function UserUpdate(){
     var percentList= $("#skillList li").find('.skill-dynamic-html');
     var skillsName = "";
     for(var i=0;i< percentList.length;i++){
-        skillsName += percentList[i].innerText;
+        skillsName += percentList[i].innerText +",";
     }
+    console.log(skillsName);
     $.ajax({
         url: "https://willingly.tk/inc/php/Update_UserInformationUpdate.php",
         method: "POST",
