@@ -12,7 +12,7 @@ $(document).ready(function() {
                 method:"GET",
                 dataType:"JSON",
                 success: function(data){
-                    self.items = data;
+                    self.items = data.Data;
                 },
                 error: function(a,b,g){
                     Swal.fire({
@@ -40,3 +40,35 @@ $(document).ready(function() {
         }
     });
 });
+
+
+function PressToMessageIdChanger(a){
+    Id = a;
+    console.log(Id);
+ }
+
+
+var Id;
+function ViewMessage(){
+    var MyVue = new Vue({
+        el: '#wt-main',
+        data:{
+            Items:[]
+        },
+        mounted: function(){
+            var self= this;
+            $.ajax({
+                url:"inc/php/Get_ChatMessages.php",
+                method:"POST",
+                data:{ChatRoomId:Id},
+                dataType:"JSON",
+                success:function(data){
+                     
+                },
+                error:function(a,b,g){
+                    
+                }
+            });
+        }
+    });
+}

@@ -162,11 +162,12 @@
 												</fieldset>
 											</form>
 											<div class="wt-verticalscrollbar wt-dashboardscrollbar">
-												<div class="wt-ad" v-for="item in items">
+												<div class="wt-ad" v-for="item in items" onclick="PressToMessageIdChanger($(this).find('div input')[0].val());">
 													<figure><img v-bind:src="item.userImage" alt=""></figure>
 													<div class="wt-adcontent">
 														<h3>{{item.userName}}</h3>
-														<span>{{item.message}}</span>
+                                                        <span>{{item.message}}</span>
+                                                        <input type="hidden" v-bind:value="item.Id"  />
 													</div>
 												</div>
 											</div>
