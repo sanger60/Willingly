@@ -230,7 +230,7 @@
                                             </div>
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
-                                                    <div class="form-group form-group-half">
+                                                    <div class="form-group form-group-half" style="width:100% !important;">
                                                         <textarea name="address" class="form-control" placeholder="Adres" v-bind:value="items.Adress" id="Adresses"></textarea>
                                                     </div>
 
