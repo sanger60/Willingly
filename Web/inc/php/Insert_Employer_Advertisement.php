@@ -19,7 +19,7 @@ CreateInsertQuery($_POST["DeadLine"],false,"DeadLine");
 
 //  var_dump("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
 
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
+$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\",\"Status\") VALUES ($QueryStep2,'$Global_UserID,'t'')");
 $data08->execute();
 
 
