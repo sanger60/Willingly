@@ -674,6 +674,103 @@ function FreelancerSendOffer(){
 
         window.location.href="https://willingly.tk/jobsingle.php?uniqorne="+id;
     }
+    function DateNow(){
+
+    }
+
+    function JobSkillsAdd(){
+        var skillName = document.getElementById("skillJob").value;
+        var list = document.getElementById("skillList");
+        if(skillName != "")
+        {
+            list.innerHTML += "<li> <div class='wt-dragdroptool'> <a href='javascript:void(0)'' class='lnr lnr-menu'></a> </div> <span class='skill-dynamic-html'>"+skillName+"</span> <div class='wt-rightarea'> <a href='javascript:void(0);' class='wt-deleteinfo'><i class='lnr lnr-trash'></i></a> </div> </li>"
+        }
+    }
+    if(window.location.href.toString().includes("jobPost.php"))
+    {
+        var jobVue = new Vue({
+            el: 'wt-main',
+            data:{
+                items: []
+            },
+            mounted: function() {
+                var self = this;
+                $.ajax({
+                    url:"https://willingly.tk/inc/php/Get_FilterConfig.php",
+                    method:"GET",
+                    dataType:"JSON",
+                    success:function(data){
+                        self.items = data.Catagory;
+                    },
+                    eroor:function(a,r,b){
+                        Swal.fire("Bilinmeyen bir hata oluştu !");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("number").onblur =function (){    
+            this.value = parseFloat(this.value.replace(/,/g, ""))
+                            .toFixed(2)
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            
+            // document.getElementById("display").value = this.value.replace(/,/g, "")
+            
+        }
+    }
+
+
+    function JobAdd(){
+        var titItem = document.getElementById("tittle").value;
+        var Description = document.getElementById("wt-tinymceeditor").value;
+        var DeadLineDate = document.getElementById("deadline").value;
+        var donationPercent = document.getElementById("donationPerce").value;
+        var price = document.getElementById('number').value;
+        var categoryId = $("#categories").children("option:selected").val();
+        var Abilities = $('#AddedSkils li').find('.skill-dynamic-html');
+        var SkilsName = "";
+
+        //#region todayDateGet
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        //#endregion
+        var UploadDate = today;
+
+        for(var i=0;i< Abilities.length;i++){
+            SkilsName += Abilities[i]+",";
+        }
+        $.ajax({
+            url:"https://willingly.tk/inc/php/Insert_Employer_Advertisement.php",
+            method:"POST",
+            data:{Tittle:titItem,Explanation:Description,Price:price,DonationPrice:donationPercent,RequiredSkills:SkilsName,CatagoryId:categoryId,ADate:UploadDate,DeadLine:DeadLineDate},
+            dataType:"JSON",
+            success:function(data){
+                if(data.Status == true){
+                    Swal.fire("Tebrikler, Başarıyla Kaydedildi.");
+                }
+                else{
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });        
+                }
+            },
+            error:function(a,r,b){
+                Swal.fire({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'Bir şeyler yanlış gitti!'
+                });    
+            }
+        });
+    }
 
   // ---------------------------------------------------------------------------------- \\
                         //          JOB    SİNGLE     PAGE            \\
@@ -699,7 +796,11 @@ function FreelancerSendOffer(){
                     console.log(data);
                 },
                 error:function(a,b,g) {
-                    Swal.fire("Bir hata oluştu !");
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });
                 }
             });
         }
