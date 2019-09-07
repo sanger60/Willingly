@@ -23,7 +23,7 @@
                                 <h2><a href="javascript:void(0);">{{items.Name}} {{items.Surname}}</a></h2>
                                 <span>{{items.Username}}</span>
                             </div>
-                            <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Bir İş İlanı Paylaş</a></div>
+                            <div class="wt-btnarea"><a href="jobPost.php" class="wt-btn">Bir İş İlanı Paylaş</a></div>
                         </div>
                     </div>
                     <nav id="wt-navdashboard" class="wt-navdashboard">
@@ -109,7 +109,7 @@
 												</fieldset>
 											</form>
 											<div class="wt-verticalscrollbar wt-dashboardscrollbar">
-												<div class="wt-ad wt-dotnotification wt-active" v-for="item in items" onclick="ViewMessage($(this).find('div input').val());">
+												<div class="wt-ad  wt-active" v-for="item in items" onclick="ViewMessage(this);">
 													<figure><img v-bind:src="item.userImage" alt=""></figure>
 													<div class="wt-adcontent">
 														<h3>{{item.userName}}</h3>
