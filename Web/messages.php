@@ -29,9 +29,9 @@
                     <nav id="wt-navdashboard" class="wt-navdashboard">
                         <ul>
                             <li class="wt-active">
-                                <a href="dashboard-profile.html">
+                                <a href="profile.php">
                                     <i class="ti-briefcase"></i>
-                                    <span>Profi</span>
+                                    <span>Profil</span>
                                 </a>
                             </li>
                             <li class="menu-item-has-children">
@@ -40,70 +40,30 @@
                                     <span>İşler</span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><hr><a href="dashboard-completejobs.html">Biten İşler</a></li>
-                                    <li><hr><a href="dashboard-ongoingjob.html">Aldığım İşler</a></li> <!-- dashboard-ongoingsingle.html -->
+                                    <li><hr><a href="endJob.php">Biten İşler</a></li>
+                                    <li><hr><a href="ongoing.php">Aldığım İşler</a></li> <!-- dashboard-ongoingsingle.html -->
                                 </ul>
                             </li>
                             <li>
                                 <a href="dashboard-managejobs.html">
                                     <i class="ti-announcement"></i>
-                                    <span>Manage Jobs</span>
+                                    <span>İşleri Yönet</span>
                                 </a>
                             </li>
-                            <li class="wt-notificationicon menu-item-has-children">
-                                <a href="javascript:void(0);">
+                            <li>
+                                <a href="messages.php">
                                     <i class="ti-pencil-alt"></i>
-                                    <span>Messages</span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li><hr><a href="messages.php">Messages</a></li>
-                                    <li><hr><a href="dashboard-messages2.html">Messages V 2</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="dashboard-saveitems.html">
-                                    <i class="ti-heart"></i>
-                                    <span>My Saved Items</span>
+                                    <span>Mesajlar</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="dashboard-invocies.html">
-                                    <i class="ti-file"></i>
-                                    <span>Invoices</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dashboard-category.html">
-                                    <i class="ti-layers"></i>
-                                    <span>Category</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dashboard-packages.html">
-                                    <i class="ti-money"></i>
-                                    <span>Packages</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dashboard-proposals.html">
-                                    <i class="ti-bookmark-alt"></i>
-                                    <span>Proposals</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="dashboard-accountsettings.html">
+                                <a href="accountsettings.php">
                                     <i class="ti-anchor"></i>
-                                    <span>Account Settings</span>
+                                    <span>Hesap Ayarları</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="dashboard-helpsupport.html">
-                                    <i class="ti-tag"></i>
-                                    <span>Help &amp; Support</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html">
+                                <a href="logout.php">
                                     <i class="ti-shift-right"></i>
                                     <span>Çıkış Yap</span>
                                 </a>
