@@ -1,29 +1,33 @@
-$(document).ready(function() {
-    var urlParams = new URLSearchParams(location.search);
-    var searchKey = urlParams.get('quaternParam');
+function GetUserData()
+{
 
     window.vue = new Vue({
         el: '#wt-main',
         data: {
             items : []
         },
-        methods: {
-            
-        },
         mounted: function() {
             var self = this;
             $.ajax({
-                url: "",
-                method: "POST",
-                data:{UserId: searchKey},
+                url: "https://willingly.tk/inc/php/Get_UserInformation.php",
+                method: "GET",
                 dataType: "JSON",
+                withCredentials : true,
                 success: function(data) {
-                    self.items = data.Data;
+                    self.items = data.Data[0];
+                    console.log(data.Data[0]);
                 },
                 error: function(a,r,g){
-                    Swal.Fire("Bilinmeyen bir hata oluştu !");
+                    console.log(a);
+                    console.log(r);
+                    console.log(g);
                 }
             });
         }
     });
-});
+}
+
+if(window.location.href.toString().includes("profile.php")){
+    console.log("İf e girdiii !!!!");
+    GetUserData();
+}

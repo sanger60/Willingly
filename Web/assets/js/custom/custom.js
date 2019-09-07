@@ -17,25 +17,25 @@ function pageChanged(a){
         var urlParams = new URLSearchParams(location.search);
         var searchKey = urlParams.get('search');
         var searchType2 = urlParams.get('searchType');
-        window.location.href = "http://willingly.com/userlisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
+        window.location.href = "https://willingly.tk/userlisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
     }
     else if(location.toString().includes('category')){
         console.log("ikinci if");
 
         var urlParams = new URLSearchParams(location.search);
         var catKey = urlParams.get('category');
-        window.location.href = "http://willingly.com/userlisting.php/?category="+catKey+"&page="+PageId;
+        window.location.href = "https://willingly.tk/userlisting.php/?category="+catKey+"&page="+PageId;
 
     }
     else{
         console.log("son deger girdi");
 
-        window.location.href = "http://willingly.com/userlisting.php/?page="+PageId;
+        window.location.href = "https://willingly.tk/userlisting.php/?page="+PageId;
     }
 
         
     //     $.ajax({
-    //         url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+    //         url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
     //         method:"POST",
     //         data:{searchKey:searchKey,searchtip: searchType2,PageId:pageId},
     //         dataType:"JSON",
@@ -52,7 +52,7 @@ function pageChanged(a){
     //     var catKey = urlParams.get('categoryId');
 
     //     $.ajax({
-    //         url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+    //         url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
     //         method:"POST",
     //         data:{categoryId: catKey,PageId:pageId},
     //         dataType:"JSON",
@@ -67,7 +67,7 @@ function pageChanged(a){
     // else{
         
     //     $.ajax({
-    //         url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+    //         url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
     //         method:"POST",
     //         data:{PageId:pageId},
     //         dataType:"JSON",
@@ -85,7 +85,7 @@ function ListWithCategory(a){
 
     var id = parseInt(a.name);
     
-    window.location.href = "http://willingly.com/userlisting.php/?category="+id+"&page=1";
+    window.location.href = "https://willingly.tk/userlisting.php/?category="+id+"&page=1";
     
 }
 
@@ -134,7 +134,7 @@ function SearchBtn(){
     }
 }
 // img,user,ilan başlık,ilan parası,ülke,ilan açıklama,ilan rate,ilan skills,ilan feedback
-if(window.location.toString().includes("http://willingly.com/userlisting.php"))
+if(window.location.toString().includes("https://willingly.tk/userlisting.php"))
 {
     FreeLancerList();
 
@@ -188,7 +188,7 @@ function FreeLancerList(){
         mounted: function () {
             var self = this;
             $.ajax({
-                url: 'http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php',
+                url: 'https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php',
                 method: 'POST',
                 data: {searchKey:searchKey,searchtip: searchType2,PageId:page,category: category,price:price},
                 dataType: "JSON",
@@ -206,7 +206,7 @@ function FreeLancerList(){
             });
 
             $.ajax({
-                url: 'http://willingly.tk/inc/php/Get_FilterConfig.php',
+                url: 'https://willingly.tk/inc/php/Get_FilterConfig.php',
                 method: 'POST',
                 dataType: "JSON",
                 timeout: 60000,
@@ -366,10 +366,10 @@ function updateTextInput2(val) {
 function AdDetail(item){
     var id = item.getAttribute("title");
 
-    window.location.href="http://willingly.com/usersingle.php?uniqorne="+id;
+    window.location.href="https://willingly.tk/usersingle.php?uniqorne="+id;
 }
 
-if(window.location.toString().includes("http://willingly.com/usersingle.php"))
+if(window.location.toString().includes("https://willingly.tk/usersingle.php"))
 {
     var urlParams = new URLSearchParams(location.search);
     var advId = urlParams.get('uniqorne');
@@ -382,7 +382,7 @@ if(window.location.toString().includes("http://willingly.com/usersingle.php"))
         mounted: function(){
             var self = this;
             $.ajax({
-                url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+                url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
                 method: "POST",
                 data: {AdvertisementId:advId,PageId:1},
                 dataType: "JSON",
@@ -469,7 +469,7 @@ function FreelancerSendOffer(){
             mounted: function () {
                 var self = this;
                 $.ajax({
-                    url: 'http://willingly.tk/inc/php/Get_Employer_Advertisement.php',
+                    url: 'https://willingly.tk/inc/php/Get_Employer_Advertisement.php',
                     method: 'POST',
                     data: {searchKey:searchKey,searchtip: searchType2,PageId:page,category: category,price:price},
                     dataType: "JSON",
@@ -487,7 +487,7 @@ function FreelancerSendOffer(){
                 });
     
                 $.ajax({
-                    url: 'http://willingly.tk/inc/php/Get_FilterConfig.php',
+                    url: 'https://willingly.tk/inc/php/Get_FilterConfig.php',
                     method: 'POST',
                     dataType: "JSON",
                     timeout: 60000,
@@ -508,7 +508,7 @@ function FreelancerSendOffer(){
         window.vue = ItemsVue;
     }
 
-    if(window.location.toString().includes("http://willingly.com/joblisting.php"))
+    if(window.location.toString().includes("https://willingly.tk/joblisting.php"))
     {
         JobList();
 
@@ -572,20 +572,20 @@ function FreelancerSendOffer(){
             var urlParams = new URLSearchParams(location.search);
             var searchKey = urlParams.get('search');
             var searchType2 = urlParams.get('searchType');
-            window.location.href = "http://willingly.com/joblisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
+            window.location.href = "https://willingly.tk/joblisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
         }
         else if(location.toString().includes('category')){
             console.log("ikinci if");
     
             var urlParams = new URLSearchParams(location.search);
             var catKey = urlParams.get('category');
-            window.location.href = "http://willingly.com/joblisting.php/?category="+catKey+"&page="+PageId;
+            window.location.href = "https://willingly.tk/joblisting.php/?category="+catKey+"&page="+PageId;
     
         }
         else{
             console.log("son deger girdi");
     
-            window.location.href = "http://willingly.com/joblisting.php/?page="+PageId;
+            window.location.href = "https://willingly.tk/joblisting.php/?page="+PageId;
         }
     
        
@@ -672,12 +672,12 @@ function FreelancerSendOffer(){
     function JobDetail(item){
         var id = item.getAttribute("title");
 
-        window.location.href="http://willingly.com/jobsingle.php?uniqorne="+id;
+        window.location.href="https://willingly.tk/jobsingle.php?uniqorne="+id;
     }
 
   // ---------------------------------------------------------------------------------- \\
                         //          JOB    SİNGLE     PAGE            \\
-    if(window.location.toString().includes("http://willingly.com/jobsingle.php"))
+    if(window.location.toString().includes("https://willingly.tk/jobsingle.php"))
     {
     var urlParams = new URLSearchParams(location.search);
     var advId = urlParams.get('uniqorne');
@@ -690,7 +690,7 @@ function FreelancerSendOffer(){
         mounted: function(){
             var self = this;
             $.ajax({
-                url:"http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                url:"https://willingly.tk/inc/php/Get_Employer_Advertisement.php",
                 method: "POST",
                 data: {AdvertisementId:advId,PageId:1},
                 dataType: "JSON",
