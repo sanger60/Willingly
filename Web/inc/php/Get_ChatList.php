@@ -25,11 +25,11 @@ foreach ($List as $value)
         }
     }
 
-    $UnreadMessages = $Conn_pgsql->query("SELECT Count(*) FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' and \"Sender\"='".$value["User2"]."'")->fetchAll(PDO::FETCH_ASSOC);
+    $UnreadMessages = $Conn_pgsql->query("SELECT Count(*) FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' and \"Reciver\"='$Global_UserID'  and \"IsRead\"='f'")->fetchAll(PDO::FETCH_ASSOC);
 
     $TArray["unreadCount"] = $UnreadMessages[0]["count"];
 
-    $Messages = $Conn_pgsql->query("SELECT \"Id\",\"Text\" FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' and \"IsRead\"='f' and \"Reciver\"='$Global_UserID'")->fetchAll(PDO::FETCH_ASSOC);
+    $Messages = $Conn_pgsql->query("SELECT \"Id\",\"Text\" FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' Order By \"Id\" DESC Limit 1")->fetchAll(PDO::FETCH_ASSOC);
 
     $TArray["message"] = "";
 
