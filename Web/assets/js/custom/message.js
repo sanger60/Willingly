@@ -46,25 +46,27 @@ $(document).ready(function() {
 function ViewMessage(a){
     var id = a;
 
-    var MyVue = new Vue({
-        el: '#wt-main',
-        data:{
-            Items:[]
-        },
-        mounted: function(){
-            var self= this;
-            $.ajax({
-                url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
-                method:"POST",
-                data:{ChatRoomID:id},
-                dataType:"JSON",
-                success:function(data){
-                     self.Items = data.Data;
-                },
-                error:function(a,b,g){
-                    Swal.fire("Hatalı İşlem");
+        var self= this;
+        $.ajax({
+            url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
+            method:"POST",
+            data:{ChatRoomID:id},
+            dataType:"JSON",
+            success:function(data){
+                var main = document.getElementById("msgList");
+                main.innerHTML = "";
+                
+                for(var i=0;i< data.Data.length;i++){
+                    if(data.Data[i].Sender == 21){
+                        main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";         
+                    }
+                    else{
+                        main.innerHTML += "<div class='wt-memessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                    }
                 }
-            });
-        }
+            },
+            error:function(a,b,g){
+                Swal.fire("Hatalı İşlem");
+            }
     });
 }

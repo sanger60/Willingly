@@ -121,52 +121,23 @@
 										</li>
 										<li>
 											<div class="wt-chatarea">
-												<div class="wt-messages wt-verticalscrollbar wt-dashboardscrollbar">
-													<div class="wt-offerermessage">
-														<figure><img src="/../../../assets/images/messages/img-12.jpg" alt="image description"></figure>
-														<div class="wt-description">
-															<p>Consectetur adipisicing elit sei do eiusmod tempor incididunt labore et dolore.</p>
-															<div class="clearfix"></div>
-															<time datetime="2017-08-08">January 12th, 2011</time>
-														</div>
-													</div>
-													<div class="wt-memessage wt-readmessage">
-														<figure><img src="/../../../assets/images/messages/img-11.jpg" alt="image description"></figure>
-														<div class="wt-description">
+												<div class="wt-messages wt-verticalscrollbar wt-dashboardscrollbar" id="msgList">
+														<div class="wt-memessage">
+															<figure><img src="/../../../assets/images/messages/img-11.jpg" alt="image description"></figure>
+															<div class="wt-description">
+															<div class="clearfix"></div>	
 															<p>Eiusmod tempor incididunt labore et dolore magna aliqiu enim ad minim veniam qiuisru exercitation ullamco laborisen nisi ut aliquip exea.</p>
 															<div class="clearfix"></div>
-															<p><a href="https://themeforest.net" target="_blank">https://themeforest.net</a></p>
-															<div class="clearfix"></div>
-															<p>It that ok?</p>
-															<div class="clearfix"></div>
-															<time datetime="2017-08-08">Jun 28, 2017 09:30</time>
-															<div class="clearfix"></div>
+															</div>
 														</div>
-													</div>
-													<div class="wt-offerermessage">
-														<figure><img src="/../../../assets/images/messages/img-12.jpg" alt="image description"></figure>
-														<div class="wt-description">
-															<div class="clearfix"></div>
-															<p>Consectetur adipisicing elit sei do eiusmod tempor incididunt labore et dolore.</p>
-															<div class="clearfix"></div>
-															<time datetime="2017-08-08">January 12th, 2011</time>
-															<div class="clearfix"></div>
+														<div class="wt-offerermessage">
+															<figure><img src="/../../../assets/images/messages/img-12.jpg" alt="image description"></figure>
+															<div class="wt-description">
+																<div class="clearfix"></div>
+																<p>Text Gelecek</p>
+																<div class="clearfix"></div>
+															</div>
 														</div>
-													</div>
-													<div class="wt-memessage wt-readmessage">
-														<figure><img src="/../../../assets/images/messages/img-11.jpg" alt="image description"></figure>
-														<div class="wt-description">
-															<div class="clearfix"></div>
-															<p>Eiusmod tempor incididunt labore et dolore magna aliqiu enim ad minim veniam qiuisru exercitation ullamco laborisen nisi ut aliquip exea.</p>
-															<div class="clearfix"></div>
-															<p><a href="https://themeforest.net" target="_blank">https://themeforest.net</a></p>
-															<div class="clearfix"></div>
-															<p>It that ok?</p>
-															<div class="clearfix"></div>
-															<time datetime="2017-08-08">Jun 28, 2017 09:30</time>
-															<div class="clearfix"></div>
-														</div>
-													</div>
 												</div>
 												<div class="wt-replaybox">
 													<div class="form-group">
@@ -176,7 +147,7 @@
 														<i class="lnr lnr-thumbs-up"></i>
 														<i class="lnr lnr-thumbs-down"></i>
 														<i class="lnr lnr-smile"></i>
-														<a href="javascript:void(0);" class="wt-btnsendmsg">Send</a>
+														<a href="javascript:void(0);" class="wt-btnsendmsg">Gönder</a>
 													</div>
 												</div>
 											</div>
