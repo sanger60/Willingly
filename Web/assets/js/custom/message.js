@@ -58,7 +58,7 @@ function ViewMessage(){
         mounted: function(){
             var self= this;
             $.ajax({
-                url:"inc/php/Get_ChatMessages.php",
+                url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
                 method:"POST",
                 data:{ChatRoomId:Id},
                 dataType:"JSON",
