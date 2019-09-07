@@ -233,47 +233,6 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        <div class="wt-bannerphoto wt-tabsinfo">
-                                            <div class="wt-tabscontenttitle">
-                                                <h2>Banner Photo</h2>
-                                            </div>
-                                            <div class="wt-profilephotocontent">
-                                                <div class="wt-description">
-                                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aut enim ad minim veniamac quis nostrud exercitation ullamco laboris.</p>
-                                                </div>
-                                                <form class="wt-formtheme wt-formprojectinfo wt-formcategory">
-                                                    <fieldset>
-                                                        <div class="form-group form-group-label">
-                                                            <div class="wt-labelgroup">
-                                                                <label for="filew">
-                                                                    <span class="wt-btn">Select Files</span>
-                                                                    <input type="file" name="file" id="filew">
-                                                                </label>
-                                                                <span>Drop files here to upload</span>
-                                                                <em class="wt-fileuploading">Uploading<i class="fa fa-spinner fa-spin"></i></em>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <ul class="wt-attachfile wt-attachfilevtwo">
-                                                                <li class="wt-uploadingholder">
-                                                                    <div class="wt-uploadingbox">
-                                                                        <div class="wt-designimg">
-                                                                            <input id="demoq" type="radio" name="employees" value="company" checked="">
-                                                                            <label for="demoq"><img src="/../../../assets/images/company/img-10.jpg" alt="img description"><i class="fa fa-check"></i></label>
-                                                                        </div>
-                                                                        <div class="wt-uploadingbar">
-                                                                            <span class="uploadprogressbar"></span>
-                                                                            <span>Banner Photo.jpg</span>
-                                                                            <em>File size: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </fieldset>
-                                                </form>
-                                            </div>
-                                        </div>
                                         <div class="wt-location wt-tabsinfo">
                                             <div class="wt-tabscontenttitle">
                                                 <h2>Lokasyon</h2>
@@ -281,90 +240,11 @@
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
                                                     <div class="form-group form-group-half">
-                                                        <span class="wt-select">
-                                                            <select>
-                                                                <option value="">United States</option>
-                                                                <option value="">China</option>
-                                                                <option value="">India</option>
-                                                            </select>
-                                                        </span>
+                                                        <textarea name="address" class="form-control" placeholder="Adres" v-bind:value="items.Adress"></textarea>
                                                     </div>
-                                                    <div class="form-group form-group-half">
-                                                        <input type="text" name="address" class="form-control" placeholder="Your Address">
-                                                    </div>
-                                                    <div class="form-group form-group-half">
-                                                        <input type="text" name="text" class="form-control" placeholder="Enter Longitude (Optional)">
-                                                    </div>
-                                                    <div class="form-group form-group-half">
-                                                        <input type="text" name="text" class="form-control" placeholder="Enter Latitude (Optional)">
-                                                    </div>
+
                                                 </fieldset>
                                             </form>
-                                        </div>
-                                        <div class="wt-tabcompanyinfo wt-tabsinfo">
-                                            <div class="wt-tabscontenttitle">
-                                                <h2>Company Details</h2>
-                                            </div>
-                                            <div class="wt-accordiondetails">
-                                                <div class="wt-radioboxholder">
-                                                    <div class="wt-title">
-                                                        <h4>No. of employees you have</h4>
-                                                    </div>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-just" type="radio" name="employees" value="company" checked="">
-                                                        <label for="wt-just">It's just me</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-employees" type="radio" name="employees" value="company">
-                                                        <label for="wt-employees">2 - 9 employees</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-employees1" type="radio" name="employees" value="company">
-                                                        <label for="wt-employees1">10 - 99 employees</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-employees2" type="radio" name="employees" value="company">
-                                                        <label for="wt-employees2">100 - 499 employees</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-employees3" type="radio" name="employees" value="company">
-                                                        <label for="wt-employees3">500 - 1000 employees</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-employees4" type="radio" name="employees" value="company">
-                                                        <label for="wt-employees4">More than 1000 employees</label>
-                                                    </span>
-                                                </div>
-                                                <div class="wt-radioboxholder">
-                                                    <div class="wt-title">
-                                                        <h4>Your Department?</h4>
-                                                    </div>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-department" type="radio" name="department" value="department" checked="">
-                                                        <label for="wt-department">Customer Service or Operations</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-department1" type="radio" name="department" value="department">
-                                                        <label for="wt-department1">Finance or Legal</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-department2" type="radio" name="department" value="department">
-                                                        <label for="wt-department2">Engineering or Product Management</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-department3" type="radio" name="department" value="department">
-                                                        <label for="wt-department3">Marketing or Sales</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-department4" type="radio" name="department" value="department">
-                                                        <label for="wt-department4">Human Resources</label>
-                                                    </span>
-                                                    <span class="wt-radio">
-                                                        <input id="wt-department5" type="radio" name="department" value="department">
-                                                        <label for="wt-department5">Other</label>
-                                                    </span>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="wt-skills">
                                             <div class="wt-tabscontenttitle">
@@ -375,139 +255,22 @@
                                                     <fieldset>
                                                         <div class="form-group">
                                                             <div class="form-group-holder">
-                                                                <span class="wt-select">
-                                                                    <select>
-                                                                        <option value="">Yeteneğini Seç</option>
-                                                                        <option value="">HTML</option>
-                                                                        <option value="">PHP</option>
-                                                                        <option value="">JQUERY</option>
-                                                                    </select>
-                                                                </span>
-                                                                <input type="number" name="rate" class="form-control" placeholder="Yeteneğini değerlendir (%0'dan %100'e)">
+                                                                <input type="text" name="skill" id="skillUser" class="form-control" placeholder="Yeteneğinizi Seçiniz">
+                                                                <input type="number" name="rate" id="skillRate" class="form-control" placeholder="Yeteneğini değerlendir (%0'dan %100'e)">
                                                             </div>
                                                         </div>
                                                         <div class="form-group wt-btnarea">
-                                                            <a href="javascript:void(0);" class="wt-btn">Yetenek Ekle</a>
+                                                            <a href="javascript:void(0);" class="wt-btn" onclick="UserSkillsAdd();">Yetenek Ekle</a>
                                                         </div>
                                                     </fieldset>
                                                 </form>
                                                 <div class="wt-myskills">
-                                                    <ul class="sortable list">
+                                                    <ul class="sortable list" id="skillList">
                                                         <li>
                                                             <div class="wt-dragdroptool">
                                                                 <a href="javascript:void(0)" class="lnr lnr-menu"></a>
                                                             </div>
                                                             <span class="skill-dynamic-html">PHP (<em class="skill-val">90</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Website Tasarımı (<em class="skill-val">55</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">HTML 5 (<em class="skill-val">90</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Grafik Tasarım (<em class="skill-val">80</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Yeteneğini Değerlendir (<em class="skill-val">10</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">SEO (<em class="skill-val">35</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">My SQL (<em class="skill-val">40</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">İçerik Yazarlığı (<em class="skill-val">80</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">CSS (<em class="skill-val">80</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Jquery (<em class="skill-val">75</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Bootstrap (<em class="skill-val">96</em>%)</span>
                                                             <span class="skill-dynamic-field">
                                                                 <input type="text" name="skills[1][percentage]" value="90">
                                                             </span>
