@@ -158,16 +158,13 @@
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
                                                     <div class="form-group form-group-half">
-                                                        <input type="text" name="first name" class="form-control" placeholder="İsim" v-bind:value="items.Name">
+                                                        <input type="text" id="Name" name="first name" class="form-control" placeholder="İsim" v-bind:value="items.Name">
                                                     </div>
                                                     <div class="form-group form-group-half">
-                                                        <input type="email" name="last name" class="form-control" placeholder="Soyisim" v-bind:value="items.Surname">
+                                                        <input type="email" id="Surname" name="last name" class="form-control" placeholder="Soyisim" v-bind:value="items.Surname">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="tagline" class="form-control" placeholder="Yeteneklerini Buraya Yaz" v-bind:value="items.Skills">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <textarea name="message" class="form-control" placeholder="Hakkında" v-bind:value="items.About"></textarea>
+                                                        <textarea name="message" class="form-control" placeholder="Hakkında" v-bind:value="items.About" id="about"></textarea>
                                                     </div>
                                                 </fieldset>
                                             </form>
@@ -177,9 +174,6 @@
                                                 <h2>Profil Fotoğrafı</h2>
                                             </div>
                                             <div class="wt-profilephotocontent">
-                                                <div class="wt-description">
-                                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aut enim ad minim veniamac quis nostrud exercitation ullamco laboris.</p>
-                                                </div>
                                                 <form class="wt-formtheme wt-formprojectinfo wt-formcategory">
                                                     <fieldset>
                                                         <div class="form-group form-group-label">
@@ -240,7 +234,7 @@
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
                                                     <div class="form-group form-group-half">
-                                                        <textarea name="address" class="form-control" placeholder="Adres" v-bind:value="items.Adress"></textarea>
+                                                        <textarea name="address" class="form-control" placeholder="Adres" v-bind:value="items.Adress" id="Adresses"></textarea>
                                                     </div>
 
                                                 </fieldset>
@@ -254,10 +248,8 @@
                                                 <form class="wt-formtheme wt-skillsform">
                                                     <fieldset>
                                                         <div class="form-group">
-                                                            <div class="form-group-holder">
                                                                 <input type="text" name="skill" id="skillUser" class="form-control" placeholder="Yeteneğinizi Seçiniz">
-                                                                <input type="number" name="rate" id="skillRate" class="form-control" placeholder="Yeteneğini değerlendir (%0'dan %100'e)">
-                                                            </div>
+                                                                <input type="number" name="rate" id="skillRate" class="form-control" placeholder="Yeteneğini değerlendir (%0'dan %100'e)" style="float:left">
                                                         </div>
                                                         <div class="form-group wt-btnarea">
                                                             <a href="javascript:void(0);" class="wt-btn" onclick="UserSkillsAdd();">Yetenek Ekle</a>
@@ -266,19 +258,7 @@
                                                 </form>
                                                 <div class="wt-myskills">
                                                     <ul class="sortable list" id="skillList">
-                                                        <li>
-                                                            <div class="wt-dragdroptool">
-                                                                <a href="javascript:void(0)" class="lnr lnr-menu"></a>
-                                                            </div>
-                                                            <span class="skill-dynamic-html">PHP (<em class="skill-val">90</em>%)</span>
-                                                            <span class="skill-dynamic-field">
-                                                                <input type="text" name="skills[1][percentage]" value="90">
-                                                            </span>
-                                                            <div class="wt-rightarea">
-                                                                <a href="javascript:void(0);" class="wt-addinfo"><i class="lnr lnr-pencil"></i></a>
-                                                                <a href="javascript:void(0);" class="wt-deleteinfo"><i class="lnr lnr-trash"></i></a>
-                                                            </div>
-                                                        </li>
+
                                                     </ul>
                                                 </div>
                                             </div>
