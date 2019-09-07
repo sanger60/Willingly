@@ -48,6 +48,12 @@ if (isset($_POST["Password"])){
         CreateInsertQuery($_POST["Password"],"Password");
     }
 }
+if (isset($_POST["Password"])){
+    if (!is_null($_POST["Password"]) && $_POST["Password"] != "")
+    {
+        CreateInsertQuery($_POST["Password"],"Password");
+    }
+}
 if (isset($_POST["PhotoSrc"])){
     if (!is_null($_POST["PhotoSrc"]) && $_POST["PhotoSrc"] != "")
     {
