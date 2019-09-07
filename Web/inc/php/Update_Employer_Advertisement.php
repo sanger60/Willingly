@@ -36,3 +36,4 @@ function CreateInsertQuery($Text,$IsFirst){
 	    $QueryStep1 .= "\"$Text\"='$Text'";
     }
 }
+

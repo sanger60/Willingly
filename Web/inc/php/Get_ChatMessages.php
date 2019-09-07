@@ -24,7 +24,7 @@ if (isset($_POST["ChatRoomID"]))
     }
 }
 
-var_dump($AddQuery);
+//var_dump($AddQuery);
 
 $Response = array();
 
