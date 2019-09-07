@@ -14,7 +14,7 @@
 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="/../../../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/../../../assets/css/normalize.css">
-	<!-- <link rel="stylesheet" href="/../../../assets/css/scrollbar.css"> -->
+	<link rel="stylesheet" href="/../../../assets/css/scrollbar.css">
 	<link rel="stylesheet" href="/../../../assets/css/fontawesome/fontawesome-all.css">
 	<link rel="stylesheet" href="/../../../assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/../../../assets/css/owl.carousel.min.css">
