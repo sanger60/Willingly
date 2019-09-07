@@ -23,7 +23,7 @@
                         <div class="wt-companysinfo">
                             <figure><img src="http://amentotech.com/htmls/worktern/images/sidebar/img-02.jpg" alt="img description"></figure>
                             <div class="wt-title">
-                                <h2><a href="javascript:void(0);">İsim veya Kullanıcı adı </a></h2>
+                                <h2><a href="javascript:void(0);">{{items.Name}} {{items.Surname}}</a></h2>
                                 <span>{{items.Username}}</span>
                             </div>
                             <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Bir İş İlanı Paylaş</a></div>
