@@ -59,7 +59,7 @@ function ViewMessage(a){
                 data:{ChatRoomId:id},
                 dataType:"JSON",
                 success:function(data){
-                     self.items = data.Data;
+                     self.Items = data.Data;
                 },
                 error:function(a,b,g){
                     Swal.fire("Hatalı İşlem");
