@@ -29,7 +29,7 @@ foreach ($List as $value)
 
     $TArray["unreadCount"] = $UnreadMessages[0]["count"];
 
-    $Messages = $Conn_pgsql->query("SELECT \"Id\",\"Text\" FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' and \"IsRead\"='f' Order By \"Id\" DESC Limit 1")->fetchAll(PDO::FETCH_ASSOC);
+    $Messages = $Conn_pgsql->query("SELECT \"Id\",\"Text\" FROM public.\"Messages\" where \"ChatID\"='".$value["Id"]."' and \"IsRead\"='f' and \"Reciver\"='$Global_UserID'")->fetchAll(PDO::FETCH_ASSOC);
 
     $TArray["message"] = "";
 
