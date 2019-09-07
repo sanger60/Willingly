@@ -62,3 +62,8 @@
 
   .viewjobclockData{
   }
+
+
+  .mCustomScrollBox{
+    max-height: 0px !important;
+  }

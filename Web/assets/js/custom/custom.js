@@ -680,12 +680,17 @@ function FreelancerSendOffer(){
 
     function JobSkillsAdd(){
         var skillName = document.getElementById("skillJob").value;
-        var list = document.getElementById("skillList");
+        var list = document.getElementById("AddedSkils");
         if(skillName != "")
         {
-            list.innerHTML += "<li> <div class='wt-dragdroptool'> <a href='javascript:void(0)'' class='lnr lnr-menu'></a> </div> <span class='skill-dynamic-html'>"+skillName+"</span> <div class='wt-rightarea'> <a href='javascript:void(0);' class='wt-deleteinfo'><i class='lnr lnr-trash'></i></a> </div> </li>"
+            list.innerHTML += "<li> <div class='wt-dragdroptool'> <a href='javascript:void(0)'' class='lnr lnr-menu'></a> </div> <span class='skill-dynamic-html'>"+skillName+"</span> <div class='wt-rightarea'> <a href='javascript:void(0);' onclick='JobSkillRemove(this);' class='wt-deleteinfo'><i class='lnr lnr-trash'></i></a> </div> </li>"
         }
     }
+
+    function JobSkillRemove(a){
+        $(a.parentElement.parentElement.parentElement).remove();
+    }
+
     if(window.location.href.toString().includes("jobPost.php"))
     {
         var jobVue = new Vue({
