@@ -404,8 +404,10 @@ address { font-style: italic; }
 	line-height: 30px;
 }
 .wt-btn {
+	justify-content: center;
+	align-items: center;
 	color: #fff;
-	padding: 18px 50px;
+	padding: 5px 50px;
 	background: #fff;
 	position:relative;
 	text-align:center;
@@ -2847,7 +2849,7 @@ body.wt-login .wt-userlogedin{display: block;}
 	line-height: 18px;
 }
 .wt-joinnowholder{
-	float: left;
+	float: center;
 	width: 100%;
 	margin-top:37px; 
 	text-align: center;

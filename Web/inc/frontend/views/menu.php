@@ -4,7 +4,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<strong class="wt-logo"><a href="index-2.html"><img src="/../../../assets/images/logo.png" alt="company logo here"></a></strong>
+								<strong class="wt-logo"><a href="/"><img src="/../../../assets/images/logo.png" alt="company logo here"></a></strong>
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,44 +13,7 @@
 										<div class="collapse navbar-collapse wt-navigation" id="navbarNav">
 											<ul class="navbar-nav">
 												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">Main</a>
-													<ul class="sub-menu">
-														<li class="menu-item-has-children page_item_has_children wt-notificationicon"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
-															<a href="javascript:void(0);">Home</a>
-															<ul class="sub-menu">
-																<li><a href="index-2.html">Home v1</a></li>
-																<li class="wt-newnoti"><a href="indexvtwo.html">Home v2<em>without login</em></a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children page_item_has_children"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
-															<a href="javascript:void(0);">Article</a>
-															<ul class="sub-menu">
-																<li><a href="articlelist.html">Article List</a></li>
-																<li><a href="articlegrid.html">Article Grid</a></li>
-																<li><a href="articlesingle.html">Article Single</a></li>
-																<li><a href="articleclassic.html">Article Classic</a></li>
-															</ul>
-														</li>
-														<li class="menu-item-has-children page_item_has_children"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
-															<a href="javascript:void(0);">Company</a>
-															<ul class="sub-menu">
-																<li><a href="companygrid.html">Company Grid</a></li>
-																<li><a href="companysigle.html">Company Sigle</a></li>
-															</ul>
-														</li>
-														<li>
-															<a href="about.html">About</a>
-														</li>
-														<li>
-															<a href="privacypolicy.html">Privacy Policy</a>
-														</li>
-														<li>
-															<a href="comingsoon.html">Coming Soon</a>
-														</li>
-														<li>
-															<a href="404page.html">404page</a>
-														</li>
-													</ul>
+													<a href="index.php">Ana Sayfa</a>
 												</li>
 												<li class="nav-item">
 													<a href="howitworks.html">How It Works</a>
@@ -132,7 +95,7 @@
 											    </form>
 											</div>
 										</div>
-										<a href="register.html" class="wt-btn">Join Now</a>
+										<a href="register.php" class="wt-btn">Join Now</a>
 									</div>
 									<div class="wt-userlogedin">
 										<figure class="wt-userimg">
@@ -214,13 +177,8 @@
 													</a>
 												</li>
 												<li>
-													<a href="dashboard-helpsupport.html">
-														<span>Help &amp; Support</span>
-													</a>
-												</li>
-												<li>
 													<a href="index-2.html">
-														<span>Logout</span>
+														<span>Çıkış Yap</span>
 													</a>
 												</li>
 											</ul>
