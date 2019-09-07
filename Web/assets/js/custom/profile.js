@@ -9,16 +9,18 @@ function GetUserData()
         mounted: function() {
             var self = this;
             $.ajax({
-                url: "http://willingly.tk/inc/php/Get_UserInformation.php",
+                url: "https://willingly.tk/inc/php/Get_UserInformation.php",
                 method: "GET",
                 dataType: "JSON",
-                crossDomain: true,
+                withCredentials : true,
                 success: function(data) {
                     self.items = data.Data[0];
                     console.log(data.Data[0]);
                 },
                 error: function(a,r,g){
-                    console.log("Hatalı ");
+                    console.log(a);
+                    console.log(r);
+                    console.log(g);
                 }
             });
         }
