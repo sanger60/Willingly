@@ -4,6 +4,7 @@
 
 <?php require 'inc/frontend/views/head_end.php'; ?>
         <!--Main Start-->
+        <!--Main Start-->
         <main id="wt-main" class="wt-main wt-haslayout">
             <!--Sidebar Start-->
             <div id="wt-sidebarwrapper" class="wt-sidebarwrapper">
@@ -17,13 +18,13 @@
                 <div id="wt-verticalscrollbar" class="wt-verticalscrollbar">
                     <div class="wt-companysdetails wt-usersidebar">
                         <figure class="wt-companysimg">
-                            <img src="images\sidebar\img-01.jpg" alt="img description">
+                            <img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description">
                         </figure>
                         <div class="wt-companysinfo">
-                            <figure><img src="images\sidebar\img-02.jpg" alt="img description"></figure>
+                            <figure><img src="http://amentotech.com/htmls/worktern/images/sidebar/img-02.jpg" alt="img description"></figure>
                             <div class="wt-title">
-                                <h2><a href="javascript:void(0);"> Louanne Mattioli</a></h2>
-                                <span>Amento Tech</span>
+                                <h2><a href="javascript:void(0);"> Name and UserName </a></h2>
+                                <span>{{UserName}}</span>
                             </div>
                             <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Post a Job</a></div>
                         </div>
@@ -133,7 +134,7 @@
             <!--Register Form Start-->
             <section class="wt-haslayout">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-">
                         <div class="wt-haslayout wt-dbsectionspace">
                             <div class="wt-dashboardbox wt-dashboardtabsholder">
                                 <div class="wt-dashboardboxtitle">
@@ -207,7 +208,7 @@
                                                             <ul class="wt-attachfile wt-attachfilevtwo">
                                                                 <li class="wt-uploadingholder wt-companyimg-uploading">
                                                                     <div class="wt-uploadingbox">
-                                                                        <figure><img src="images\company\img-07.jpg" alt="img description"></figure>
+                                                                        <figure><img src="/../../../assets/images/company/img-07.jpg" alt="img description"></figure>
                                                                         <div class="wt-uploadingbar wt-uploading">
                                                                             <span class="uploadprogressbar"></span>
                                                                             <span>Profile Photo.jpg</span>
@@ -217,7 +218,7 @@
                                                                 </li>
                                                                 <li class="wt-uploadingholder wt-companyimg-user">
                                                                     <div class="wt-uploadingbox">
-                                                                        <figure><img src="images\company\img-08.jpg" alt="img description"></figure>
+                                                                        <figure><img src="/../../../assets/images/company/img-08.jpg" alt="img description"></figure>
                                                                         <div class="wt-uploadingbar wt-uploading">
                                                                             <span class="uploadprogressbar"></span>
                                                                             <span>Profile Photo.jpg</span>
@@ -229,7 +230,7 @@
                                                                     <div class="wt-uploadingbox">
                                                                         <div class="wt-designimg">
                                                                             <input id="demoz" type="radio" name="employees" value="company" checked="">
-                                                                            <label for="demoz"><img src="images\company\img-09.jpg" alt="img description"><i class="fa fa-check"></i></label>
+                                                                            <label for="demoz"><img src="/../../../assets/images/company/img-09.jpg" alt="img description"><i class="fa fa-check"></i></label>
                                                                         </div>
                                                                         <div class="wt-uploadingbar wt-uploading">
                                                                             <span class="uploadprogressbar"></span>
@@ -270,7 +271,7 @@
                                                                     <div class="wt-uploadingbox">
                                                                         <div class="wt-designimg">
                                                                             <input id="demoq" type="radio" name="employees" value="company" checked="">
-                                                                            <label for="demoq"><img src="images\company\img-10.jpg" alt="img description"><i class="fa fa-check"></i></label>
+                                                                            <label for="demoq"><img src="/../../../assets/images/company/img-10.jpg" alt="img description"><i class="fa fa-check"></i></label>
                                                                         </div>
                                                                         <div class="wt-uploadingbar">
                                                                             <span class="uploadprogressbar"></span>
@@ -302,9 +303,6 @@
                                                     </div>
                                                     <div class="form-group form-group-half">
                                                         <input type="text" name="address" class="form-control" placeholder="Your Address">
-                                                    </div>
-                                                    <div class="form-group wt-formmap">
-                                                        <div id="wt-locationmap" class="wt-locationmap"></div>
                                                     </div>
                                                     <div class="form-group form-group-half">
                                                         <input type="text" name="text" class="form-control" placeholder="Enter Longitude (Optional)">
@@ -761,7 +759,7 @@
                                                 <li>
                                                     <div class="wt-accordioninnertitle">
                                                         <div class="wt-projecttitle collapsed" data-toggle="collapse" data-target="#innertitleaone">
-                                                            <figure><img src="images\thumbnail\img-11.jpg" alt="img description"></figure>
+                                                            <figure><img src="/../../../assets/images/thumbnail/img-11.jpg" alt="img description"></figure>
                                                             <h3>Project Title Here<span>www.themeforest.net</span></h3>
                                                         </div>
                                                         <div class="wt-rightarea">
@@ -818,7 +816,7 @@
                                                 <li>
                                                     <div class="wt-accordioninnertitle">
                                                         <div class="wt-projecttitle collapsed" data-toggle="collapse" data-target="#innertitlebone">
-                                                            <figure><img src="images\thumbnail\img-12.jpg" alt="img description"></figure>
+                                                            <figure><img src="/../../../assets/images/thumbnail/img-12.jpg" alt="img description"></figure>
                                                             <h3>Project Title Here<span>www.themeforest.net</span></h3>
                                                         </div>
                                                         <div class="wt-rightarea">
@@ -875,7 +873,7 @@
                                                 <li>
                                                 <div class="wt-accordioninnertitle">
                                                     <div class="wt-projecttitle collapsed" data-toggle="collapse" data-target="#innertitlecone">
-                                                        <figure><img src="images\thumbnail\img-13.jpg" alt="img description"></figure>
+                                                        <figure><img src="/../../../assets/images/thumbnail/img-13.jpg" alt="img description"></figure>
                                                         <h3>Project Title Here<span>www.themeforest.net</span></h3>
                                                     </div>
                                                     <div class="wt-rightarea">
@@ -940,7 +938,7 @@
                                                 <li>
                                                     <div class="wt-accordioninnertitle">
                                                         <div class="wt-projecttitle collapsed" data-toggle="collapse" data-target="#innertitleawone">
-                                                            <figure><img src="images\thumbnail\img-08.jpg" alt="img description"></figure>
+                                                            <figure><img src="/../../../assets/images/thumbnail/img-08.jpg" alt="img description"></figure>
                                                             <h3>Awards Title Here<samp>Apr 27, 2016</samp></h3>
                                                         </div>
                                                         <div class="wt-rightarea">
@@ -997,7 +995,7 @@
                                                 <li>
                                                     <div class="wt-accordioninnertitle">
                                                         <div class="wt-projecttitle collapsed" data-toggle="collapse" data-target="#innertitlebwone">
-                                                            <figure><img src="images\thumbnail\img-08.jpg" alt="img description"></figure>
+                                                            <figure><img src="/../../../assets/images/thumbnail/img-08.jpg" alt="img description"></figure>
                                                             <h3>Awards Title Here<samp>Apr 27, 2016</samp></h3>
                                                         </div>
                                                         <div class="wt-rightarea">
@@ -1054,7 +1052,7 @@
                                                 <li>
                                                     <div class="wt-accordioninnertitle">
                                                         <div class="wt-projecttitle collapsed" data-toggle="collapse" data-target="#innertitlecwone">
-                                                            <figure><img src="images\thumbnail\img-09.jpg" alt="img description"></figure>
+                                                            <figure><img src="/../../../assets/images/thumbnail/img-09.jpg" alt="img description"></figure>
                                                             <h3>Awards Title Here<samp>Apr 27, 2016</samp></h3>
                                                         </div>
                                                         <div class="wt-rightarea">
@@ -1120,38 +1118,11 @@
                             <a class="wt-btn" href="javascript:void(0);">Save &amp; Update</a>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                        <div class="wt-haslayout wt-dbsectionspace wt-codescansidebar">
-                            <div class="tg-authorcodescan wt-codescanholder">
-                                <figure class="tg-qrcodeimg">
-                                    <img src="images\qrcode.png" alt="img description">
-                                </figure>
-                                <div class="tg-qrcodedetail">
-                                    <span class="lnr lnr-laptop-phone"></span>
-                                    <div class="tg-qrcodefeat">
-                                        <h3>Scan with your <span>Smart Phone </span> To Get It Handy.</h3>
-                                    </div>
-                                </div>
-                                <div class="wt-codescanicons">
-                                    <span>Share Your Profile</span>
-                                    <ul class="wt-socialiconssimple">
-                                        <li class="wt-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li class="wt-twitter"><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
-                                        <li class="wt-linkedin"><a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li class="wt-clone"><a href="javascript:void(0);"><i class="far fa-clone"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="wt-companyad">
-                                <figure class="wt-companyadimg"><img src="images\add-img.jpg" alt="img description"></figure>
-                                <span>Advertisement  255px X 255px</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
             <!--Register Form End-->
         </main>
         <!--Main End-->	
 <?php require 'inc/frontend/views/footer_start.php'; ?>
+<script type="text/javascript" src="/../../../assets/js/custom/profile.js">
 <?php require 'inc/frontend/views/footer_end.php'; ?>
