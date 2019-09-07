@@ -384,7 +384,7 @@ if(window.location.toString().includes("http://willingly.com/usersingle.php"))
             $.ajax({
                 url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
                 method: "POST",
-                data: {Id:advId},
+                data: {AdvertisementId:advId,PageId:1},
                 dataType: "JSON",
                 success:function(data) {
                     self.item = data;
@@ -591,7 +591,8 @@ function FreelancerSendOffer(){
        
     }
 
-    function JobFilter(){
+    function JobFilter()
+    {
         var filterProp = $('input[name=category]:checked');
         var filterCheckedProps = "";
     
@@ -673,3 +674,113 @@ function FreelancerSendOffer(){
 
         window.location.href="http://willingly.com/jobsingle.php?uniqorne="+id;
     }
+
+  // ---------------------------------------------------------------------------------- \\
+                        //          JOB    SİNGLE     PAGE            \\
+    if(window.location.toString().includes("http://willingly.com/jobsingle.php"))
+    {
+    var urlParams = new URLSearchParams(location.search);
+    var advId = urlParams.get('uniqorne');
+    
+    var AdDetailVue = new Vue({
+        el: '#wt-main',
+        data:{
+            item: []
+        },
+        mounted: function(){
+            var self = this;
+            $.ajax({
+                url:"http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                method: "POST",
+                data: {AdvertisementId:advId,PageId:1},
+                dataType: "JSON",
+                success:function(data) {
+                    self.item = data;
+                    console.log(data);
+                },
+                error:function(a,b,g) {
+                    Swal.fire("Bir hata oluştu !");
+                }
+            });
+        }
+    });
+    
+    $(document).ready(function() {
+        setTimeout(function() {
+            var widgets = $('.wt-widgettag');
+            var clocks = $('.viewjobclockData');
+
+            console.log(widgets);
+            for(var i=0; i < widgets.length;i++)
+            {
+                console.log(i);
+
+                var firstChl = widgets[i].firstChild;
+                console.log(firstChl);
+
+                var firstDizi = firstChl.innerText.split(",");
+                console.log(firstDizi);
+                // window
+                $(firstChl).remove();
+
+                for(var j=0;j< firstDizi.length;j++)
+                {
+                    var txt3 = document.createElement("a");
+                    txt3.innerText = firstDizi[j];
+                    $(widgets[i]).append(txt3);
+                }
+            }
+
+            
+            for(var i=0;i< clocks.length;i++){
+                var eskiDeger = clocks[i].innerText.replace("00:00:00","");
+
+                clocks[i].innerText = "";
+
+                var item = document.createElement('i');
+
+                item.classList.add("far");
+                item.classList.add("fa-clock");
+                item.classList.add("wt-viewjobclock");
+
+                $(clocks[i]).append(item);
+
+                var tarih = new Date(eskiDeger);
+
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = today.getFullYear();
+
+                today = yyyy + '/' + mm + '/' + dd;
+                
+                var ClockMessageTemplate = "";
+
+                var yılIslem = tarih.getFullYear() - yyyy;
+
+                if(yılIslem > 0){
+                    ClockMessageTemplate += yılIslem+" yıl ";
+                }
+
+                var ayIslem = tarih.getMonth() - mm;
+
+                if(ayIslem > 0){
+                    ClockMessageTemplate += ayIslem+" ay ";
+                }
+
+                var gunIslem = tarih.getDay() - dd;
+
+                if(gunIslem > 0){
+                    ClockMessageTemplate += ayIslem+" gün ";
+                }
+
+                ClockMessageTemplate += "kaldı";
+
+                        
+                var item2 = document.createElement('text');
+                item2.innerText = ClockMessageTemplate;
+                $(clocks[i]).append(item2);
+            }
+        },1300);
+    });
+}

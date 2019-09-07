@@ -40,7 +40,7 @@
 													</span>
 													<span class="wt-radio">
 														<input id="wt-jobs"  data-title="MeetUp" type="radio"  name="SearchType" value="MeetUp">
-														<label for="wt-jobs">Meet up</label>
+														<label for="wt-jobs">İhtiyaçlar</label>
 													</span>
 													<input type="hidden" value="1" name="page" id="pageIndex" />
 												</div>
@@ -64,8 +64,8 @@
 							<div class="col-xs-12 col-sm-12 col-md-8 push-md-2 col-lg-6 push-lg-3">
 								<div class="wt-sectionhead wt-textcenter">
 									<div class="wt-sectiontitle">
-										<h2>Explore Categories</h2>
-										<span>Professional by categories</span>
+										<h2>Kategoriler</h2>
+										<span>Ne tarz bir işe ihtiyacınız var?</span>
 									</div>
 								</div>
 							</div>
@@ -74,11 +74,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-01.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Mobiles</a></h3>
+											<h3><a href="javascrip:void(0);">Grafik Tasarım</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -86,11 +86,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-08.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Digital Marketing</a></h3>
+											<h3><a href="javascrip:void(0);">İnternet Reklamcılığı</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -98,11 +98,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-02.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Writing &amp; Translation</a></h3>
+											<h3><a href="javascrip:void(0);">Yazi &amp; Çeviri</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -110,11 +110,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-03.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Video &amp; Animation</a></h3>
+											<h3><a href="javascrip:void(0);">Video &amp; Animasyon</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -122,11 +122,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-04.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Music &amp; Audio</a></h3>
+											<h3><a href="javascrip:void(0);">Ses &amp; Müzik</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -134,11 +134,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-05.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Programming &amp; Tech</a></h3>
+											<h3><a href="javascrip:void(0);">Yazılım &amp; Teknoloji</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -146,11 +146,11 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-06.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Business</a></h3>
+											<h3><a href="javascrip:void(0);">İş Yönetimi</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -158,17 +158,12 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-07.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Fun &amp; Lifestyle</a></h3>
+											<h3><a href="javascrip:void(0);">Eğlence &amp; Yaşam Tarzı</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
-									</div>
-								</div>
-								<div class="col-12 col-sm-12 col-md-12 col-lg-12 float-left">
-									<div class="wt-btnarea">
-										<a href="javascript:void(0)" class="wt-btn">View All</a>
 									</div>
 								</div>
 							</div>
@@ -184,24 +179,24 @@
 								<div class="wt-companydetails">
 									<div class="wt-companycontent">
 										<div class="wt-companyinfotitle">
-											<h2>Start As Company</h2>
+											<h2>Organizatör Olarak Başla</h2>
 										</div>
 										<div class="wt-description">
 											<p>Consectetur adipisicing elit sed dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum.</p>
 										</div>
 										<div class="wt-btnarea">
-											<a href="javascript:void(0);" class="wt-btn">Join Now</a>
+											<a href="javascript:void(0);" class="wt-btn">Hemen Üye Ol</a>
 										</div>
 									</div>
 									<div class="wt-companycontent">
 										<div class="wt-companyinfotitle">
-											<h2>Start As Freelancer</h2>
+											<h2>Willingers Olarak Başla</h2>
 										</div>
 										<div class="wt-description">
 											<p>Consectetur adipisicing elit sed dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum.</p>
 										</div>
 										<div class="wt-btnarea">
-											<a href="javascript:void(0);" class="wt-btn">Join Now</a>
+											<a href="javascript:void(0);" class="wt-btn">Hemen Üye Ol</a>
 										</div>
 									</div>
 								</div>
@@ -233,14 +228,10 @@
 										<ul class="wt-appicon">
 											<li>
 												<a href="javascript:void(0)">
-													<figure><img src="/../../../assets/images/app-icon/img-01.png" alt="img description"></figure>
+													<figure><img style="height:75px; width:auto;" src="/../../../assets/images/app-icon/img-01.png" alt="img description"></figure>
 												</a>
 											</li>
-											<li>
-												<a href="javascript:void(0)">
-													<figure><img src="/../../../assets/images/app-icon/img-02.png" alt="img description"></figure>
-												</a>
-											</li>
+
 										</ul>
 									</div>
 								</div>
@@ -249,86 +240,6 @@
 					</div>
 				</section>
 				<!--Limitless Experience End-->
-				<!--Skills Start-->
-				<section class="wt-haslayaout wt-main-section wt-footeraboutus">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-sm-6 col-md-3 col-lg-3">
-								<div class="wt-widgetskills">
-									<div class="wt-fwidgettitle">
-										<h3>By Skills</h3>
-									</div>
-									<ul class="wt-fwidgetcontent">
-										<li><a href="javascript:void(0);">Software Engineer</a></li>
-										<li><a href="javascript:void(0);">Technical Writer</a></li>
-										<li><a href="javascript:void(0);">UI Designer</a></li>
-										<li><a href="javascript:void(0);">UX Designer</a></li>
-										<li><a href="javascript:void(0);">Virtual Assistant</a></li>
-										<li><a href="javascript:void(0);">Web Designer</a></li>
-										<li><a href="javascript:void(0);">Wordpress Developer</a></li>
-										<li><a href="javascript:void(0);">Content Writer</a></li>
-										<li class="wt-viewmore"><a href="javascript:void(0);">+ View All</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-3 col-lg-3">
-								<div class="wt-widgetskill">
-									<div class="wt-fwidgettitle">
-										<h3>Skills In US</h3>
-									</div>
-									<ul class="wt-fwidgetcontent">
-										<li><a href="javascript:void(0);">HTML Developers in US</a></li>
-										<li><a href="javascript:void(0);">HTML5 Developers in US</a></li>
-										<li><a href="javascript:void(0);">JavaScript Developers in US</a></li>
-										<li><a href="javascript:void(0);">Microsoft Word Experts in US</a></li>
-										<li><a href="javascript:void(0);">PowerPoint Experts in US</a></li>
-										<li><a href="javascript:void(0);">Social Media Marketers in US</a></li>
-										<li><a href="javascript:void(0);">WordPress Developers in US</a></li>
-										<li><a href="javascript:void(0);">Writers in US</a></li>
-										<li class="wt-viewmore"><a href="javascript:void(0);">+ View All</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-3 col-lg-3">
-								<div class="wt-footercol wt-widgetcategories">
-									<div class="wt-fwidgettitle">
-										<h3>By Categories</h3>
-									</div>
-									<ul class="wt-fwidgetcontent">
-										<li><a href="javascript:void(0);">Graphics &amp; Design</a></li>
-										<li><a href="javascript:void(0);">Digital Marketing</a></li>
-										<li><a href="javascript:void(0);">Writing &amp; Translation</a></li>
-										<li><a href="javascript:void(0);">Video &amp; Animation</a></li>
-										<li><a href="javascript:void(0);">Music &amp; Audio</a></li>
-										<li><a href="javascript:void(0);">Programming &amp; Tech</a></li>
-										<li><a href="javascript:void(0);">Business</a></li>
-										<li><a href="javascript:void(0);">Fun &amp; Lifestyle</a></li>
-										<li class="wt-viewmore"><a href="javascript:void(0);">+ View All</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-12 col-sm-6 col-md-3 col-lg-3">
-								<div class="wt-widgetbylocation">
-									<div class="wt-fwidgettitle">
-										<h3>By Location</h3>
-									</div>
-									<ul class="wt-fwidgetcontent">
-										<li><a href="javascript:void(0);">Switzerland</a></li>
-										<li><a href="javascript:void(0);">Canada</a></li>
-										<li><a href="javascript:void(0);">Germany</a></li>
-										<li><a href="javascript:void(0);">United Kingdom</a></li>
-										<li><a href="javascript:void(0);">Japan</a></li>
-										<li><a href="javascript:void(0);">Sweden</a></li>
-										<li><a href="javascript:void(0);">Australia</a></li>
-										<li><a href="javascript:void(0);">United States</a></li>
-										<li class="wt-viewmore"><a href="javascript:void(0);">+ View All</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--Skills Start End-->
 			</main>
 			<!--Main End-->
 			<!--Footer Start-->
