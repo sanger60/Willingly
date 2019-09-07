@@ -19,7 +19,7 @@
 								<img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description">
 							</figure>
 							<div class="wt-companysinfo">
-								<figure><img src="/../../../assets/images/sidebar/img-02.jpg" alt="img description"></figure>
+								<figure><img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description"></figure>
 								<div class="wt-title">
 									<h2><a href="javascript:void(0);"> Louanne Mattioli</a></h2>
 									<span>Amento Tech</span>
@@ -141,7 +141,7 @@
 									<a href="javascript:;" class="wt-back"><i class="ti-arrow-left"></i></a>
 									<div class="wt-userlogedin">
 										<figure class="wt-userimg">
-											<img v-bind:src="">
+											<img>
 										</figure>
 										<div class="wt-username">
 											<h3><i class="fa fa-check-circle"></i> {{result.Name}} {{result.Surname}}</h3>
