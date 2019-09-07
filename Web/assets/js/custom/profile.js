@@ -45,7 +45,7 @@ if(window.location.href.toString().includes("profile.php")){
 function UserUpdate(){
     var name = document.getElementById("Name").value;
     var surname = document.getElementById("Surname").value;
-    var skill = document.getElementById("about").value;
+    var about = document.getElementById("about").value;
     var adress = document.getElementById("Adresses").value;
 
     var skillList = document.getElementById("skillList");
@@ -53,13 +53,16 @@ function UserUpdate(){
     var percentList= $("#skillList li").find('.skill-dynamic-html');
     var skillsName = "";
     for(var i=0;i< percentList.length;i++){
-        skillsName += percentList[i].innerText +",";
+        if(percentList[i].innerText != "")
+        {
+            skillsName += percentList[i].innerText +",";
+        }
     }
     console.log(skillsName);
     $.ajax({
         url: "https://willingly.tk/inc/php/Update_UserInformationUpdate.php",
         method: "POST",
-        data: {Name:name,Surname:surname,Skills:skillsName,Adress:adress},
+        data: {Name:name,Surname:surname,About:about,Skills:skillsName,Adress:adress},
         dataType: "JSON",
         success:function(data) {
             if(data.Status == true){
