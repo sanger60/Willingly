@@ -16,10 +16,10 @@
 					<div id="wt-verticalscrollbar" class="wt-verticalscrollbar">
 						<div class="wt-companysdetails wt-usersidebar">
 							<figure class="wt-companysimg">
-								<img src="images/sidebar/img-01.jpg" alt="img description">
+								<img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description">
 							</figure>
 							<div class="wt-companysinfo">
-								<figure><img src="images/sidebar/img-02.jpg" alt="img description"></figure>
+								<figure><img src="/../../../assets/images/sidebar/img-02.jpg" alt="img description"></figure>
 								<div class="wt-title">
 									<h2><a href="javascript:void(0);"> Louanne Mattioli</a></h2>
 									<span>Amento Tech</span>
@@ -175,7 +175,7 @@
 											<div class="wt-chatarea">
 												<div class="wt-messages wt-verticalscrollbar wt-dashboardscrollbar">
 													<div class="wt-offerermessage">
-														<figure><img src="images/messages/img-12.jpg" alt="image description"></figure>
+														<figure><img src="/../../../assets/images/messages/img-12.jpg" alt="image description"></figure>
 														<div class="wt-description">
 															<p>Consectetur adipisicing elit sei do eiusmod tempor incididunt labore et dolore.</p>
 															<div class="clearfix"></div>
@@ -183,7 +183,7 @@
 														</div>
 													</div>
 													<div class="wt-memessage wt-readmessage">
-														<figure><img src="images/messages/img-11.jpg" alt="image description"></figure>
+														<figure><img src="/../../../assets/images/messages/img-11.jpg" alt="image description"></figure>
 														<div class="wt-description">
 															<p>Eiusmod tempor incididunt labore et dolore magna aliqiu enim ad minim veniam qiuisru exercitation ullamco laborisen nisi ut aliquip exea.</p>
 															<div class="clearfix"></div>
@@ -196,7 +196,7 @@
 														</div>
 													</div>
 													<div class="wt-offerermessage">
-														<figure><img src="images/messages/img-12.jpg" alt="image description"></figure>
+														<figure><img src="/../../../assets/images/messages/img-12.jpg" alt="image description"></figure>
 														<div class="wt-description">
 															<div class="clearfix"></div>
 															<p>Consectetur adipisicing elit sei do eiusmod tempor incididunt labore et dolore.</p>
@@ -206,7 +206,7 @@
 														</div>
 													</div>
 													<div class="wt-memessage wt-readmessage">
-														<figure><img src="images/messages/img-11.jpg" alt="image description"></figure>
+														<figure><img src="/../../../assets/images/messages/img-11.jpg" alt="image description"></figure>
 														<div class="wt-description">
 															<div class="clearfix"></div>
 															<p>Eiusmod tempor incididunt labore et dolore magna aliqiu enim ad minim veniam qiuisru exercitation ullamco laborisen nisi ut aliquip exea.</p>
@@ -239,11 +239,11 @@
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
 							<div class="wt-dashboardbox wt-messagebox">
-								<span class="wt-featuredtag"><img src="images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
+								<span class="wt-featuredtag"><img src="/../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
 								<div class="wt-dashboardboxcontent">
 									<div class="wt-userprofile">
 										<figure>
-											<img src="images/profile/img-02.jpg" alt="img description">
+											<img src="/../../../assets/images/profile/img-02.jpg" alt="img description">
 											<div class="wt-userdropdown wt-online">
 											</div>
 										</figure>
@@ -273,4 +273,5 @@
 	    }
 	    menu_icon.addEventListener('click', addClassFunThree);
 </script>
+<script src="/../../../assets/js/custom/message.js"></script>
 <?php require 'inc/frontend/views/footer_end.php'; ?>
