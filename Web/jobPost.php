@@ -132,7 +132,7 @@
 				<!--Register Form Start-->
 				<section class="wt-haslayout wt-dbsectionspace">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-6 float-left">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left">
 							<div class="wt-dashboardbox">
 								<div class="wt-dashboardboxtitle">
 									<h2>İlan Paylaş</h2>
@@ -147,27 +147,17 @@
 												<div class="form-group">
 													<input type="text" name="title" id="tittle" class="form-control" placeholder="Başlık">
 												</div>
-												<div class="form-group form-group-half wt-formwithlabel" style="width:100% !important;">
-													<span class="wt-select">
-                                                        <label for="selectoption">İlan Bitiş Zamanı:</label>
-                                                        <input type="date" name="deadDate" id="deadline" />
-													</span>
+												<div class="form-group" style="width:100% !important;">
+                                                        <input type="date" placeholder="Bitiş Tarihi" name="deadDate" id="deadline" style="width:100%;" />
                                                 </div>
-                                                <div class="form-group form-group-half wt-formwithlabel">
-													<span class="wt-select">
-                                                        <label for="selectoption">Bağışlanan Yüzde:</label>
-                                                        <input type="number" name="donationPercent" id="donationPerce" min="7" />
+                                                <div class="form-group form-group-half wt-formwithlabel" style="width:50%;">
+                                                        <input type="number" name="donationPercent" placeholder="Bağışlanan Yüzde" id="donationPerce" min="7" style="width:100%;" />
+                                                        <br/>
                                                         <em>Buradaki tutar şirketimizin minimum hizmet bedelidir.</em>
                                                         <em>Tamamen kurumlara bağışlanacaktır.</em>
-													</span>
                                                 </div>
-                                                <div class="form-group form-group-half wt-formwithlabel">
-													<span class="wt-select">
-                                                        <label for="selectoption">İlan Tutarı:</label>
-                                                        <input type="text" id="number" pattern="[0-9]*">
-                                                        <em>Buradaki tutar şirketimizin minimum hizmet bedelidir.</em>
-                                                        <em>Tamamen kurumlara bağışlanacaktır.</em>
-													</span>
+                                                <div class="form-group form-group-half wt-formwithlabel" style="width:50%;">
+                                                        <input type="text" placeholder="İlan Tutarı" name="priceTitle" id="number" pattern="[0-9]*" style="float:right;width:100%;">
                                                 </div>
 											</fieldset>
 										</form>
@@ -179,17 +169,15 @@
 										<form class="wt-formtheme wt-userform wt-userformvtwo">
 											<fieldset>
 												<div class="form-group">
-													<textarea id="wt-tinymceeditor" class="wt-tinymceeditor" placeholder="İlan Detaylarını Giriniz..."></textarea>
+													<textarea id="wt-tinymceeditor" class="wt-tinymceeditor" placeholder="İlan Detaylarını Giriniz..." style="width:100%;"></textarea>
                                                 </div>
                                                 <div class="form-group">
-                                                <span class="wt-select">
-                                                    <label>Kategori Seçiniz:</label>
-                                                    <select id="categories">
+                                                    <select id="categories" style="width:100%;">
+                                                            <option selected="" disabled="">Kategori Seçiniz</option>
 															<option v-bind:value="item.Id" v-for="item in items">
                                                                 {{item.Name}}
                                                             </option>
 													</select>
-                                                </span>
 												</div>
 											</fieldset>
 										</form>

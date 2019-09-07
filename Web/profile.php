@@ -31,32 +31,20 @@
                     </div>
                     <nav id="wt-navdashboard" class="wt-navdashboard">
                         <ul>
-                            <li class="menu-item-has-children">
-                                <a href="javascript:void(0);">
-                                    <i class="ti-dashboard"></i>
-                                    <span>Insights</span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li><hr><a href="dashboard-insights.html">Insights</a></li>
-                                    <li><hr><a href="dashboard-insightsuser.html">Insights User</a></li>
-                                </ul>
-                            </li>
                             <li class="wt-active">
                                 <a href="dashboard-profile.html">
                                     <i class="ti-briefcase"></i>
-                                    <span>My Profile</span>
+                                    <span>Profi</span>
                                 </a>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="javascript:void(0);">
                                     <i class="ti-package"></i>
-                                    <span>All Jobs</span>
+                                    <span>İşler</span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><hr><a href="dashboard-completejobs.html">Completed Jobs</a></li>
-                                    <li><hr><a href="dashboard-canceljobs.html">Cancelled Jobs</a></li>
-                                    <li><hr><a href="dashboard-ongoingjob.html">Ongoing Jobs</a></li>
-                                    <li><hr><a href="dashboard-ongoingsingle.html">Ongoing Single</a></li>
+                                    <li><hr><a href="dashboard-completejobs.html">Biten İşler</a></li>
+                                    <li><hr><a href="dashboard-ongoingjob.html">Aldığım İşler</a></li> <!-- dashboard-ongoingsingle.html -->
                                 </ul>
                             </li>
                             <li>
@@ -71,7 +59,7 @@
                                     <span>Messages</span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><hr><a href="dashboard-messages.html">Messages</a></li>
+                                    <li><hr><a href="messages.php">Messages</a></li>
                                     <li><hr><a href="dashboard-messages2.html">Messages V 2</a></li>
                                 </ul>
                             </li>
