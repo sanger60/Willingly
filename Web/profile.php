@@ -23,10 +23,10 @@
                         <div class="wt-companysinfo">
                             <figure><img src="http://amentotech.com/htmls/worktern/images/sidebar/img-02.jpg" alt="img description"></figure>
                             <div class="wt-title">
-                                <h2><a href="javascript:void(0);"> Name and UserName </a></h2>
+                                <h2><a href="javascript:void(0);">İsim veya Kullanıcı adı </a></h2>
                                 <span>{{UserName}}</span>
                             </div>
-                            <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Post a Job</a></div>
+                            <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Bir İş İlanı Paylaş</a></div>
                         </div>
                     </div>
                     <nav id="wt-navdashboard" class="wt-navdashboard">
@@ -120,13 +120,13 @@
                             <li>
                                 <a href="index.html">
                                     <i class="ti-shift-right"></i>
-                                    <span>Logout</span>
+                                    <span>Çıkış Yap</span>
                                 </a>
                             </li>
                         </ul>
                     </nav>
                     <div class="wt-navdashboard-footer">
-                        <span>Worktern. © 2019 All Rights Reserved.</span>
+                        <span>Willingly. © 2019 Bütün Hakları Saklıdır.</span>
                     </div>
                 </div>
             </div>
@@ -138,55 +138,55 @@
                         <div class="wt-haslayout wt-dbsectionspace">
                             <div class="wt-dashboardbox wt-dashboardtabsholder">
                                 <div class="wt-dashboardboxtitle">
-                                    <h2>My Profile</h2>
+                                    <h2>Profilim</h2>
                                 </div>
                                 <div class="wt-dashboardtabs">
                                     <ul class="wt-tabstitle nav navbar-nav">
                                         <li class="nav-item">
-                                            <a class="active" data-toggle="tab" href="#wt-skills">Personal Details &amp; Skills</a>
+                                            <a class="active" data-toggle="tab" href="#wt-skills">Kişisel Özellikler &amp; Yetenekler</a>
                                         </li>
-                                        <li class="nav-item"><a data-toggle="tab" href="#wt-education">Experience &amp; Education</a></li>
-                                        <li class="nav-item"><a data-toggle="tab" href="#wt-awards">Projects &amp; Awards</a></li>
+                                        <li class="nav-item"><a data-toggle="tab" href="#wt-education">Tecrübe &amp; Eğitim</a></li>
+                                        <li class="nav-item"><a data-toggle="tab" href="#wt-awards">Projeler &amp; Ödüller</a></li>
                                     </ul>
                                 </div>
                                 <div class="wt-tabscontent tab-content">
                                     <div class="wt-personalskillshold tab-pane active fade show" id="wt-skills">
                                         <div class="wt-yourdetails wt-tabsinfo">
                                             <div class="wt-tabscontenttitle">
-                                                <h2>Your Details</h2>
+                                                <h2>Kişisel Bilgilerin</h2>
                                             </div>
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
                                                     <div class="form-group form-group-half">
                                                         <span class="wt-select">
                                                             <select>
-                                                                <option value="" disabled="">Select Gender</option>
-                                                                <option value="">Male</option>
-                                                                <option value="">Female</option>
+                                                                <option value="" disabled="">Cinsiyet Seçiniz</option>
+                                                                <option value="">Erkek</option>
+                                                                <option value="">Kadın</option>
                                                             </select>
                                                         </span>
                                                     </div>
                                                     <div class="form-group form-group-half">
-                                                        <input type="text" name="first name" class="form-control" placeholder="First Name">
+                                                        <input type="text" name="first name" class="form-control" placeholder="İsim">
                                                     </div>
                                                     <div class="form-group form-group-half">
-                                                        <input type="email" name="last name" class="form-control" placeholder="Last Name">
+                                                        <input type="email" name="last name" class="form-control" placeholder="Soyisim">
                                                     </div>
                                                     <div class="form-group form-group-half">
-                                                        <input type="number" name="rate" class="form-control" placeholder="Your Service Hourly Rate ($)">
+                                                        <input type="number" name="rate" class="form-control" placeholder="Saatlik Bedeliniz (TL)">
                                                     </div>
                                                     <div class="form-group">
-                                                        <input type="text" name="tagline" class="form-control" placeholder="Add Your Tagline Here">
+                                                        <input type="text" name="tagline" class="form-control" placeholder="Yeteneklerini Buraya Yaz">
                                                     </div>
                                                     <div class="form-group">
-                                                        <textarea name="message" class="form-control" placeholder="Description"></textarea>
+                                                        <textarea name="message" class="form-control" placeholder="Hakkında"></textarea>
                                                     </div>
                                                 </fieldset>
                                             </form>
                                         </div>
                                         <div class="wt-profilephoto wt-tabsinfo">
                                             <div class="wt-tabscontenttitle">
-                                                <h2>Profile Photo</h2>
+                                                <h2>Profil Fotoğrafı</h2>
                                             </div>
                                             <div class="wt-profilephotocontent">
                                                 <div class="wt-description">
@@ -197,11 +197,11 @@
                                                         <div class="form-group form-group-label">
                                                             <div class="wt-labelgroup">
                                                                 <label for="filep">
-                                                                    <span class="wt-btn">Select Files</span>
+                                                                    <span class="wt-btn">Dosyaları Seç</span>
                                                                     <input type="file" name="file" id="filep">
                                                                 </label>
-                                                                <span>Drop files here to upload</span>
-                                                                <em class="wt-fileuploading">Uploading<i class="fa fa-spinner fa-spin"></i></em>
+                                                                <span>Dosyaları yüklemek için sürükle.</span>
+                                                                <em class="wt-fileuploading">Yükleniyor<i class="fa fa-spinner fa-spin"></i></em>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -211,8 +211,8 @@
                                                                         <figure><img src="/../../../assets/images/company/img-07.jpg" alt="img description"></figure>
                                                                         <div class="wt-uploadingbar wt-uploading">
                                                                             <span class="uploadprogressbar"></span>
-                                                                            <span>Profile Photo.jpg</span>
-                                                                            <em>File size: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
+                                                                            <span>Profil Fotografı.jpg</span>
+                                                                            <em>Dosya Boyutu: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
                                                                         </div>
                                                                     </div>
                                                                 </li>
@@ -221,8 +221,8 @@
                                                                         <figure><img src="/../../../assets/images/company/img-08.jpg" alt="img description"></figure>
                                                                         <div class="wt-uploadingbar wt-uploading">
                                                                             <span class="uploadprogressbar"></span>
-                                                                            <span>Profile Photo.jpg</span>
-                                                                            <em>File size: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
+                                                                            <span>Profil Fotografı.jpg</span>
+                                                                            <em>Dosya Boyutu: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
                                                                         </div>	
                                                                     </div>
                                                                 </li>
@@ -234,8 +234,8 @@
                                                                         </div>
                                                                         <div class="wt-uploadingbar wt-uploading">
                                                                             <span class="uploadprogressbar"></span>
-                                                                            <span>Profile Photo.jpg</span>
-                                                                            <em>File size: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
+                                                                            <span>Profil Fotografı.jpg</span>
+                                                                            <em>Dosya Boyutu: 300 kb<a href="javascript:void(0);" class="lnr lnr-cross"></a></em>
                                                                         </div>
                                                                     </div>
                                                                 </li>
@@ -288,7 +288,7 @@
                                         </div>
                                         <div class="wt-location wt-tabsinfo">
                                             <div class="wt-tabscontenttitle">
-                                                <h2>Your Location</h2>
+                                                <h2>Lokasyon</h2>
                                             </div>
                                             <form class="wt-formtheme wt-userform">
                                                 <fieldset>
@@ -380,7 +380,7 @@
                                         </div>
                                         <div class="wt-skills">
                                             <div class="wt-tabscontenttitle">
-                                                <h2>My Skills</h2>
+                                                <h2>Yeteneklerim</h2>
                                             </div>
                                             <div class="wt-skillscontent-holder">
                                                 <form class="wt-formtheme wt-skillsform">
@@ -389,17 +389,17 @@
                                                             <div class="form-group-holder">
                                                                 <span class="wt-select">
                                                                     <select>
-                                                                        <option value="">Select Your Skill</option>
+                                                                        <option value="">Yeteneğini Seç</option>
                                                                         <option value="">HTML</option>
                                                                         <option value="">PHP</option>
                                                                         <option value="">JQUERY</option>
                                                                     </select>
                                                                 </span>
-                                                                <input type="number" name="rate" class="form-control" placeholder="Rate Your Skill (0% to 100%)">
+                                                                <input type="number" name="rate" class="form-control" placeholder="Yeteneğini değerlendir (%0'dan %100'e)">
                                                             </div>
                                                         </div>
                                                         <div class="form-group wt-btnarea">
-                                                            <a href="javascript:void(0);" class="wt-btn">Add Skills</a>
+                                                            <a href="javascript:void(0);" class="wt-btn">Yetenek Ekle</a>
                                                         </div>
                                                     </fieldset>
                                                 </form>
@@ -420,7 +420,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="wt-dragdroptool"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Website Design (<em class="skill-val">55</em>%)</span>
+                                                            <span class="skill-dynamic-html">Website Tasarımı (<em class="skill-val">55</em>%)</span>
                                                             <span class="skill-dynamic-field">
                                                                 <input type="text" name="skills[1][percentage]" value="90">
                                                             </span>
@@ -442,7 +442,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Graphic Design (<em class="skill-val">80</em>%)</span>
+                                                            <span class="skill-dynamic-html">Grafik Tasarım (<em class="skill-val">80</em>%)</span>
                                                             <span class="skill-dynamic-field">
                                                                 <input type="text" name="skills[1][percentage]" value="90">
                                                             </span>
@@ -453,7 +453,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Rate Your Skill (<em class="skill-val">10</em>%)</span>
+                                                            <span class="skill-dynamic-html">Yeteneğini Değerlendir (<em class="skill-val">10</em>%)</span>
                                                             <span class="skill-dynamic-field">
                                                                 <input type="text" name="skills[1][percentage]" value="90">
                                                             </span>
@@ -486,7 +486,7 @@
                                                         </li>
                                                         <li>
                                                             <div class="wt-dragdroptool handle"><a href="javascript:void(0)" class="lnr lnr-menu"></a></div>
-                                                            <span class="skill-dynamic-html">Content Writing (<em class="skill-val">80</em>%)</span>
+                                                            <span class="skill-dynamic-html">İçerik Yazarlığı (<em class="skill-val">80</em>%)</span>
                                                             <span class="skill-dynamic-field">
                                                                 <input type="text" name="skills[1][percentage]" value="90">
                                                             </span>
@@ -536,8 +536,8 @@
                                     <div class="wt-educationholder tab-pane fade" id="wt-education">
                                         <div class="wt-userexperience wt-tabsinfo">
                                             <div class="wt-tabscontenttitle wt-addnew">
-                                                <h2>Add Your Experience</h2>
-                                                <a href="javascript:void(0);">Add New</a>
+                                                <h2>Deneyimlerini Ekle</h2>
+                                                <a href="javascript:void(0);">Yeni Ekle</a>
                                             </div>
                                             <ul class="wt-experienceaccordion accordion">
                                                 <li>
@@ -1100,7 +1100,7 @@
                                                                     </ul>
                                                                 </div>
                                                                 <div class="form-group wt-btnarea">
-                                                                    <a href="javascript:void(0);" class="wt-btn">Save</a>
+                                                                    <a href="javascript:void(0);" class="wt-btn">Kaydet</a>
                                                                 </div>
                                                             </fieldset>
                                                         </form>
@@ -1114,8 +1114,8 @@
                         </div>
                         <div class="wt-updatall">
                             <i class="ti-announcement"></i>
-                            <span>Update all the latest changes made by you, by just clicking on “Save &amp; Continue” button.</span>
-                            <a class="wt-btn" href="javascript:void(0);">Save &amp; Update</a>
+                            <span>Yaptığınız bütün değişikler "Kaydet &amp; Devam Et” tuşuna bastığınız anda kaydedilecektir.</span>
+                            <a class="wt-btn" href="javascript:void(0);">Kaydet &amp; Devam Et</a>
                         </div>
                     </div>
                 </div>
