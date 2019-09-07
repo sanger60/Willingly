@@ -55,13 +55,25 @@ function ViewMessage(a){
             success:function(data){
                 var main = document.getElementById("msgList");
                 main.innerHTML = "";
-                
+
                 for(var i=0;i< data.Data.length;i++){
                     if(data.Data[i].Sender == 21){
-                        main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";         
+                        if(data.Data[i].IsRead)
+                        {
+                            main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                        }
+                        else{
+                            main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                        }
                     }
                     else{
-                        main.innerHTML += "<div class='wt-memessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                        if(data.Data[i].IsRead)
+                        {
+                            main.innerHTML += "<div class='wt-memessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                        }
+                        else{
+                            main.innerHTML += "<div class='wt-memessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                        }
                     }
                 }
             },
