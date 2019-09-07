@@ -6,15 +6,54 @@ $DontUseChecker = true;
 include_once("Config.php");
 
 $QueryStep1 = "";
-
-CreateInsertQuery($_POST["Name"],"Name",true);
-CreateInsertQuery($_POST["Surname"],"Surname");
-CreateInsertQuery($_POST["Age"],"Age");
-CreateInsertQuery($_POST["Email"],"Email");
-CreateInsertQuery($_POST["Phone"],"Phone");
-CreateInsertQuery($_POST["About"],"About");
-CreateInsertQuery($_POST["Password"],"Password");
-CreateInsertQuery($_POST["PhotoSrc"],"PhotoSrc");
+if (isset($_POST["Name"])){
+    if (!is_null($_POST["Name"]) && $_POST["Name"] != "")
+    {
+        CreateInsertQuery($_POST["Name"],"Name",true);
+    }
+}
+if (isset($_POST["Surname"])){
+    if (!is_null($_POST["Surname"]) && $_POST["Surname"] != "")
+    {
+        CreateInsertQuery($_POST["Surname"],"Surname");
+    }
+}
+if (isset($_POST["Age"])){
+    if (!is_null($_POST["Age"]) && $_POST["Age"] != "")
+    {
+        CreateInsertQuery($_POST["Age"],"Age");
+    }
+}
+if (isset($_POST["Email"])){
+    if (!is_null($_POST["Email"]) && $_POST["Email"] != "")
+    {
+        CreateInsertQuery($_POST["Email"],"Email");
+    }
+}
+if (isset($_POST["Phone"])){
+    if (!is_null($_POST["Phone"]) && $_POST["Phone"] != "")
+    {
+        CreateInsertQuery($_POST["Phone"],"Phone");
+    }
+}
+if (isset($_POST["About"])){
+    if (!is_null($_POST["About"]) && $_POST["About"] != "")
+    {
+        CreateInsertQuery($_POST["About"],"About");
+    }
+}
+if (isset($_POST["Password"])){
+    if (!is_null($_POST["Password"]) && $_POST["Password"] != "")
+    {
+        CreateInsertQuery($_POST["Password"],"Password");
+    }
+}
+if (isset($_POST["PhotoSrc"])){
+    if (!is_null($_POST["PhotoSrc"]) && $_POST["PhotoSrc"] != "")
+    {
+        CreateInsertQuery($_POST["PhotoSrc"],"PhotoSrc");
+    }
+}
 
 //var_dump("UPDATE public.\"Users\" SET $QueryStep1 where \"Id\"='$Global_UserID'");
 
