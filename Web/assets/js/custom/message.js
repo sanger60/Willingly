@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    setInterval(function() {
+        if(firstClick){
+            ViewMessage(FadeIdItem);
+        }
+    },1500);
     var MessageVue = new Vue({
         el:'#wt-main',
         data:{
@@ -41,13 +46,14 @@ $(document).ready(function() {
     });
 });
 
-
+var firstClick = false;
+var FadeIdItem;
 
 function ViewMessage(a){
     var id = $(a).find('div input').val()
-
-        var self= this;
-        setInterval(function() {
+    FadeIdItem = a;
+    firstClick = true;
+    
             $.ajax({
                 url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
                 method:"POST",
@@ -110,5 +116,11 @@ function ViewMessage(a){
                     Swal.fire("Hatalı İşlem");
                 }
         });
-        },2000);
+}
+
+
+
+
+function SendMessage(){
+
 }
