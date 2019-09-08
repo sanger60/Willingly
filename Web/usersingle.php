@@ -27,7 +27,7 @@
 												</figure>
 												<div class="wt-title">
 													<h3><i class="fa fa-check-circle"></i> {{result.Name}}</h3>
-													<span>{{result.AdvertisementRate}}/5 <a class="javascript:void(0);">({{result.FeedBack}} Feedback)</a> <br>Member since {{result.MemberDate}} </span>
+													<span>{{result.AdvertisementInfo.AdvertisementRate}}/5 <a class="javascript:void(0);">(150 Feedback)</a> <br>Member since {{result.AdvertisementInfo.MemberDate}} </span>
 												</div>
 											</div>
 										</div>
@@ -41,7 +41,7 @@
 												</ul>
 												<div class="wt-description">
                                                     <p>
-                                                        {{result.Explanation}}
+                                                        {{result.AdvertisementInfo.Explanation}}
                                                     </p>
 												</div>
 											</div>
@@ -87,15 +87,15 @@
 											<div class="wt-experiencelisting-hold">
 												<div class="wt-experiencelisting wt-bgcolor">
 													<div class="wt-title">
-														<h3>Web &amp; Apps Project Manager</h3>
+														<h3>Java Yazilim Uzmanligi</h3>
 													</div>
 													<div class="wt-experiencecontent">
 														<ul class="wt-userlisting-breadcrumb">
-															<li><span><i class="far fa-building"></i> Amento Tech</span></li>
-															<li><span><i class="far fa-calendar"></i> Aug 2017 - Till Now</span></li>
+															<li><span><i class="far fa-building"></i> Asli Boluk</span></li>
+															<li><span><i class="far fa-calendar"></i> Aug 2019</span></li>
 														</ul>
 														<div class="wt-description">
-															<p>“ Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliquaenim ad minim veniamac quis nostrud exercitation ullamco laboris. ”</p>
+															<p>“ Java öğrenmek isteyen arkadaşlar! Java’yı' Dersleri anlaşılır ve akıcı. Dinlerken keyif alıyorsunuz. Bire bir özel sorularınıza yanıt alıyorsunuz. Bu fırsat kaçmaz! ”</p>
 														</div>
 													</div>
 												</div>
