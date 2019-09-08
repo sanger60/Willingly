@@ -787,7 +787,8 @@ function FreelancerSendOffer(){
     var AdDetailVue = new Vue({
         el: '#wt-main',
         data:{
-            item: []
+            item: [],
+            Offer: []
         },
         mounted: function(){
             var self = this;
@@ -798,6 +799,24 @@ function FreelancerSendOffer(){
                 dataType: "JSON",
                 success:function(data) {
                     self.item = data;
+                    console.log(data);
+                },
+                error:function(a,b,g) {
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });
+                }
+            });
+
+            $.ajax({
+                url:"https://willingly.tk/inc/php/Get_OfferEmployer.php",
+                method: "POST",
+                data: {EmployerId:advId,PageId:1},
+                dataType: "JSON",
+                success:function(data) {
+                    self.Offer = data;
                     console.log(data);
                 },
                 error:function(a,b,g) {
@@ -888,5 +907,73 @@ function FreelancerSendOffer(){
                 $(clocks[i]).append(item2);
             }
         },1300);
+    });
+}
+
+if(window.location.toString().includes("https://willingly.tk/OnGoingJob.php"))
+{
+    var EndVue = new Vue({
+        el:'#wt-main',
+        data:{
+            Items: []
+        },
+        mounted: function() {
+            var self = this;
+            $.ajax({
+                url: "http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                method: "POST",
+                data:{PageId:1},
+                dataType:"JSON",
+                success:function(data){
+                    for(var i=0;i< data.Data.length;i++){
+                        if(data.Data[i].Status != true)
+                        {
+                            var index = data.Data.indexOf(data.Data[i]);
+                            if (index !== -1)
+	                        data.Data.splice(index, 1); 
+                        }
+                    }
+
+                    self.Items = data.Data;
+                },
+                error: function(a,b,g){
+                    Swal.fire("Bilinmeyen bir hata oluştu !!");
+                }
+            });
+        }
+    });
+}
+
+if(window.location.toString().includes("https://willingly.tk/ComplatedJob.php"))
+{
+    var EndVue2 = new Vue({
+        el:'#wt-main',
+        data:{
+            Items: []
+        },
+        mounted: function() {
+            var self = this;
+            $.ajax({
+                url: "http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                method: "POST",
+                data:{PageId:1},
+                dataType:"JSON",
+                success:function(data){
+                    for(var i=0;i< data.Data.length;i++){
+                        if(data.Data[i].Status == true)
+                        {
+                            var index = data.Data.indexOf(data.Data[i]);
+                            if (index !== -1)
+	                        data.Data.splice(index, 1); 
+                        }
+                    }
+
+                    self.Items = data.Data;
+                },
+                error: function(a,b,g){
+                    Swal.fire("Bilinmeyen bir hata oluştu !!");
+                }
+            });
+        }
     });
 }
