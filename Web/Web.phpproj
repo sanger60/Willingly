@@ -26,9 +26,15 @@
     <Compile Include="inc\php\Config.php" />
     <Compile Include="inc\php\Get_ChatMessages.php" />
     <Compile Include="inc\php\Get_ChatList.php" />
+    <Compile Include="inc\php\Get_Employer_Advertisement.php" />
+    <Compile Include="inc\php\Get_OfferEmployer.php" />
     <Compile Include="inc\php\Get_UserInformation.php" />
     <Compile Include="inc\php\Get_FreelanceAdvertisement.php" />
     <Compile Include="inc\php\Get_FilterConfig.php" />
+    <Compile Include="inc\php\Insert_EmployerOffer.php" />
+    <Compile Include="inc\php\Insert_NewMessage.php" />
+    <Compile Include="inc\php\Insert_Employer_Advertisement.php" />
+    <Compile Include="inc\php\Update_Employer_Advertisement.php" />
     <Compile Include="inc\php\Update_UserInformationUpdate.php" />
     <Compile Include="inc\php\Update_FreelancerAdvertisement.php" />
     <Compile Include="inc\php\Insert_FreelancerAdvertisementCreate.php" />

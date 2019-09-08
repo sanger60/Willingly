@@ -121,6 +121,11 @@ if (isset($_POST["price"]))
         $IsFist = false;
     }
 }
+$IsMobile = false;
+if (isset($_POST["Mobile"]))
+{
+  $IsMobile = True;
+}
 
 $Users = $Conn_pgsql->query("SELECT * FROM public.\"Users\"")->fetchAll(PDO::FETCH_ASSOC);
 
@@ -136,6 +141,12 @@ $total_pages = ceil($total_results/$limit);
 $starting_limit = ($page-1)*$limit;
 
 $Ilan = $Conn_pgsql->query("SELECT * FROM public.\"Freelancer_Advertisement\"  $AddQuery $AddQuery02 $AddQuery03 $AddQuery04 ORDER BY \"Id\" DESC LIMIT $limit offset $starting_limit")->fetchAll(PDO::FETCH_ASSOC);
+
+if ($IsMobile == true)
+{
+	Print(json_encode(array("Data" =>$Ilan)));
+    die();
+}
 
 foreach ($Ilan as $value)
 {

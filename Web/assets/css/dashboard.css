@@ -542,7 +542,6 @@ body{background:#f2f3fa;}
 }
 .wt-offersmessages ul li .wt-messages:before{
 	top: 0;
-	width: 100%;
 	content: '';
 	z-index: 1;
 	height: 100px;
@@ -1769,7 +1768,7 @@ table.wt-tablecategories tbody tr td figure img{
 	text-transform: capitalize;
 }
 .wt-userformvtwo .form-group select{padding-right: 30px;}
-.wt-userformvtwo .form-group:nth-child(2) select{padding-left:115px; }
+.wt-userformvtwo .form-group:nth-child(2) select{  }
 .wt-userformvtwo .form-group:nth-child(3) select{padding-left:85px; }
 .wt-userformvtwo .form-group:nth-child(4) select{padding-left:110px; }
 .wt-userformvtwo .form-group:nth-child(5) select{padding-left:110px; }

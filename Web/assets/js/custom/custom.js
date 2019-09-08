@@ -17,25 +17,25 @@ function pageChanged(a){
         var urlParams = new URLSearchParams(location.search);
         var searchKey = urlParams.get('search');
         var searchType2 = urlParams.get('searchType');
-        window.location.href = "http://willingly.com/userlisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
+        window.location.href = "https://willingly.tk/userlisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
     }
     else if(location.toString().includes('category')){
         console.log("ikinci if");
 
         var urlParams = new URLSearchParams(location.search);
         var catKey = urlParams.get('category');
-        window.location.href = "http://willingly.com/userlisting.php/?category="+catKey+"&page="+PageId;
+        window.location.href = "https://willingly.tk/userlisting.php/?category="+catKey+"&page="+PageId;
 
     }
     else{
         console.log("son deger girdi");
 
-        window.location.href = "http://willingly.com/userlisting.php/?page="+PageId;
+        window.location.href = "https://willingly.tk/userlisting.php/?page="+PageId;
     }
 
         
     //     $.ajax({
-    //         url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+    //         url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
     //         method:"POST",
     //         data:{searchKey:searchKey,searchtip: searchType2,PageId:pageId},
     //         dataType:"JSON",
@@ -52,7 +52,7 @@ function pageChanged(a){
     //     var catKey = urlParams.get('categoryId');
 
     //     $.ajax({
-    //         url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+    //         url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
     //         method:"POST",
     //         data:{categoryId: catKey,PageId:pageId},
     //         dataType:"JSON",
@@ -67,7 +67,7 @@ function pageChanged(a){
     // else{
         
     //     $.ajax({
-    //         url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+    //         url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
     //         method:"POST",
     //         data:{PageId:pageId},
     //         dataType:"JSON",
@@ -85,7 +85,7 @@ function ListWithCategory(a){
 
     var id = parseInt(a.name);
     
-    window.location.href = "http://willingly.com/userlisting.php/?category="+id+"&page=1";
+    window.location.href = "https://willingly.tk/userlisting.php/?category="+id+"&page=1";
     
 }
 
@@ -134,7 +134,7 @@ function SearchBtn(){
     }
 }
 // img,user,ilan başlık,ilan parası,ülke,ilan açıklama,ilan rate,ilan skills,ilan feedback
-if(window.location.toString().includes("http://willingly.com/userlisting.php"))
+if(window.location.toString().includes("https://willingly.tk/userlisting.php"))
 {
     FreeLancerList();
 
@@ -188,7 +188,7 @@ function FreeLancerList(){
         mounted: function () {
             var self = this;
             $.ajax({
-                url: 'http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php',
+                url: 'https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php',
                 method: 'POST',
                 data: {searchKey:searchKey,searchtip: searchType2,PageId:page,category: category,price:price},
                 dataType: "JSON",
@@ -206,7 +206,7 @@ function FreeLancerList(){
             });
 
             $.ajax({
-                url: 'http://willingly.tk/inc/php/Get_FilterConfig.php',
+                url: 'https://willingly.tk/inc/php/Get_FilterConfig.php',
                 method: 'POST',
                 dataType: "JSON",
                 timeout: 60000,
@@ -366,10 +366,10 @@ function updateTextInput2(val) {
 function AdDetail(item){
     var id = item.getAttribute("title");
 
-    window.location.href="http://willingly.com/usersingle.php?uniqorne="+id;
+    window.location.href="https://willingly.tk/usersingle.php?uniqorne="+id;
 }
 
-if(window.location.toString().includes("http://willingly.com/usersingle.php"))
+if(window.location.toString().includes("https://willingly.tk/usersingle.php"))
 {
     var urlParams = new URLSearchParams(location.search);
     var advId = urlParams.get('uniqorne');
@@ -382,7 +382,7 @@ if(window.location.toString().includes("http://willingly.com/usersingle.php"))
         mounted: function(){
             var self = this;
             $.ajax({
-                url:"http://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
+                url:"https://willingly.tk/inc/php/Get_FreelanceAdvertisement.php",
                 method: "POST",
                 data: {AdvertisementId:advId,PageId:1},
                 dataType: "JSON",
@@ -469,7 +469,7 @@ function FreelancerSendOffer(){
             mounted: function () {
                 var self = this;
                 $.ajax({
-                    url: 'http://willingly.tk/inc/php/Get_Employer_Advertisement.php',
+                    url: 'https://willingly.tk/inc/php/Get_Employer_Advertisement.php',
                     method: 'POST',
                     data: {searchKey:searchKey,searchtip: searchType2,PageId:page,category: category,price:price},
                     dataType: "JSON",
@@ -487,7 +487,7 @@ function FreelancerSendOffer(){
                 });
     
                 $.ajax({
-                    url: 'http://willingly.tk/inc/php/Get_FilterConfig.php',
+                    url: 'https://willingly.tk/inc/php/Get_FilterConfig.php',
                     method: 'POST',
                     dataType: "JSON",
                     timeout: 60000,
@@ -508,7 +508,7 @@ function FreelancerSendOffer(){
         window.vue = ItemsVue;
     }
 
-    if(window.location.toString().includes("http://willingly.com/joblisting.php"))
+    if(window.location.toString().includes("https://willingly.tk/joblisting.php"))
     {
         JobList();
 
@@ -572,20 +572,20 @@ function FreelancerSendOffer(){
             var urlParams = new URLSearchParams(location.search);
             var searchKey = urlParams.get('search');
             var searchType2 = urlParams.get('searchType');
-            window.location.href = "http://willingly.com/joblisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
+            window.location.href = "https://willingly.tk/joblisting.php/?search="+searchKey+"&searchType="+searchType2+"&page="+PageId;
         }
         else if(location.toString().includes('category')){
             console.log("ikinci if");
     
             var urlParams = new URLSearchParams(location.search);
             var catKey = urlParams.get('category');
-            window.location.href = "http://willingly.com/joblisting.php/?category="+catKey+"&page="+PageId;
+            window.location.href = "https://willingly.tk/joblisting.php/?category="+catKey+"&page="+PageId;
     
         }
         else{
             console.log("son deger girdi");
     
-            window.location.href = "http://willingly.com/joblisting.php/?page="+PageId;
+            window.location.href = "https://willingly.tk/joblisting.php/?page="+PageId;
         }
     
        
@@ -672,12 +672,114 @@ function FreelancerSendOffer(){
     function JobDetail(item){
         var id = item.getAttribute("title");
 
-        window.location.href="http://willingly.com/jobsingle.php?uniqorne="+id;
+        window.location.href="https://willingly.tk/jobsingle.php?uniqorne="+id;
+    }
+    function DateNow(){
+
+    }
+
+    function JobSkillsAdd(){
+        var skillName = document.getElementById("skillJob").value;
+        var list = document.getElementById("AddedSkils");
+        if(skillName != "")
+        {
+            list.innerHTML += "<li> <div class='wt-dragdroptool'> <a href='javascript:void(0)'' class='lnr lnr-menu'></a> </div> <span class='skill-dynamic-html'>"+skillName+"</span> <div class='wt-rightarea'> <a href='javascript:void(0);' onclick='JobSkillRemove(this);' class='wt-deleteinfo'><i class='lnr lnr-trash'></i></a> </div> </li>"
+        }
+    }
+
+    function JobSkillRemove(a){
+        $(a.parentElement.parentElement.parentElement).remove();
+    }
+
+    if(window.location.href.toString().includes("jobPost.php"))
+    {
+        var jobVue = new Vue({
+            el: 'wt-main',
+            data:{
+                items: []
+            },
+            mounted: function() {
+                var self = this;
+                $.ajax({
+                    url:"https://willingly.tk/inc/php/Get_FilterConfig.php",
+                    method:"GET",
+                    dataType:"JSON",
+                    success:function(data){
+                        self.items = data.Catagory;
+                    },
+                    eroor:function(a,r,b){
+                        Swal.fire("Bilinmeyen bir hata oluştu !");
+                    }
+                });
+            }
+        });
+
+        document.getElementById("number").onblur =function (){    
+            this.value = parseFloat(this.value.replace(/,/g, ""))
+                            .toFixed(2)
+                            .toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            
+            // document.getElementById("display").value = this.value.replace(/,/g, "")
+            
+        }
+    }
+
+
+    function JobAdd(){
+        var titItem = document.getElementById("tittle").value;
+        var Description = document.getElementById("wt-tinymceeditor").value;
+        var DeadLineDate = document.getElementById("deadline").value;
+        var donationPercent = document.getElementById("donationPerce").value;
+        var price = document.getElementById('number').value;
+        var categoryId = $("#categories").children("option:selected").val();
+        var Abilities = $('#AddedSkils li').find('.skill-dynamic-html');
+        var SkilsName = "";
+
+        //#region todayDateGet
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        //#endregion
+        var UploadDate = today;
+
+        for(var i=0;i< Abilities.length;i++){
+            SkilsName += Abilities[i]+",";
+        }
+        $.ajax({
+            url:"https://willingly.tk/inc/php/Insert_Employer_Advertisement.php",
+            method:"POST",
+            data:{Tittle:titItem,Explanation:Description,Price:price,DonationPrice:donationPercent,RequiredSkills:SkilsName,CatagoryId:categoryId,ADate:UploadDate,DeadLine:DeadLineDate},
+            dataType:"JSON",
+            success:function(data){
+                if(data.Status == true){
+                    Swal.fire("Tebrikler, Başarıyla Kaydedildi.");
+                }
+                else{
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });        
+                }
+            },
+            error:function(a,r,b){
+                Swal.fire({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'Bir şeyler yanlış gitti!'
+                });    
+            }
+        });
     }
 
   // ---------------------------------------------------------------------------------- \\
                         //          JOB    SİNGLE     PAGE            \\
-    if(window.location.toString().includes("http://willingly.com/jobsingle.php"))
+    if(window.location.toString().includes("https://willingly.tk/jobsingle.php"))
     {
     var urlParams = new URLSearchParams(location.search);
     var advId = urlParams.get('uniqorne');
@@ -685,12 +787,13 @@ function FreelancerSendOffer(){
     var AdDetailVue = new Vue({
         el: '#wt-main',
         data:{
-            item: []
+            item: [],
+            Offer: []
         },
         mounted: function(){
             var self = this;
             $.ajax({
-                url:"http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                url:"https://willingly.tk/inc/php/Get_Employer_Advertisement.php",
                 method: "POST",
                 data: {AdvertisementId:advId,PageId:1},
                 dataType: "JSON",
@@ -699,7 +802,29 @@ function FreelancerSendOffer(){
                     console.log(data);
                 },
                 error:function(a,b,g) {
-                    Swal.fire("Bir hata oluştu !");
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });
+                }
+            });
+
+            $.ajax({
+                url:"https://willingly.tk/inc/php/Get_OfferEmployer.php",
+                method: "POST",
+                data: {EmployerId:advId,PageId:1},
+                dataType: "JSON",
+                success:function(data) {
+                    self.Offer = data;
+                    console.log(data);
+                },
+                error:function(a,b,g) {
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });
                 }
             });
         }
@@ -782,5 +907,73 @@ function FreelancerSendOffer(){
                 $(clocks[i]).append(item2);
             }
         },1300);
+    });
+}
+
+if(window.location.toString().includes("https://willingly.tk/OnGoingJob.php"))
+{
+    var EndVue = new Vue({
+        el:'#wt-main',
+        data:{
+            Items: []
+        },
+        mounted: function() {
+            var self = this;
+            $.ajax({
+                url: "http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                method: "POST",
+                data:{PageId:1},
+                dataType:"JSON",
+                success:function(data){
+                    for(var i=0;i< data.Data.length;i++){
+                        if(data.Data[i].Status != true)
+                        {
+                            var index = data.Data.indexOf(data.Data[i]);
+                            if (index !== -1)
+	                        data.Data.splice(index, 1); 
+                        }
+                    }
+
+                    self.Items = data.Data;
+                },
+                error: function(a,b,g){
+                    Swal.fire("Bilinmeyen bir hata oluştu !!");
+                }
+            });
+        }
+    });
+}
+
+if(window.location.toString().includes("https://willingly.tk/ComplatedJob.php"))
+{
+    var EndVue2 = new Vue({
+        el:'#wt-main',
+        data:{
+            Items: []
+        },
+        mounted: function() {
+            var self = this;
+            $.ajax({
+                url: "http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                method: "POST",
+                data:{PageId:1},
+                dataType:"JSON",
+                success:function(data){
+                    for(var i=0;i< data.Data.length;i++){
+                        if(data.Data[i].Status == true)
+                        {
+                            var index = data.Data.indexOf(data.Data[i]);
+                            if (index !== -1)
+	                        data.Data.splice(index, 1); 
+                        }
+                    }
+
+                    self.Items = data.Data;
+                },
+                error: function(a,b,g){
+                    Swal.fire("Bilinmeyen bir hata oluştu !!");
+                }
+            });
+        }
     });
 }

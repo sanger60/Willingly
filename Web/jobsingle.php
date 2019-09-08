@@ -10,7 +10,7 @@
 							<div id="wt-twocolumns" class="wt-twocolumns wt-haslayout" v-for="result in item.Data">
 								<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 float-left">
 									<div class="wt-proposalholder">
-										<span class="wt-featuredtag"><img src="/../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
+										<span class="wt-featuredtag"><img src="/../../../assets//../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
 										<div class="wt-proposalhead">
 											<h2>{{result.AdvertisementInfo.Tittle}}</h2>
 											<ul class="wt-userlisting-breadcrumb wt-userlisting-breadcrumbvtwo">
@@ -39,6 +39,46 @@
 												<a href="javascript:void(0);">{{result.AdvertisementInfo.RequiredSkills}}</a>
 											</div>
 										</div>
+										<div class="wt-freelancerholder wt-rcvproposalholder">
+										<div class="wt-tabscontenttitle">
+											<h2>Alınan Teklifler</h2>
+										</div>
+										<div class="wt-managejobcontent" id="manageJob">
+											<div class="wt-userlistinghold wt-featured wt-proposalitem" v-for="item in Offer.Data">
+												<span class="wt-featuredtag"><img src="/../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style mCS_img_loaded"></span>
+												<figure class="wt-userlistingimg">
+													<img src="/../../../assets/images/user/userlisting/img-01.jpg" alt="image description" class="mCS_img_loaded">
+												</figure>
+												<div class="wt-proposaldetails">
+													<div class="wt-contenthead">
+														<div class="wt-title">
+															<a href="javascript:;" onclick="ViewProfile();"> {{item.UserInfo.Name}} {{item.UserInfo.Surname}}</a>
+															<input type="hidden" v-bind:value="item.Id" />
+														</div>
+													</div>
+													<div class="wt-proposalfeedback">
+														<span class="wt-starsvtwo">
+															<i class="fa fa-star fill"></i>
+														</span>
+														<span class="wt-starcontent"> {{item.UserInfo.Rate}}/<i>5</i></span>
+													</div>													
+												</div>
+												<div class="wt-rightarea">
+													<div class="wt-btnarea">
+														<a href="javascript:void(0);" class="wt-btn">İşi Ver</a>
+													</div>												
+													<div class="wt-hireduserstatus">
+														<h5>{{item.AdvertisementInfo.Price}}₺</h5>
+														<span>Tutar</span>
+													</div>
+													<div class="wt-hireduserstatus">
+														<i class="far fa-envelope"></i>
+														<span>Hızlı İletişim</span>
+													</div>													
+												</div>
+											</div>		
+										</div>										
+									</div>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 float-left">
@@ -53,7 +93,7 @@
 											</div>
 											<div class="tg-authorcodescan">
 												<figure class="tg-qrcodeimg" style="margin: 0px 0px 20px 0px !important;">
-													<img src="/../../../assets/images/qrcode.png" alt="img description">
+													<img src="/../../../assets//../../../assets/images/qrcode.png" alt="img description">
 												</figure>
 												<div class="tg-qrcodedetail">
 													<div class="tg-qrcodefeat">

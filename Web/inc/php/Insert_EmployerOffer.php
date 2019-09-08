@@ -8,20 +8,15 @@ include_once("Config.php");
 $QueryStep1 = "";
 $QueryStep2 = "";
 
-CreateInsertQuery($_POST["Tittle"],true,"Tittle");
-CreateInsertQuery($_POST["Explanation"],false,"Explanation");
+CreateInsertQuery($_POST["UserId"],true,"UserId"); 
+CreateInsertQuery($_POST["EmployerId"],false,"EmployerId");
+CreateInsertQuery($_POST["FreelancerId"],false,"FreelancerId"); 
 CreateInsertQuery($_POST["Price"],false,"Price"); 
-CreateInsertQuery($_POST["DonationPrice"],false,"DonationPrice");
-CreateInsertQuery($_POST["RequiredSkills"],false,"RequiredSkills"); 
-CreateInsertQuery($_POST["CatagoryId"],false,"CatagoryId");
-CreateInsertQuery($_POST["ADate"],false,"ADate");
-CreateInsertQuery($_POST["DeadLine"],false,"DeadLine");
+CreateInsertQuery($_POST["Description"],false,"Description"); 
+//var_dump("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
 
-//  var_dump("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\") VALUES ($QueryStep2,'$Global_UserID')");
-
-$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"UserId\",\"Status\") VALUES ($QueryStep2,'$Global_UserID','t')");
+$data08 = $Conn_pgsql->prepare("INSERT INTO public.\"Employer_Advertisement\" ($QueryStep1,\"Status\",\"State\") VALUES ($QueryStep2,'t','0')");
 $data08->execute();
-
 
 print(json_encode(array(
                 "Status" => True,
