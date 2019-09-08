@@ -16,7 +16,7 @@ function RegisterCheck(){
             dataType: "JSON",
             success: function(data){
                 if(data.Status == true){
-                    Swal.fire('Olduuuuu');
+                    window.location.href="https://willingly.tk/";
                 }
                 else{
                     Swal.fire({
