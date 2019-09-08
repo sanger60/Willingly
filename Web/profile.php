@@ -48,12 +48,6 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="dashboard-managejobs.html">
-                                    <i class="ti-announcement"></i>
-                                    <span>İşleri Yönet</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="messages.php">
                                     <i class="ti-pencil-alt"></i>
                                     <span>Mesajlar</span>
