@@ -26,7 +26,7 @@
 													<img src="/../../../assets/images/profile/img-01.jpg" alt="img description">
 												</figure>
 												<div class="wt-title">
-													<h3><i class="fa fa-check-circle"></i> {{result.Name}}</h3>
+													<h3><i class="fa fa-check-circle"></i> {{result.AdvertisementInfo.Name}}</h3>
 													<span>{{result.AdvertisementInfo.AdvertisementRate}}/5 <a class="javascript:void(0);">(150 Feedback)</a> <br>Member since {{result.AdvertisementInfo.MemberDate}} </span>
 												</div>
 											</div>
