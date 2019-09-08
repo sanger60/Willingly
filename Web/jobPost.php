@@ -21,8 +21,8 @@
                         <div class="wt-companysinfo">
                             <figure><img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description"></figure>
                             <div class="wt-title">
-                                <h2><a href="javascript:void(0);">{{items.Name}} {{items.Surname}}</a></h2>
-                                <span>{{items.Username}}</span>
+                                <h2><a href="javascript:void(0);">{{user.Name}} {{user.Surname}}</a></h2>
+                                <span>{{user.Username}}</span>
                             </div>
                             <div class="wt-btnarea"><a href="jobPost.php" class="wt-btn">Bir İş İlanı Paylaş</a></div>
                         </div>

@@ -74,10 +74,10 @@
 									<div class="wt-categorycontent">
 										<figure><img src="/../../../assets/images/categories/img-01.png" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Grafik Tasarım</a></h3>
+											<h3><a href="javascrip:void(0)">Grafik Tasarım</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -88,7 +88,7 @@
 											<h3><a href="javascrip:void(0);">İnternet Reklamcılığı</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -99,7 +99,7 @@
 											<h3><a href="javascrip:void(0);">Yazi &amp; Çeviri</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -110,7 +110,7 @@
 											<h3><a href="javascrip:void(0);">Video &amp; Animasyon</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -121,7 +121,7 @@
 											<h3><a href="javascrip:void(0);">Ses &amp; Müzik</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -132,7 +132,7 @@
 											<h3><a href="javascrip:void(0);">Yazılım &amp; Teknoloji</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -143,7 +143,7 @@
 											<h3><a href="javascrip:void(0);">İş Yönetimi</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>
@@ -154,7 +154,7 @@
 											<h3><a href="javascrip:void(0);">Eğlence &amp; Yaşam Tarzı</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
+											<a href="https://willingly.tk/userlisting.php/?searchType=1&page=1">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 								</div>

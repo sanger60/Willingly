@@ -696,7 +696,8 @@ function FreelancerSendOffer(){
         var jobVue = new Vue({
             el: 'wt-main',
             data:{
-                items: []
+                items: [],
+                user: []
             },
             mounted: function() {
                 var self = this;
@@ -709,6 +710,22 @@ function FreelancerSendOffer(){
                     },
                     eroor:function(a,r,b){
                         Swal.fire("Bilinmeyen bir hata oluştu !");
+                    }
+                });
+
+                $.ajax({
+                    url: "https://willingly.tk/inc/php/Get_UserInformation.php",
+                    method: "GET",
+                    dataType: "JSON",
+                    withCredentials: true,
+                    success: function (data) {
+                        self.user = data.Data[0];
+                        console.log(data.Data[0]);
+                    },
+                    error: function (a, r, g) {
+                        console.log(a);
+                        console.log(r);
+                        console.log(g);
                     }
                 });
             }
@@ -915,7 +932,8 @@ if(window.location.toString().includes("https://willingly.tk/OnGoingJob.php"))
     var EndVue = new Vue({
         el:'#wt-main',
         data:{
-            Items: []
+            Items: [],
+            user: []
         },
         mounted: function() {
             var self = this;
@@ -938,6 +956,22 @@ if(window.location.toString().includes("https://willingly.tk/OnGoingJob.php"))
                 },
                 error: function(a,b,g){
                     Swal.fire("Bilinmeyen bir hata oluştu !!");
+                }
+            });
+
+            $.ajax({
+                url: "https://willingly.tk/inc/php/Get_UserInformation.php",
+                method: "GET",
+                dataType: "JSON",
+                withCredentials: true,
+                success: function (data) {
+                    self.user = data.Data[0];
+                    console.log(data.Data[0]);
+                },
+                error: function (a, r, g) {
+                    console.log(a);
+                    console.log(r);
+                    console.log(g);
                 }
             });
         }
