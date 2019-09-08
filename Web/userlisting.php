@@ -49,7 +49,7 @@
 																<div class="wt-checkboxholder wt-verticalscrollbar">
 																	<span class="wt-checkbox" v-for="item in categories">
 																		<input v-bind:id="item.Name" type="checkbox" name="category" v-bind:value="item.Id" checked="true">
-																		<label v-bind:for="item.Name"> {{item..Name}}</label>
+																		<label v-bind:for="item.Name"> {{item.Name}}</label>
 																	</span>
 																</div>
 															</fieldset>
@@ -107,7 +107,7 @@
 															<div class="wt-title">
 																<a href="javascript:;"><i class="fa fa-check-circle"></i> {{item.AdvertisementInfo.UserId}} Id
 																</a>
-																<a href="javascript:;" onclick="AdDetail(this);" v-bind:title="item.Id"><h2>{{item.AdvertisementInfo.Tittle}}</h2></a>
+																<a href="javascript:;" onclick="AdDetail(this);" v-bind:title="item.AdvertisementInfo.Id"><h2>{{item.AdvertisementInfo.Tittle}}</h2></a>
 															</div>
 															<ul class="wt-userlisting-breadcrumb">
 																<li><span><i class="far fa-money-bill-alt"></i> {{item.AdvertisementInfo.Price}} ₺</span></li>
