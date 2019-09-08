@@ -13,9 +13,11 @@ $page = 1;
 
 $page = $_POST["PageId"];
 
+$UserId = $Global_UserID;
+
 if (isset($_POST["EmployerId"]))
 {
-    if (!is_null($_POST["EmployerId"]) && $_POST["EmployerId"] != "")
+    if (!is_null($_POST["UserId"]) && $_POST["EmployerId"] != "")
     {
     	if ($IsFist == false)
         {
@@ -23,7 +25,9 @@ if (isset($_POST["EmployerId"]))
         }else{
             $AddQuery .= "where";
         }
-	    $AddQuery .= "\"EmployerId\" = '".$_POST["EmployerId"]."'";
+        $UserId = $_POST["UserId"];
+
+	    $AddQuery .= "\"UserId\" = '".$UserId."'";
 
         $IsFist = false;
     }
