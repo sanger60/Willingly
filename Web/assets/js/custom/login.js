@@ -9,7 +9,7 @@ function LoginCheck(){
         dataType: "JSON",
         success: function(data){
             if(data.Status == true){
-                Swal.fire('Olduuu');
+                window.location.reload();
             }
             else{
                 Swal.fire({
