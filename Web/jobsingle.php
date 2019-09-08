@@ -105,10 +105,10 @@
 										<div class="wt-widget wt-companysinfo-jobsingle">
 											<div class="wt-companysdetails">
 												<figure class="wt-companysimg">
-													<img v-bind:src="/../../../assets/result.UserInfo.PhotoSrc" alt="img description">
+													<img v-bind:src="result.UserInfo.PhotoSrc" alt="img description">
 												</figure>
 												<div class="wt-companysinfo">
-													<figure><img  v-bind:src="/../../../assets/result.UserInfo.PhotoSrc" alt="img description"></figure>
+													<figure><img  v-bind:src="result.UserInfo.PhotoSrc" alt="img description"></figure>
 													<div class="wt-title">
 														<h2>{{result.UserInfo.Name}}</h2>
 													</div>
