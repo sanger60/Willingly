@@ -124,7 +124,7 @@
 										</li>
 										<li>
 											<div class="wt-chatarea">
-												<div class="wt-messages wt-verticalscrollbar wt-dashboardscrollbar" id="msgList">
+												<div class="wt-messages" id="msgList" style="overflow-y: auto;">
 
 
 												</div>
