@@ -890,3 +890,37 @@ function FreelancerSendOffer(){
         },1300);
     });
 }
+
+if(window.location.toString().includes("https://willingly.tk/OnGoingJob.php") || window.location.toString().includes("https://willingly.tk/ComplatedJob.php"))
+{
+    var EndVue = new Vue({
+        el:'#wt-main',
+        data:{
+            Items: []
+        },
+        mounted: function() {
+            var self = this;
+            $.ajax({
+                url: "http://willingly.tk/inc/php/Get_Employer_Advertisement.php",
+                method: "POST",
+                data:{PageId:1},
+                dataType:"JSON",
+                success:function(data){
+                    for(var i=0;i< data.Data.length;i++){
+                        if(data.Data[i].Status != true)
+                        {
+                            var index = data.Data.indexOf(data.Data[i]);
+                            if (index !== -1)
+	                        data.Data.splice(index, 1); // 2 indeksindeki 1 elemanı yani 5'i siler.
+                        }
+                    }
+
+                    self.Items = data.Data;
+                },
+                error: function(a,b,g){
+                    Swal.fire("Bilinmeyen bir hata oluştu !!");
+                }
+            });
+        }
+    });
+}

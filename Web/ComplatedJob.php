@@ -1,4 +1,6 @@
 <?php require 'inc/frontend/views/head_start.php'; ?>
+<link rel="stylesheet" href="/../../../assets/css/dashboard.css">
+<link rel="stylesheet" href="/../../../assets/css/dbresponsive.css">
 <?php require 'inc/frontend/views/head_end.php'; ?>
 <main id="wt-main" class="wt-main wt-haslayout">
 				<!--Sidebar Start-->
@@ -13,10 +15,10 @@
 					<div id="wt-verticalscrollbar" class="wt-verticalscrollbar">
 						<div class="wt-companysdetails wt-usersidebar">
 							<figure class="wt-companysimg">
-								<img src="images\sidebar\img-01.jpg" alt="img description">
+								<img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description">
 							</figure>
 							<div class="wt-companysinfo">
-								<figure><img src="images\sidebar\img-02.jpg" alt="img description"></figure>
+								<figure><img src="/../../../assets/images/sidebar/img-02.jpg" alt="img description"></figure>
 								<div class="wt-title">
 									<h2><a href="javascript:void(0);"> Louanne Mattioli</a></h2>
 									<span>Amento Tech</span>
@@ -121,7 +123,7 @@
 							</ul>
 						</nav>
 						<div class="wt-navdashboard-footer">
-							<span>Worktern. © 2019 All Rights Reserved.</span>
+							<span>Willingly. © 2019 All Rights Reserved.</span>
 						</div>
 					</div>
 				</div>
@@ -132,190 +134,35 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
 							<div class="wt-dashboardbox">
 								<div class="wt-dashboardboxtitle">
-									<h2>All Jobs</h2>
+									<h2>Tüm İşler</h2>
 								</div>
 								<div class="wt-dashboardboxcontent wt-jobdetailsholder">
 									<div class="wt-completejobholder">
-										<div class="wt-tabscontenttitle">
-											<h2>Completed Jobs</h2>
-										</div>
 										<div class="wt-managejobcontent">
-											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo">
-												<span class="wt-featuredtag"><img src="images\featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
+											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo" v-for="item in Items">
+												<span class="wt-featuredtag"><img src="/../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
 												<div class="wt-userlistingcontent wt-userlistingcontentvtwo">
 													<div class="wt-contenthead">
 														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> Louanne Mattioli
+															<a href="jobsingle.php?page=1"><i class="fa fa-check-circle"></i>
 															</a>
-															<h2>I want some customization and installation on wordpress</h2>
+															<h2>{{item.Tittle}}</h2>
 														</div>
 														<ul class="wt-saveitem-breadcrumb wt-userlisting-breadcrumb">
-															<li><span class="wt-dashboraddoller"><i class="fa fa-dollar-sign"></i> Professional</span></li>
-															<li><span><img src="images\flag\img-04.png" alt="img description"> England</span></li>
-															<li><a href="javascript:void(0);" class="wt-clicksavefolder"><i class="far fa-folder"></i> Type: Per Fixed</a></li>
-															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> Duration: 15 Days</span></li>															
+															<li><span class="wt-dashboraddoller"><i class="fas fa-liras-sign"></i> {{item.Price}}</span></li>
+															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> B.Zaman: {{item.Deadline}}</span></li>															
 														</ul>
 													</div>
 													<div class="wt-rightarea">
 														<div class="wt-btnarea">
-															<span> Project Complete</span>
-															<a href="javascript:void(0);" class="wt-btn">VIEW DETAILS</a>
+															<span> Bekleyen İlan</span>
 														</div>
-														<div class="wt-hireduserstatus">
+														<!-- <div class="wt-hireduserstatus">
 															<h4>Hired</h4><span>Terrence Tynan</span>
 															<ul class="wt-hireduserimgs">
-																<li><figure><img src="images\user\userlisting\img-01.jpg" alt="img description"></figure></li>
+																<li><figure><img src="/../../../assets/images/user/userlisting/img-01.jpg" alt="img description"></figure></li>
 															</ul>
-														</div>
-													</div>
-												</div>	
-											</div>
-											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo">
-												<span class="wt-featuredtag"><img src="images\featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style mCS_img_loaded"></span>
-												<div class="wt-userlistingcontent wt-userlistingcontentvtwo">
-													<div class="wt-contenthead">
-														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> Louanne Mattioli
-															</a>
-															<h2>I want some customization and installation on wordpress</h2>
-														</div>
-														<ul class="wt-saveitem-breadcrumb wt-userlisting-breadcrumb">
-															<li><span class="wt-dashboraddoller"><i class="fa fa-dollar-sign"></i> Professional</span></li>
-															<li><span><img src="images\flag\img-04.png" alt="img description" class="mCS_img_loaded"> England</span></li>
-															<li><a href="javascript:void(0);" class="wt-clicksavefolder"><i class="far fa-folder"></i> Type: Per Fixed</a></li>
-															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> Duration: 15 Days</span></li>															
-														</ul>
-													</div>
-													<div class="wt-rightarea">
-														<div class="wt-btnarea">
-															<span> Project Complete</span>
-															<a href="javascript:void(0);" class="wt-btn">VIEW DETAILS</a>
-														</div>
-														<div class="wt-hireduserstatus">
-															<h4>Hired</h4><span>Herlinda Hundley</span>
-															<ul class="wt-hireduserimgs">
-																<li><figure><img src="images\user\userlisting\img-05.jpg" alt="img description" class="mCS_img_loaded"></figure></li>
-															</ul>
-														</div>
-													</div>
-												</div>	
-											</div>
-											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo">
-												<div class="wt-userlistingcontent wt-userlistingcontentvtwo">
-													<div class="wt-contenthead">
-														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> Louanne Mattioli
-															</a>
-															<h2>Develop a transportation company website</h2>
-														</div>
-														<ul class="wt-saveitem-breadcrumb wt-userlisting-breadcrumb">
-															<li><span class="wt-dashboraddoller"><i class="fa fa-dollar-sign"></i> Professional</span></li>
-															<li><span><img src="images\flag\img-04.png" alt="img description" class="mCS_img_loaded"> England</span></li>
-															<li><a href="javascript:void(0);" class="wt-clicksavefolder"><i class="far fa-folder"></i> Type: Per Fixed</a></li>
-															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> Duration: 15 Days</span></li>															
-														</ul>
-													</div>
-													<div class="wt-rightarea">
-														<div class="wt-btnarea">
-															<span> Project Complete</span>
-															<a href="javascript:void(0);" class="wt-btn">VIEW DETAILS</a>
-														</div>
-														<div class="wt-hireduserstatus">
-															<h4>Hired</h4><span>Marcelene Westerberg</span>
-															<ul class="wt-hireduserimgs">
-																<li><figure><img src="images\user\userlisting\img-02.jpg" alt="img description" class="mCS_img_loaded"></figure></li>
-															</ul>
-														</div>
-													</div>
-												</div>	
-											</div>
-											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo">
-												<span class="wt-featuredtag"><img src="images\featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style mCS_img_loaded"></span>
-												<div class="wt-userlistingcontent wt-userlistingcontentvtwo">
-													<div class="wt-contenthead">
-														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> Louanne Mattioli
-															</a>
-															<h2>Change temp to Arabic and install on wordpress</h2>
-														</div>
-														<ul class="wt-saveitem-breadcrumb wt-userlisting-breadcrumb">
-															<li><span class="wt-dashboraddoller"><i class="fa fa-dollar-sign"></i> Professional</span></li>
-															<li><span><img src="images\flag\img-04.png" alt="img description" class="mCS_img_loaded"> England</span></li>
-															<li><a href="javascript:void(0);" class="wt-clicksavefolder"><i class="far fa-folder"></i> Type: Per Fixed</a></li>
-															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> Duration: 15 Days</span></li>															
-														</ul>
-													</div>
-													<div class="wt-rightarea">
-														<div class="wt-btnarea">
-															<span> Project Complete</span>
-															<a href="javascript:void(0);" class="wt-btn">VIEW DETAILS</a>
-														</div>
-														<div class="wt-hireduserstatus">
-															<h4>Hired</h4><span>Vance Applebaum</span>
-															<ul class="wt-hireduserimgs">
-																<li><figure><img src="images\user\userlisting\img-03.jpg" alt="img description" class="mCS_img_loaded"></figure></li>
-															</ul>
-														</div>
-													</div>
-												</div>	
-											</div>
-											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo">
-												<span class="wt-featuredtag"><img src="images\featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style mCS_img_loaded"></span>
-												<div class="wt-userlistingcontent wt-userlistingcontentvtwo">
-													<div class="wt-contenthead">
-														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> Louanne Mattioli
-															</a>
-															<h2>I want some customization and installation on wordpress</h2>
-														</div>
-														<ul class="wt-saveitem-breadcrumb wt-userlisting-breadcrumb">
-															<li><span class="wt-dashboraddoller"><i class="fa fa-dollar-sign"></i> Professional</span></li>
-															<li><span><img src="images\flag\img-04.png" alt="img description" class="mCS_img_loaded"> England</span></li>
-															<li><a href="javascript:void(0);" class="wt-clicksavefolder"><i class="far fa-folder"></i> Type: Per Fixed</a></li>
-															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> Duration: 15 Days</span></li>															
-														</ul>
-													</div>
-													<div class="wt-rightarea">
-														<div class="wt-btnarea">
-															<span> Project Complete</span>
-															<a href="javascript:void(0);" class="wt-btn">VIEW DETAILS</a>
-														</div>
-														<div class="wt-hireduserstatus">
-															<h4>Hired</h4><span>Terrence Tynan</span>
-															<ul class="wt-hireduserimgs">
-																<li><figure><img src="images\user\userlisting\img-05.jpg" alt="img description" class="mCS_img_loaded"></figure></li>
-															</ul>
-														</div>
-													</div>
-												</div>	
-											</div>
-											<div class="wt-userlistinghold wt-featured wt-userlistingvtwo">
-												<span class="wt-featuredtag"><img src="images\featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style mCS_img_loaded"></span>
-												<div class="wt-userlistingcontent wt-userlistingcontentvtwo">
-													<div class="wt-contenthead">
-														<div class="wt-title">
-															<a href="usersingle.html"><i class="fa fa-check-circle"></i> Louanne Mattioli
-															</a>
-															<h2>I want some customization and installation on wordpress</h2>
-														</div>
-														<ul class="wt-saveitem-breadcrumb wt-userlisting-breadcrumb">
-															<li><span class="wt-dashboraddoller"><i class="fa fa-dollar-sign"></i> Professional</span></li>
-															<li><span><img src="images\flag\img-04.png" alt="img description" class="mCS_img_loaded"> England</span></li>
-															<li><a href="javascript:void(0);" class="wt-clicksavefolder"><i class="far fa-folder"></i> Type: Per Fixed</a></li>
-															<li><span class="wt-dashboradclock"><i class="far fa-clock"></i> Duration: 15 Days</span></li>															
-														</ul>
-													</div>
-													<div class="wt-rightarea">
-														<div class="wt-btnarea">
-															<span> Project Complete</span>
-															<a href="javascript:void(0);" class="wt-btn">VIEW DETAILS</a>
-														</div>
-														<div class="wt-hireduserstatus">
-															<h4>Hired</h4><span>Terrence Tynan</span>
-															<ul class="wt-hireduserimgs">
-																<li><figure><img src="images\user\userlisting\img-05.jpg" alt="img description" class="mCS_img_loaded"></figure></li>
-															</ul>
-														</div>
+														</div> -->
 													</div>
 												</div>	
 											</div>										
@@ -341,7 +188,7 @@
 								<div class="wt-proposalsr">
 									<div class="wt-proposalsrcontent">
 										<figure>
-											<img src="images\thumbnail\img-17.png" alt="image">
+											<img src="/../../../assets/images/thumbnail/img-17.png" alt="image">
 										</figure>
 										<div class="wt-title">
 											<h3>150</h3>
@@ -352,7 +199,7 @@
 								<div class="wt-proposalsr">
 									<div class="wt-proposalsrcontent wt-componyfolow">
 										<figure>
-											<img src="images\thumbnail\img-16.png" alt="image">
+											<img src="/../../../assets/images/thumbnail/img-16.png" alt="image">
 										</figure>
 										<div class="wt-title">
 											<h3>1406</h3>
@@ -363,7 +210,7 @@
 								<div class="wt-proposalsr">
 									<div class="wt-proposalsrcontent  wt-freelancelike">
 										<figure>
-											<img src="images\thumbnail\img-15.png" alt="image">
+											<img src="/../../../assets/images/thumbnail/img-15.png" alt="image">
 										</figure>
 										<div class="wt-title">
 											<h3>2075</h3>
@@ -373,7 +220,7 @@
 								</div>								
 							</aside>
 							<div class="wt-companyad">
-								<figure class="wt-companyadimg"><img src="images\add-img.jpg" alt="img description"></figure>
+								<figure class="wt-companyadimg"><img src="/../../../assets/images/add-img.jpg" alt="img description"></figure>
 								<span>Advertisement  255px X 255px</span>
 							</div>
 						</div>
