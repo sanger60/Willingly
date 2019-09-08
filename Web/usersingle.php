@@ -172,7 +172,7 @@
 								<textarea class="form-control" id="txtOffer" placeholder="Freelancer'a teklifiniz nedir ?*"></textarea>
 							</div>
 							<div class="form-group wt-btnarea">
-								<a href="javascript:void(0);" class="wt-btn">Teklif Gönder</a>
+								<a href="javascript:void(0);" class="wt-btn" onclick="window.location.reload();">Teklif Gönder</a>
 							</div>
 						</fieldset>
 					</form>
