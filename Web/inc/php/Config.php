@@ -17,7 +17,6 @@ catch (Exception $e) {
 }
 
 if (isset($_SESSION['UserID'])) {
-        die();
 		$Global_IsLogin = True;
 		$data04 = $Conn_pgsql->query("Select * from Public.\"Users\" Where \"Id\"='".$_SESSION['UserID']."'")->fetchAll(PDO::FETCH_ASSOC);
 		if (count($data04) > 0) {
@@ -29,16 +28,9 @@ if (isset($_SESSION['UserID'])) {
 			}
 		}else{
 			$Global_IsLogin = False;
-			if(GetFullUrl("OnlyCurretFile") != "/signin.php" && $DontUseChecker != True){
-				//header("Location: ".GetFullUrl("Full")."/signin.php");
-			}
 		}
 } else {
 	$Global_IsLogin = False;
-
-	if(GetFullUrl("OnlyCurretFile") != "/signin.php" && $DontUseChecker != True){
-		//header("Location: ".GetFullUrl("Full")."/signin.php");
-	}
 }
 function GetIP(){
 	if (getenv("HTTP_CLIENT_IP")) {
