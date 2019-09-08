@@ -49,7 +49,7 @@
 																<div class="wt-checkboxholder wt-verticalscrollbar">
 																	<span class="wt-checkbox" v-for="item in categories">
 																		<input v-bind:id="item.Name" type="checkbox" name="category" v-bind:value="item.Id" checked="true">
-																		<label v-bind:for="item.Name"> {{item.Name}}</label>
+																		<label v-bind:for="item.Name"> {{item..Name}}</label>
 																	</span>
 																</div>
 															</fieldset>
@@ -105,12 +105,12 @@
 													<div class="wt-userlistingcontent">
 														<div class="wt-contenthead">
 															<div class="wt-title">
-																<a href="javascript:;"><i class="fa fa-check-circle"></i> {{item.UserId}} Id
+																<a href="javascript:;"><i class="fa fa-check-circle"></i> {{item.AdvertisementInfo.UserId}} Id
 																</a>
-																<a href="javascript:;" onclick="AdDetail(this);" v-bind:title="item.Id"><h2>{{item.Tittle}}</h2></a>
+																<a href="javascript:;" onclick="AdDetail(this);" v-bind:title="item.Id"><h2>{{item.AdvertisementInfo.Tittle}}</h2></a>
 															</div>
 															<ul class="wt-userlisting-breadcrumb">
-																<li><span><i class="far fa-money-bill-alt"></i> {{item.Price}} ₺</span></li>
+																<li><span><i class="far fa-money-bill-alt"></i> {{item.AdvertisementInfo.Price}} ₺</span></li>
 															</ul>
 														</div>
 														<div class="wt-rightarea">
@@ -121,14 +121,14 @@
 																<i class="fa fa-star fill"></i>
 																<i class="fa fa-star fill"></i>
 															</span>
-															<span class="wt-starcontent">{{item.AdvertisementRate}}/<sub>5</sub> <em>(88 Feedback)</em></span>
+															<span class="wt-starcontent">{{item.AdvertisementInfo.AdvertisementRate}}/<sub>5</sub> <em>(88 Feedback)</em></span>
 														</div>
 													</div>
 													<div class="wt-description">
 														<p>{{item.Explanation}}</p>
 													</div>
 													<div class="wt-tag wt-widgettag">
-														<a href="javascript:void(0);">{{item.AdvertisementSkills}}</a>
+														<a href="javascript:void(0);">{{item.AdvertisementInfo.AdvertisementSkills}}</a>
 													</div>
 												</div>
 												<nav class="wt-pagination">
