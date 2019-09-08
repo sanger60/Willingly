@@ -17,6 +17,7 @@ catch (Exception $e) {
 }
 
 if (isset($_SESSION['UserID'])) {
+        die();
 		$Global_IsLogin = True;
 		$data04 = $Conn_pgsql->query("Select * from Public.\"Users\" Where \"Id\"='".$_SESSION['UserID']."'")->fetchAll(PDO::FETCH_ASSOC);
 		if (count($data04) > 0) {
