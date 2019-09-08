@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    scrollToBottom();
     setInterval(function() {
         if(firstClick){
             ViewMessage(FadeIdItem);
@@ -48,7 +49,8 @@ $(document).ready(function() {
 
 var firstClick = false;
 var FadeIdItem;
-
+var shouldScroll;
+var messagesList = document.getElementById("msgList");
 function ViewMessage(a){
     var id = $(a).find('div input').val()
     FadeIdItem = a;
@@ -60,6 +62,8 @@ function ViewMessage(a){
                 data:{ChatRoomID:id},
                 dataType:"JSON",
                 success:function(data){
+                    shouldScroll = messages.scrollTop + messages.clientHeight === messages.scrollHeight;
+
                     var main = document.getElementById("msgList");
                     main.innerHTML = "";
     
@@ -69,17 +73,17 @@ function ViewMessage(a){
                             if(data.Data[i].Sender == data.Data[i].Reciver){
                                 if(data.Data[i].IsRead == true)
                                 {
-                                    main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                    a.classList.remove("wt-dotnotification");
                                 }
                                 else{
                                     a.classList.add("wt-dotnotification");
-                                    
+                                }                                    
                                     main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
-                                }
                             }
                             else{
                                 if(data.Data[i].IsRead == true)
                                 {
+                                    a.classList.remove("wt-dotnotification");
                                     main.innerHTML += "<div class='wt-memessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
                                 }
                                 else{
@@ -92,7 +96,8 @@ function ViewMessage(a){
                             if(data.Data[i].Sender == data.Data[i].Reciver){
                                 if(data.Data[i].IsRead == true)
                                 {
-                                    main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                    a.classList.remove("wt-dotnotification");
+                                    main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
                                 }
                                 else{
                                     a.classList.add("wt-dotnotification");
@@ -102,6 +107,7 @@ function ViewMessage(a){
                             else{
                                 if(data.Data[i].IsRead == true)
                                 {
+                                    a.classList.remove("wt-dotnotification");
                                     main.innerHTML += "<div class='wt-memessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
                                 }
                                 else{
@@ -111,12 +117,21 @@ function ViewMessage(a){
                             }
                         }
                     }
+
+                    if (!shouldScroll) {
+                        scrollToBottom();
+                      }
                 },
                 error:function(a,b,g){
                     Swal.fire("Hatalı İşlem");
                 }
         });
 }
+
+function scrollToBottom() {
+    messagesList.scrollTop = messages.scrollHeight;
+  }
+
 function SendMessage(){
     var t1 = document.getElementsByName("reciverIds")[0].value;
     var t2 = document.getElementsByName("chatIds")[0].value;
