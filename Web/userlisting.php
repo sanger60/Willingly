@@ -9,7 +9,7 @@
 							<div class="wt-cattitle">
 								<h3>
 									
-									<input type="submit" v-bind:value="item.Name" v-bind:name="item.Id" class="btnCategory" onclick="ListWithCategory();" />
+									<input type="submit" v-bind:value="item.Name" v-bind:name="item.Id" class="btnCategory" onclick="ListWithCategory(this);" />
 									
 								</h3>
 								
