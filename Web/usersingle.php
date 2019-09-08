@@ -26,8 +26,8 @@
 													<img src="/../../../assets/images/profile/img-01.jpg" alt="img description">
 												</figure>
 												<div class="wt-title">
-													<h3><i class="fa fa-check-circle"></i> {{result.AdvertisementInfo.Name}} {{result.AdvertisementInfo.Surname}}</h3>
-													<span>{{result.AdvertisementInfo.AdvertisementRate}}/5 <a class="javascript:void(0);">(150 Feedback)</a> <br>Member since {{result.AdvertisementInfo.MemberDate}} </span>
+													<h3><i class="fa fa-check-circle"></i> {{result.UserInfo.Name}} {{result.UserInfo.Surname}}</h3>
+													<span>{{result.AdvertisementInfo.AdvertisementRate}}/5 <a class="javascript:void(0);">(150 Feedback)</a> <br>Member since {{result.UserInfo.MemberDate}} </span>
 												</div>
 											</div>
 										</div>
