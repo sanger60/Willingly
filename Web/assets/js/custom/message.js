@@ -66,7 +66,7 @@ function ViewMessage(a){
                     for(var i=0;i< data.Data.length;i++){
                         if(i == 0)
                         {
-                            if(data.Data[i].Sender == data.Data[i].ReciverId){
+                            if(data.Data[i].Sender == data.Data[i].Reciver){
                                 if(data.Data[i].IsRead == true)
                                 {
                                     main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
@@ -89,7 +89,7 @@ function ViewMessage(a){
                             }
                         }
                         else{
-                            if(data.Data[i].Sender == data.Data[i].ReciverId){
+                            if(data.Data[i].Sender == data.Data[i].Reciver){
                                 if(data.Data[i].IsRead == true)
                                 {
                                     main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
