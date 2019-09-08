@@ -117,13 +117,12 @@ function ViewMessage(a){
                 }
         });
 }
-
 function SendMessage(){
     var t1 = document.getElementsByName("reciverIds")[0].value;
     var t2 = document.getElementsByName("chatIds")[0].value;
     var msg = document.getElementById("msgBox").value;
 
-    $(".wt-adcontent input")
+    $(".wt-adcontent input");
     $.ajax({
         url:"https://willingly.tk/inc/php/Insert_NewMessage.php",
         method:"POST",
@@ -136,7 +135,7 @@ function SendMessage(){
 
         },
         error:function(a,b,g){
-            Swal.fire("Bilinmeyen bir hata oluştu"),
+            Swal.fire("Bilinmeyen bir hata oluştu");
         }
-    })
+    });
 }
