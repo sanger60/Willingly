@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    setInterval(function() {
+        if(firstClick){
+            ViewMessage(FadeIdItem);
+        }
+    },1500);
     var MessageVue = new Vue({
         el:'#wt-main',
         data:{
@@ -41,44 +46,96 @@ $(document).ready(function() {
     });
 });
 
-
+var firstClick = false;
+var FadeIdItem;
 
 function ViewMessage(a){
-    var id = a;
-
-        var self= this;
-        $.ajax({
-            url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
-            method:"POST",
-            data:{ChatRoomID:id},
-            dataType:"JSON",
-            success:function(data){
-                var main = document.getElementById("msgList");
-                main.innerHTML = "";
-
-                for(var i=0;i< data.Data.length;i++){
-                    if(data.Data[i].Sender == 21){
-                        if(data.Data[i].IsRead)
+    var id = $(a).find('div input').val()
+    FadeIdItem = a;
+    firstClick = true;
+    
+            $.ajax({
+                url:"https://willingly.tk/inc/php/Get_ChatMessages.php",
+                method:"POST",
+                data:{ChatRoomID:id},
+                dataType:"JSON",
+                success:function(data){
+                    var main = document.getElementById("msgList");
+                    main.innerHTML = "";
+    
+                    for(var i=0;i< data.Data.length;i++){
+                        if(i == 0)
                         {
-                            main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                            if(data.Data[i].Sender == data.Data[i].Reciver){
+                                if(data.Data[i].IsRead == true)
+                                {
+                                    main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                                else{
+                                    a.classList.add("wt-dotnotification");
+                                    
+                                    main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                            }
+                            else{
+                                if(data.Data[i].IsRead == true)
+                                {
+                                    main.innerHTML += "<div class='wt-memessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                                else{
+                                    a.classList.add("wt-dotnotification");
+                                    main.innerHTML += "<div class='wt-memessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                            }
                         }
                         else{
-                            main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
+                            if(data.Data[i].Sender == data.Data[i].Reciver){
+                                if(data.Data[i].IsRead == true)
+                                {
+                                    main.innerHTML += "<div class='wt-offerermessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                                else{
+                                    a.classList.add("wt-dotnotification");
+                                    main.innerHTML += "<div class='wt-offerermessage'> <figure><img src='/../../../assets/images/messages/img-12.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                            }
+                            else{
+                                if(data.Data[i].IsRead == true)
+                                {
+                                    main.innerHTML += "<div class='wt-memessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                                else{
+                                    a.classList.add("wt-dotnotification");
+                                    main.innerHTML += "<div class='wt-memessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> <time datetime='2017-08-08'>January 12th, 2011</time> </div> </div>";
+                                }
+                            }
                         }
                     }
-                    else{
-                        if(data.Data[i].IsRead)
-                        {
-                            main.innerHTML += "<div class='wt-memessage wt-readmessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
-                        }
-                        else{
-                            main.innerHTML += "<div class='wt-memessage'> <figure><img src='/../../../assets/images/messages/img-11.jpg' alt='image description'></figure> <div class='wt-description'> <div class='clearfix'></div> <p>"+data.Data[i].Text+"</p> <div class='clearfix'></div> </div> </div>";
-                        }
-                    }
+                },
+                error:function(a,b,g){
+                    Swal.fire("Hatalı İşlem");
                 }
-            },
-            error:function(a,b,g){
-                Swal.fire("Hatalı İşlem");
-            }
+        });
+}
+function SendMessage(){
+    var t1 = document.getElementsByName("reciverIds")[0].value;
+    var t2 = document.getElementsByName("chatIds")[0].value;
+    var msg = document.getElementById("msgBox").value;
+
+    $(".wt-adcontent input");
+    $.ajax({
+        url:"https://willingly.tk/inc/php/Insert_NewMessage.php",
+        method:"POST",
+        data:{Text:msg,Reciver:t1,ChatID:t2},
+        dataType:"JSON",
+        success:function(data){
+            if(data.Status == true)
+            Swal.fire("Mesaj Gönderildi");
+            else Swal.fire("Bilinmeyen bir hata oluştu");
+
+        },
+        error:function(a,b,g){
+            Swal.fire("Bilinmeyen bir hata oluştu");
+        }
     });
 }

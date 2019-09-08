@@ -18,12 +18,12 @@
                             <img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description">
                         </figure>
                         <div class="wt-companysinfo">
-                            <figure><img src="http://amentotech.com/htmls/worktern/images/sidebar/img-02.jpg" alt="img description"></figure>
+                            <figure><img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description"></figure>
                             <div class="wt-title">
                                 <h2><a href="javascript:void(0);">{{items.Name}} {{items.Surname}}</a></h2>
                                 <span>{{items.Username}}</span>
                             </div>
-                            <div class="wt-btnarea"><a href="dashboard-postjob.html" class="wt-btn">Bir İş İlanı Paylaş</a></div>
+                            <div class="wt-btnarea"><a href="jobPost.php" class="wt-btn">Bir İş İlanı Paylaş</a></div>
                         </div>
                     </div>
                     <nav id="wt-navdashboard" class="wt-navdashboard">
@@ -79,7 +79,7 @@
 				<!--Register Form Start-->
 				<section class="wt-haslayout wt-dbsectionspace">
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 							<div class="wt-dashboardbox wt-messages-holder">
 								<div class="wt-dashboardboxtitle">
 									<h2>Mesajlar</h2>
@@ -109,12 +109,15 @@
 												</fieldset>
 											</form>
 											<div class="wt-verticalscrollbar wt-dashboardscrollbar">
-												<div class="wt-ad wt-dotnotification wt-active" v-for="item in items" onclick="ViewMessage($(this).find('div input').val());">
+												<div class="wt-ad  wt-active" v-for="item in items" onclick="ViewMessage(this);">
 													<figure><img v-bind:src="item.userImage" alt=""></figure>
 													<div class="wt-adcontent">
 														<h3>{{item.userName}}</h3>
                                                         <span>{{item.message}}</span>
-                                                        <input type="hidden" v-bind:value="item.Id"  />
+														<input type="hidden" v-bind:value="item.Id"  />
+														<input type="hidden" v-bind:value="item.ReciverId" name="reciverIds" />
+														<input type="hidden" v-bind:value="item.Id" name="chatIds" />
+
 													</div>
 												</div>
 											</div>
@@ -122,59 +125,23 @@
 										<li>
 											<div class="wt-chatarea">
 												<div class="wt-messages wt-verticalscrollbar wt-dashboardscrollbar" id="msgList">
-														<div class="wt-memessage">
-															<figure><img src="/../../../assets/images/messages/img-11.jpg" alt="image description"></figure>
-															<div class="wt-description">
-															<div class="clearfix"></div>	
-															<p>Eiusmod tempor incididunt labore et dolore magna aliqiu enim ad minim veniam qiuisru exercitation ullamco laborisen nisi ut aliquip exea.</p>
-															<div class="clearfix"></div>
-															</div>
-														</div>
-														<div class="wt-offerermessage">
-															<figure><img src="/../../../assets/images/messages/img-12.jpg" alt="image description"></figure>
-															<div class="wt-description">
-																<div class="clearfix"></div>
-																<p>Text Gelecek</p>
-																<div class="clearfix"></div>
-															</div>
-														</div>
+
+
 												</div>
 												<div class="wt-replaybox">
 													<div class="form-group">
-														<textarea class="form-control" name="reply" placeholder="Type message here"></textarea>
+														<textarea class="form-control" id="msgBox" name="reply" placeholder="Type message here"></textarea>
 													</div>
 													<div class="wt-iconbox">
 														<i class="lnr lnr-thumbs-up"></i>
 														<i class="lnr lnr-thumbs-down"></i>
 														<i class="lnr lnr-smile"></i>
-														<a href="javascript:void(0);" class="wt-btnsendmsg">Gönder</a>
+														<a href="javascript:void(0);" onclick="SendMessage()" class="wt-btnsendmsg">Gönder</a>
 													</div>
 												</div>
 											</div>
 										</li>
 									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
-							<div class="wt-dashboardbox wt-messagebox">
-								<span class="wt-featuredtag"><img src="/../../../assets/images/featured.png" alt="img description" data-tipso="Plus Member" class="template-content tipso_style"></span>
-								<div class="wt-dashboardboxcontent">
-									<div class="wt-userprofile">
-										<figure>
-											<img src="/../../../assets/images/profile/img-02.jpg" alt="img description">
-											<div class="wt-userdropdown wt-online">
-											</div>
-										</figure>
-										<div class="wt-title">
-											<h3><i class="fa fa-check-circle"></i> Valentine Mehring</h3>
-											<span>5.0/5 <a class="javascript:void(0);">(860 Feedback)</a> <br>Member since May 30, 2013 <br><a href="javascript:void(0);">@valentine20658</a></span>
-										</div>
-									</div>
-									<div class="wt-applyfilters">
-										<span>Adpsicing elit sed do eiusmod tempor<br> incididunt ut labore et dolore.</span>
-										<a href="javascript:void(0);" class="wt-btn">View Profile</a>
-									</div>
 								</div>
 							</div>
 						</div>
