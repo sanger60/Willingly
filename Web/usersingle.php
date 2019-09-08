@@ -26,7 +26,7 @@
 													<img src="/../../../assets/images/profile/img-01.jpg" alt="img description">
 												</figure>
 												<div class="wt-title">
-													<h3><i class="fa fa-check-circle"></i> {{result.AdvertisementInfo.Name}}</h3>
+													<h3><i class="fa fa-check-circle"></i> {{result.AdvertisementInfo.Name}} {{result.AdvertisementInfo.Surname}}</h3>
 													<span>{{result.AdvertisementInfo.AdvertisementRate}}/5 <a class="javascript:void(0);">(150 Feedback)</a> <br>Member since {{result.AdvertisementInfo.MemberDate}} </span>
 												</div>
 											</div>
@@ -37,7 +37,7 @@
 											<div class="wt-proposalhead wt-userdetails">
 												<h2>{{result.Tittle}}</h2>
 												<ul class="wt-userlisting-breadcrumb wt-userlisting-breadcrumbvtwo">
-													<li><span><i class="far fa-money-bill-alt"></i> {{result.Price}}</span></li>
+													<li><span><i class="far fa-money-bill-alt"></i> {{result.AdvertisementInfo.Price}}</span></li>
 												</ul>
 												<div class="wt-description">
                                                     <p>
@@ -112,7 +112,7 @@
 											</div>
 											<div class="wt-widgetcontent wt-skillscontent">
 												<div class="wt-skillholder" data-percent="90%" v-for="result in item.Data">
-													<span>{{result.AdvertisementSkills}}</span>
+													<span>{{result.AdvertisementInfo.AdvertisementSkills}}</span>
 													<div class="wt-skillbarholder"><div class="wt-skillbar"></div></div>
 												</div>
 											</div>
@@ -151,8 +151,8 @@
 							<div class="wt-projectselect">
 								<figure><img src="/../../../assets/images/thumbnail/img-07.jpg" alt="img description"></figure>
 								<div class="wt-projectselect-content">
-									<h3>{{result.Tittle}}</h3>
-									<span><i class="lnr lnr-calendar-full"></i> Bitiş Tarihi : {{result.BitisTarihi}}</span>
+									<h3>{{result.AdvertisementInfo.Tittle}}</h3>
+									<span><i class="lnr lnr-calendar-full"></i> Bitiş Tarihi : {{result.AdvertisementInfo.DeadLine}}</span>
 								</div>
 							</div>
 						</div>
@@ -160,8 +160,8 @@
 							<div class="wt-projectselect">
 								<figure><img src="/../../../assets/images/thumbnail/img-07.jpg" alt="img description"></figure>
 								<div class="wt-projectselect-content">
-									<h3>{{result.Tittle}}</h3>
-									<span><i class="lnr lnr-calendar-full"></i> Bitiş Tarihi : {{result.BitisTarihi}}</span>
+									<h3>{{result.AdvertisementInfo.Tittle}}</h3>
+									<span><i class="lnr lnr-calendar-full"></i> Bitiş Tarihi : {{result.AdvertisementInfo.DeadLine}}</span>
 								</div>
 							</div>
 						</div>
