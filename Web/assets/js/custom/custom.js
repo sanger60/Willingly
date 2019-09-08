@@ -811,7 +811,7 @@ function FreelancerSendOffer(){
             });
 
             $.ajax({
-                url:"https://willingly.tk/inc/php/inc/php/Get_OfferEmployer.php",
+                url:"https://willingly.tk/inc/php/Get_OfferEmployer.php",
                 method: "POST",
                 data: {EmployerId:advId,PageId:1},
                 dataType: "JSON",
