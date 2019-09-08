@@ -15,7 +15,12 @@
 												<li class="menu-item-has-children page_item_has_children">
 													<a href="index.php">Ana Sayfa</a>
 												</li>
-												<li>
+												<li class="menu-item-has-children page_item_has_children">
+													<a href="userlisting.php/?searchType=1&page=1">Willingers</a>
+												</li>
+												<li class="menu-item-has-children page_item_has_children">
+													<a href="joblisting.php/?searchType=1&page=1">Is Verenler</a>
+												</li>
 											</ul>
 										</div>
 									</nav>
