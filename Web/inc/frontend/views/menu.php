@@ -72,7 +72,7 @@
 										<a href="register.php" class="wt-btn">Şimdi Başla</a>
 									</div>
 									<?php }else{ ?>
-										<div class="wt-userlogedin">
+										<div class="wt-userlogedin"style="display:block;">
 										<figure class="wt-userimg">
 											<img src="/../../../assets/images/user-img.jpg" alt="image description">
 										</figure>
