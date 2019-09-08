@@ -77,7 +77,6 @@
 											<h3><a href="javascrip:void(0);">Grafik Tasarım</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -89,7 +88,6 @@
 											<h3><a href="javascrip:void(0);">İnternet Reklamcılığı</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -101,7 +99,6 @@
 											<h3><a href="javascrip:void(0);">Yazi &amp; Çeviri</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -113,7 +110,6 @@
 											<h3><a href="javascrip:void(0);">Video &amp; Animasyon</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -125,7 +121,6 @@
 											<h3><a href="javascrip:void(0);">Ses &amp; Müzik</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -137,7 +132,6 @@
 											<h3><a href="javascrip:void(0);">Yazılım &amp; Teknoloji</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -149,7 +143,6 @@
 											<h3><a href="javascrip:void(0);">İş Yönetimi</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -161,7 +154,6 @@
 											<h3><a href="javascrip:void(0);">Eğlence &amp; Yaşam Tarzı</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
 											<a href="javascript:void(0);">Keşfet <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
@@ -182,10 +174,9 @@
 											<h2>Organizatör Olarak Başla</h2>
 										</div>
 										<div class="wt-description">
-											<p>Consectetur adipisicing elit sed dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum.</p>
 										</div>
 										<div class="wt-btnarea">
-											<a href="javascript:void(0);" class="wt-btn">Hemen Üye Ol</a>
+											<a href="register.php" class="wt-btn">Hemen Üye Ol</a>
 										</div>
 									</div>
 									<div class="wt-companycontent">
@@ -193,10 +184,9 @@
 											<h2>Willingers Olarak Başla</h2>
 										</div>
 										<div class="wt-description">
-											<p>Consectetur adipisicing elit sed dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum.</p>
 										</div>
 										<div class="wt-btnarea">
-											<a href="javascript:void(0);" class="wt-btn">Hemen Üye Ol</a>
+											<a href="register.php" class="wt-btn">Hemen Üye Ol</a>
 										</div>
 									</div>
 								</div>
@@ -204,42 +194,6 @@
 						</div>
 					</div>
 				</section>
-				<!--Join Company Info End-->
-				<!--Limitless Experience Start-->
-				<section class="wt-haslayout wt-main-section">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-sm-12 col-md-6 col-lg-6 float-left">
-								<figure class="wt-mobileimg">
-									<img src="/../../../assets/images/mobile-img.png" alt="img description">
-								</figure>
-							</div>
-							<div class="col-12 col-sm-12 col-md-6 col-lg-6 float-left">
-								<div class="wt-experienceholder">
-									<div class="wt-sectionhead">
-										<div class="wt-sectiontitle">
-											<h2>Explore Categories</h2>
-											<span>Professional by categories</span>
-										</div>
-										<div class="wt-description">
-											<p>Dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum dolore eu fugiat nulla pariatur lokaim urianewce.</p>
-											<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumed perspiciatis.</p>
-										</div>
-										<ul class="wt-appicon">
-											<li>
-												<a href="javascript:void(0)">
-													<figure><img style="height:75px; width:auto;" src="/../../../assets/images/app-icon/img-01.png" alt="img description"></figure>
-												</a>
-											</li>
-
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--Limitless Experience End-->
 			</main>
 			<!--Main End-->
 			<!--Footer Start-->

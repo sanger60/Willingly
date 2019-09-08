@@ -43,8 +43,8 @@
                                     <span>İşler</span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><hr><a href="endJob.php">Biten İşler</a></li>
-                                    <li><hr><a href="ongoing.php">Aldığım İşler</a></li> <!-- dashboard-ongoingsingle.html -->
+                                    <li><hr><a href="ComplatedJob.php">Biten İşler</a></li>
+                                    <li><hr><a href="OnGoingJob.php">Aldığım İşler</a></li> <!-- dashboard-ongoingsingle.html -->
                                 </ul>
                             </li>
                             <li>
