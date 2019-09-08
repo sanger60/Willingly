@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "willingly_react/build/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
