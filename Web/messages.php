@@ -4,7 +4,7 @@
 <?php require 'inc/frontend/views/head_end.php'; ?>
 
 <main id="wt-main" class="wt-main wt-haslayout">
-<div id="wt-sidebarwrapper" class="wt-sidebarwrapper">
+			<div id="wt-sidebarwrapper" class="wt-sidebarwrapper">
                 <div id="wt-btnmenutoggle" class="wt-btnmenutoggle">
                     <span class="menu-icon">
                         <em></em>
