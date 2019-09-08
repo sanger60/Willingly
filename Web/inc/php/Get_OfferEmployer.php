@@ -17,7 +17,7 @@ $UserId = $Global_UserID;
 
 if (isset($_POST["EmployerId"]))
 {
-    if (!is_null($_POST["UserId"]) && $_POST["EmployerId"] != "")
+    if (!is_null($_POST["EmployerId"]) && $_POST["EmployerId"] != "")
     {
     	if ($IsFist == false)
         {
