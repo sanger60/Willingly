@@ -1,4 +1,4 @@
-﻿
+
 			<?php require 'inc/frontend/views/head_start.php'; ?>
 			<?php require 'inc/frontend/views/head_end.php'; ?>
 			<div id="mainVue">
@@ -8,10 +8,9 @@
 							<figure><img src="/../../../assets/images/categories/slider/img-01.png" alt="image description"></figure>
 							<div class="wt-cattitle">
 								<h3>
-									<form method="GET">
-									<input type="hidden" v-bind:value="item.Id" name="category" />
-									<input type="submit" v-bind:value="item.Name" class="btnCategory" />
-									</form>
+									
+									<input type="submit" v-bind:value="item.Name" v-bind:name="item.Id" class="btnCategory" onclick="ListWithCategory();" />
+									
 								</h3>
 								
 								<span>Items: {{categories.length}}</span>
