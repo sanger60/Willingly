@@ -19,7 +19,7 @@
 											</ul>
 										</div>
 									</nav>
-									<?php if($Global_IsLogin == true){ ?>
+									<?php if($Global_IsLogin == false){ ?>
 										<div class="wt-loginarea">
 										<figure class="wt-userimg">
 											<img src="/../../../assets/images/user-login.png" alt="img description">
