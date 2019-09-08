@@ -787,7 +787,8 @@ function FreelancerSendOffer(){
     var AdDetailVue = new Vue({
         el: '#wt-main',
         data:{
-            item: []
+            item: [],
+            Offer: []
         },
         mounted: function(){
             var self = this;
@@ -798,6 +799,24 @@ function FreelancerSendOffer(){
                 dataType: "JSON",
                 success:function(data) {
                     self.item = data;
+                    console.log(data);
+                },
+                error:function(a,b,g) {
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Bir şeyler yanlış gitti!'
+                    });
+                }
+            });
+
+            $.ajax({
+                url:"https://willingly.tk/inc/php/inc/php/Get_OfferEmployer.php",
+                method: "POST",
+                data: {EmployerId:advId,PageId:1},
+                dataType: "JSON",
+                success:function(data) {
+                    self.Offer = data;
                     console.log(data);
                 },
                 error:function(a,b,g) {
