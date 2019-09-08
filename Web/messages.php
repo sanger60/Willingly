@@ -115,8 +115,8 @@
 														<h3>{{item.userName}}</h3>
                                                         <span>{{item.message}}</span>
 														<input type="hidden" v-bind:value="item.Id"  />
-														<input type="hidden" v-bind:value="item.Reciver" name="reciverIds" />
-														<input type="hidden" v-bind:value="item.ChatID" name="chatIds" />
+														<input type="hidden" v-bind:value="item.ReciverId" name="reciverIds" />
+														<input type="hidden" v-bind:value="item.Id" name="chatIds" />
 
 													</div>
 												</div>
