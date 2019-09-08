@@ -18,7 +18,7 @@
                             <img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description">
                         </figure>
                         <div class="wt-companysinfo">
-                            <figure><img src="http://amentotech.com/htmls/worktern/images/sidebar/img-02.jpg" alt="img description"></figure>
+                            <figure><img src="/../../../assets/images/sidebar/img-01.jpg" alt="img description"></figure>
                             <div class="wt-title">
                                 <h2><a href="javascript:void(0);">{{items.Name}} {{items.Surname}}</a></h2>
                                 <span>{{items.Username}}</span>
