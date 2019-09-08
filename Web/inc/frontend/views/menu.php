@@ -15,38 +15,12 @@
 												<li class="menu-item-has-children page_item_has_children">
 													<a href="index.php">Ana Sayfa</a>
 												</li>
-												<li class="nav-item">
-													<a href="howitworks.html">How It Works</a>
-												</li>
-												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">Browse Jobs</a>
-													<ul class="sub-menu">
-														<li>
-															<a href="joblisting.html">Job Listing</a>
-														</li>
-														<li class="current-menu-item">
-															<a href="jobsingle.html">Job Single</a>
-														</li>
-														<li>
-															<a href="jobproposal.html">Job Proposal</a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">View Freelancers</a>
-													<ul class="sub-menu">
-														<li>
-															<a href="userlisting.html">User Listing</a>
-														</li>
-														<li class="current-menu-item">
-															<a href="usersingle.html">User Single</a>
-														</li>
-													</ul>
-												</li>
+												<li>
 											</ul>
 										</div>
 									</nav>
-									<div class="wt-loginarea">
+									<?php if($Global_IsLogin == true){ ?>
+										<div class="wt-loginarea">
 										<figure class="wt-userimg">
 											<img src="/../../../assets/images/user-login.png" alt="img description">
 										</figure>
@@ -95,95 +69,57 @@
 											    </form>
 											</div>
 										</div>
-										<a href="register.php" class="wt-btn">Join Now</a>
+										<a href="register.php" class="wt-btn">Şimdi Başla</a>
 									</div>
-									<div class="wt-userlogedin">
+									<?php }else{ ?>
+										<div class="wt-userlogedin">
 										<figure class="wt-userimg">
 											<img src="/../../../assets/images/user-img.jpg" alt="image description">
 										</figure>
 										<div class="wt-username">
-											<h3>Louanne Mattioli</h3>
-											<span>Amento Tech</span>
+											<h3><?php echo $Global_Name; ?></h3>
+											<span><?php echo $Global_Email; ?></span>
 										</div>
 										<nav class="wt-usernav">
-											<ul>
-												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">
-														<span>Insights</span>
-													</a>
-													<ul class="sub-menu children">
-														<li><a href="dashboard-insights.html">Insights</a></li>
-														<li><a href="dashboard-insightsuser.html">Insights User</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="dashboard-profile.html">
-														<span>My Profile</span>
-													</a>
-												</li>
-												<li class="menu-item-has-children">
-													<a href="javascript:void(0);">
-														<span>All Jobs</span>
-													</a>
-													<ul class="sub-menu">
-														<li><a href="dashboard-completejobs.html">Completed Jobs</a></li>
-														<li><a href="dashboard-canceljobs.html">Cancelled Jobs</a></li>
-														<li><a href="dashboard-ongoingjob.html">Ongoing Jobs</a></li>
-														<li><a href="dashboard-ongoingsingle.html">Ongoing Single</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="dashboard-managejobs.html">
-														<span>Manage Jobs</span>
-													</a>
-												</li>
-												<li class="wt-notificationicon menu-item-has-children">
-													<a href="javascript:void(0);">
-														<span>Messages</span>
-													</a>
-													<ul class="sub-menu">
-														<li><a href="dashboard-messages.html">Messages</a></li>
-														<li><a href="dashboard-messages2.html">Messages V 2</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="dashboard-saveitems.html">
-														<span>My Saved Items</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-invocies.html">
-														<span>Invoices</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-category.html">
-														<span>Category</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-packages.html">
-														<span>Packages</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-proposals.html">
-														<span>Proposals</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-accountsettings.html">
-														<span>Account Settings</span>
-													</a>
-												</li>
-												<li>
-													<a href="index-2.html">
-														<span>Çıkış Yap</span>
-													</a>
-												</li>
-											</ul>
+										<ul>
+                            <li class="wt-active">
+                                <a href="profile.php">
+                                    <i class="ti-briefcase"></i>
+                                    <span>Profil</span>
+                                </a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">
+                                    <i class="ti-package"></i>
+                                    <span>İşler</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><hr><a href="endJob.php">Biten İşler</a></li>
+                                    <li><hr><a href="ongoing.php">Aldığım İşler</a></li> <!-- dashboard-ongoingsingle.html -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="messages.php">
+                                    <i class="ti-pencil-alt"></i>
+                                    <span>Mesajlar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="accountsettings.php">
+                                    <i class="ti-anchor"></i>
+                                    <span>Hesap Ayarları</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="logout.php">
+                                    <i class="ti-shift-right"></i>
+                                    <span>Çıkış Yap</span>
+                                </a>
+                            </li>
+                        </ul>
 										</nav>
 									</div>
+									<?php } ?>
 								</div>
 							</div>
 						</div>
